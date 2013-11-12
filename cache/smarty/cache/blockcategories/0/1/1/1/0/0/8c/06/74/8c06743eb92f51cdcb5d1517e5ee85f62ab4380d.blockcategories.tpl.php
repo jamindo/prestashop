@@ -5,17 +5,20 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '8c06743eb92f51cdcb5d1517e5ee85f62ab4380d' => 
     array (
       0 => 'C:\\xampp\\htdocs\\prestashop\\themes\\default\\modules\\blockcategories\\blockcategories.tpl',
-      1 => 1381145310,
+      1 => 1383473360,
       2 => 'file',
     ),
     '5cd8a89fbef5ec2c85df1c6f2fda9c94a7586363' => 
     array (
       0 => 'C:\\xampp\\htdocs\\prestashop\\themes\\default\\modules\\blockcategories\\category-tree-branch.tpl',
-      1 => 1381145310,
+      1 => 1383473336,
       2 => 'file',
     ),
   ),
   'nocache_hash' => '1543452728430dc4a43-98301854',
+  'cache_lifetime' => 31536000,
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_52764fc9d4ecd7_81008607',
   'variables' => 
   array (
     'isDhtml' => 0,
@@ -23,11 +26,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'child' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_52728430eff4e0_28003293',
-  'cache_lifetime' => 31536000,
 ),true); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_52728430eff4e0_28003293')) {function content_52728430eff4e0_28003293($_smarty_tpl) {?>
+<?php if ($_valid && !is_callable('content_52764fc9d4ecd7_81008607')) {function content_52764fc9d4ecd7_81008607($_smarty_tpl) {?>
 <!-- Block categories module -->
 <div id="categories_block_left" class="block">
 	<p class="title_block">Catégories</p>

@@ -5,11 +5,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'd581b38f5bd72be95477f8a8ec1be847aca085d4' => 
     array (
       0 => 'C:\\xampp\\htdocs\\prestashop\\themes\\default\\modules\\blocksocial\\blocksocial.tpl',
-      1 => 1381145310,
+      1 => 1383473332,
       2 => 'file',
     ),
   ),
   'nocache_hash' => '7717527284326b3700-91658320',
+  'cache_lifetime' => 31536000,
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_52764fcc6330c6_18814432',
   'variables' => 
   array (
     'facebook_url' => 0,
@@ -17,11 +20,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'rss_url' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_52728432773093_56137691',
-  'cache_lifetime' => 31536000,
 ),true); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_52728432773093_56137691')) {function content_52728432773093_56137691($_smarty_tpl) {?>
+<?php if ($_valid && !is_callable('content_52764fcc6330c6_18814432')) {function content_52764fcc6330c6_18814432($_smarty_tpl) {?>
 <div id="social_block">
 	<p class="title_block">Nous suivre</p>
 	<ul>

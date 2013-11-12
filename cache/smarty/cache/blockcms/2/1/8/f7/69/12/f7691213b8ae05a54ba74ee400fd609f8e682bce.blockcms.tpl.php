@@ -5,17 +5,17 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'f7691213b8ae05a54ba74ee400fd609f8e682bce' => 
     array (
       0 => 'C:\\xampp\\htdocs\\prestashop\\themes\\default\\modules\\blockcms\\blockcms.tpl',
-      1 => 1381145310,
+      1 => 1383473375,
       2 => 'file',
     ),
   ),
   'nocache_hash' => '21270527284313a4ce6-55972152',
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_52728432519f58_33752889',
-  'has_nocache_code' => false,
   'cache_lifetime' => 31536000,
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_52764fcc539ea0_14395771',
+  'has_nocache_code' => false,
 ),true); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_52728432519f58_33752889')) {function content_52728432519f58_33752889($_smarty_tpl) {?>
+<?php if ($_valid && !is_callable('content_52764fcc539ea0_14395771')) {function content_52764fcc539ea0_14395771($_smarty_tpl) {?>
 	<!-- MODULE Block footer -->
 	<div class="block_various_links" id="block_various_links_footer">
 		<p class="title_block">Information</p>

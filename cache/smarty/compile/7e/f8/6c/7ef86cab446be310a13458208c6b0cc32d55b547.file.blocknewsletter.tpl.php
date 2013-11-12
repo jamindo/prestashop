@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-10-31 17:13:43
+<?php /* Smarty version Smarty-3.1.14, created on 2013-11-03 14:29:46
          compiled from "C:\xampp\htdocs\prestashop\themes\default\modules\blocknewsletter\blocknewsletter.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:29749527281b7178800-93950302%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '7ef86cab446be310a13458208c6b0cc32d55b547' => 
     array (
       0 => 'C:\\xampp\\htdocs\\prestashop\\themes\\default\\modules\\blocknewsletter\\blocknewsletter.tpl',
-      1 => 1381145310,
+      1 => 1383473346,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_527281b7259a18_13303660',
   'variables' => 
   array (
     'msg' => 0,
@@ -23,8 +25,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'value' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_527281b7259a18_13303660',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_527281b7259a18_13303660')) {function content_527281b7259a18_13303660($_smarty_tpl) {?>
 

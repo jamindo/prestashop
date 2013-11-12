@@ -5,11 +5,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'f7691213b8ae05a54ba74ee400fd609f8e682bce' => 
     array (
       0 => 'C:\\xampp\\htdocs\\prestashop\\themes\\default\\modules\\blockcms\\blockcms.tpl',
-      1 => 1381145310,
+      1 => 1383473375,
       2 => 'file',
     ),
   ),
   'nocache_hash' => '21270527284313a4ce6-55972152',
+  'cache_lifetime' => 31536000,
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_52764fca321bf0_23525064',
   'variables' => 
   array (
     'block' => 0,
@@ -27,11 +30,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'footer_text' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_527284315ef323_18070548',
-  'cache_lifetime' => 31536000,
 ),true); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_527284315ef323_18070548')) {function content_527284315ef323_18070548($_smarty_tpl) {?>
+<?php if ($_valid && !is_callable('content_52764fca321bf0_23525064')) {function content_52764fca321bf0_23525064($_smarty_tpl) {?>
 	<!-- Block CMS module -->
 			<div id="informations_block_left_1" class="block informations_block_left">
 			<p class="title_block"><a href="http://localhost/prestashop/index.php?id_cms_category=1&amp;controller=cms">Information</a></p>

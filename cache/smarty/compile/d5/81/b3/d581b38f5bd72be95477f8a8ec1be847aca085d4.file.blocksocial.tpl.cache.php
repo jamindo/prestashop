@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-10-31 17:24:18
+<?php /* Smarty version Smarty-3.1.14, created on 2013-11-03 14:29:48
          compiled from "C:\xampp\htdocs\prestashop\themes\default\modules\blocksocial\blocksocial.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:7717527284326b3700-91658320%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'd581b38f5bd72be95477f8a8ec1be847aca085d4' => 
     array (
       0 => 'C:\\xampp\\htdocs\\prestashop\\themes\\default\\modules\\blocksocial\\blocksocial.tpl',
-      1 => 1381145310,
+      1 => 1383473332,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'cache_lifetime' => 31536000,
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_527284326f3254_42150216',
   'variables' => 
   array (
     'facebook_url' => 0,
@@ -22,8 +25,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'rss_url' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_527284326f3254_42150216',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_527284326f3254_42150216')) {function content_527284326f3254_42150216($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_escape')) include 'C:\\xampp\\htdocs\\prestashop\\tools\\smarty\\plugins\\modifier.escape.php';
 ?>

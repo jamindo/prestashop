@@ -5,11 +5,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'bcc309f282d3552806e2b60ec1522d405ef025cb' => 
     array (
       0 => 'C:\\xampp\\htdocs\\prestashop\\modules\\blocktopmenu\\blocktopmenu.tpl',
-      1 => 1381145310,
+      1 => 1383473395,
       2 => 'file',
     ),
   ),
   'nocache_hash' => '2398952728430c975d8-47336921',
+  'cache_lifetime' => 31536000,
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_52764fc9a00f59_24720409',
   'variables' => 
   array (
     'MENU' => 0,
@@ -17,11 +20,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'link' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_52728430d0c181_09028373',
-  'cache_lifetime' => 31536000,
 ),true); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_52728430d0c181_09028373')) {function content_52728430d0c181_09028373($_smarty_tpl) {?>	
+<?php if ($_valid && !is_callable('content_52764fc9a00f59_24720409')) {function content_52764fc9a00f59_24720409($_smarty_tpl) {?>	
 	<!-- Menu -->
 	<div class="sf-contener clearfix">
 		<ul class="sf-menu clearfix">

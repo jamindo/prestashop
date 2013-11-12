@@ -5,11 +5,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '2c99f74104cfd2d3da8b69713c23fe409379c469' => 
     array (
       0 => 'C:\\xampp\\htdocs\\prestashop\\modules\\homeslider\\homeslider.tpl',
-      1 => 1381145310,
+      1 => 1383473365,
       2 => 'file',
     ),
   ),
   'nocache_hash' => '2635252728431c7e0a4-10433413',
+  'cache_lifetime' => 31536000,
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_52764fcb92f383_14387001',
   'variables' => 
   array (
     'homeslider' => 0,
@@ -17,11 +20,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'slide' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_52728431d4f822_80697559',
-  'cache_lifetime' => 31536000,
 ),true); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_52728431d4f822_80697559')) {function content_52728431d4f822_80697559($_smarty_tpl) {?>
+<?php if ($_valid && !is_callable('content_52764fcb92f383_14387001')) {function content_52764fcb92f383_14387001($_smarty_tpl) {?>
 <!-- Module HomeSlider -->
 <script type="text/javascript">
 			var homeslider_loop = true;

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-10-31 17:24:16
+<?php /* Smarty version Smarty-3.1.14, created on 2013-11-03 14:29:45
          compiled from "C:\xampp\htdocs\prestashop\modules\blocktopmenu\blocktopmenu.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2398952728430c975d8-47336921%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'bcc309f282d3552806e2b60ec1522d405ef025cb' => 
     array (
       0 => 'C:\\xampp\\htdocs\\prestashop\\modules\\blocktopmenu\\blocktopmenu.tpl',
-      1 => 1381145310,
+      1 => 1383473395,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'cache_lifetime' => 31536000,
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_52728430cc4f61_70932047',
   'variables' => 
   array (
     'MENU' => 0,
@@ -22,8 +25,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'link' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_52728430cc4f61_70932047',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_52728430cc4f61_70932047')) {function content_52728430cc4f61_70932047($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_escape')) include 'C:\\xampp\\htdocs\\prestashop\\tools\\smarty\\plugins\\modifier.escape.php';
 ?><?php if ($_smarty_tpl->tpl_vars['MENU']->value!=''){?>
