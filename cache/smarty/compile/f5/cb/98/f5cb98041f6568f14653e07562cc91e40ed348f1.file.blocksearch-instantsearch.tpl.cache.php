@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-10-31 17:24:16
+<?php /* Smarty version Smarty-3.1.14, created on 2013-11-12 13:43:49
          compiled from "C:\xampp\htdocs\prestashop\modules\blocksearch\blocksearch-instantsearch.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:24735527284309a9f47-65739391%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'f5cb98041f6568f14653e07562cc91e40ed348f1' => 
     array (
       0 => 'C:\\xampp\\htdocs\\prestashop\\modules\\blocksearch\\blocksearch-instantsearch.tpl',
-      1 => 1381145310,
+      1 => 1384260154,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_52728430a104e7_98008310',
   'variables' => 
   array (
     'instantsearch' => 0,
@@ -25,8 +27,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'ajaxsearch' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_52728430a104e7_98008310',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_52728430a104e7_98008310')) {function content_52728430a104e7_98008310($_smarty_tpl) {?><?php if ($_smarty_tpl->tpl_vars['instantsearch']->value){?>
 	<script type="text/javascript">

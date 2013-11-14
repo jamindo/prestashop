@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-10-31 17:13:11
+<?php /* Smarty version Smarty-3.1.14, created on 2013-11-14 10:57:57
          compiled from "C:\xampp\htdocs\prestashop\themes\default\authentication.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:20305527281977be2c4-07656166%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'f3a658c13c908e275cce506cfd6cd8a5b49f39df' => 
     array (
       0 => 'C:\\xampp\\htdocs\\prestashop\\themes\\default\\authentication.tpl',
-      1 => 1381145310,
+      1 => 1384423072,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_52728198110d37_06380669',
   'variables' => 
   array (
     'email_create' => 0,
@@ -24,10 +26,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'country' => 0,
     'state' => 0,
     'address' => 0,
-    'back' => 0,
     'authentification_error' => 0,
     'account_error' => 0,
     'v' => 0,
+    'back' => 0,
     'inOrderProcess' => 0,
     'PS_GUEST_CHECKOUT_ENABLED' => 0,
     'genders' => 0,
@@ -55,8 +57,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'PS_REGISTRATION_PROCESS_TYPE' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_52728198110d37_06380669',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_52728198110d37_06380669')) {function content_52728198110d37_06380669($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_escape')) include 'C:\\xampp\\htdocs\\prestashop\\tools\\smarty\\plugins\\modifier.escape.php';
 ?>
@@ -145,8 +145,6 @@ $(document).ready(function() {
 <h1><?php if (!isset($_smarty_tpl->tpl_vars['email_create']->value)){?><?php echo smartyTranslate(array('s'=>'Authentication'),$_smarty_tpl);?>
 <?php }else{ ?><?php echo smartyTranslate(array('s'=>'Create an account'),$_smarty_tpl);?>
 <?php }?></h1>
-<?php if (!isset($_smarty_tpl->tpl_vars['back']->value)||$_smarty_tpl->tpl_vars['back']->value!='my-account'){?><?php $_smarty_tpl->tpl_vars['current_step'] = new Smarty_variable('login', null, 0);?><?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['tpl_dir']->value)."./order-steps.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
-<?php }?>
 <?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['tpl_dir']->value)."./errors.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
 <?php $_smarty_tpl->tpl_vars['stateExist'] = new Smarty_variable(false, null, 0);?>
@@ -270,7 +268,7 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
 </h3>
 			<div class="form_content clearfix">
 				<p class="text">
-					<label for="email"><?php echo smartyTranslate(array('s'=>'Email address'),$_smarty_tpl);?>
+					<label for="login"><?php echo smartyTranslate(array('s'=>'Login'),$_smarty_tpl);?>
 </label>
 					<span><input type="text" id="email" name="email" value="<?php if (isset($_POST['email'])){?><?php echo stripslashes($_POST['email']);?>
 <?php }?>" class="account_input" /></span>
@@ -557,6 +555,27 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
 	<fieldset class="account_creation">
 		<h3><?php echo smartyTranslate(array('s'=>'Your personal information'),$_smarty_tpl);?>
 </h3>
+		<h4> Informations du compte </h4>
+		<p class="required text">
+			<label for="login"><?php echo smartyTranslate(array('s'=>'Login'),$_smarty_tpl);?>
+ <sup>*</sup></label>
+			<input type="text" class="text" id="login" name="login" value="<?php if (isset($_POST['login'])){?><?php echo $_POST['login'];?>
+<?php }?>" />
+		</p>
+		<p class="required password">
+			<label for="passwd"><?php echo smartyTranslate(array('s'=>'Password'),$_smarty_tpl);?>
+ <sup>*</sup></label>
+			<input type="password" class="text" name="passwd" id="passwd" />
+			<span class="form_info"><?php echo smartyTranslate(array('s'=>'(Five characters minimum)'),$_smarty_tpl);?>
+</span>
+		</p>
+		<p class="required text">
+			<label for="email"><?php echo smartyTranslate(array('s'=>'Email'),$_smarty_tpl);?>
+ <sup>*</sup></label>
+			<input type="text" class="text" id="email" name="email" value="<?php if (isset($_POST['email'])){?><?php echo $_POST['email'];?>
+<?php }?>" />
+		</p>
+		<h4> Informations personnelles </h4>
 		<p class="radio required">
 			<span><?php echo smartyTranslate(array('s'=>'Title'),$_smarty_tpl);?>
 </span>
@@ -586,19 +605,6 @@ $_smarty_tpl->tpl_vars['gender']->_loop = true;
  <sup>*</sup></label>
 			<input onkeyup="$('#lastname').val(this.value);" type="text" class="text" id="customer_lastname" name="customer_lastname" value="<?php if (isset($_POST['customer_lastname'])){?><?php echo $_POST['customer_lastname'];?>
 <?php }?>" />
-		</p>
-		<p class="required text">
-			<label for="email"><?php echo smartyTranslate(array('s'=>'Email'),$_smarty_tpl);?>
- <sup>*</sup></label>
-			<input type="text" class="text" id="email" name="email" value="<?php if (isset($_POST['email'])){?><?php echo $_POST['email'];?>
-<?php }?>" />
-		</p>
-		<p class="required password">
-			<label for="passwd"><?php echo smartyTranslate(array('s'=>'Password'),$_smarty_tpl);?>
- <sup>*</sup></label>
-			<input type="password" class="text" name="passwd" id="passwd" />
-			<span class="form_info"><?php echo smartyTranslate(array('s'=>'(Five characters minimum)'),$_smarty_tpl);?>
-</span>
 		</p>
 		<p class="select">
 			<span><?php echo smartyTranslate(array('s'=>'Date of Birth'),$_smarty_tpl);?>

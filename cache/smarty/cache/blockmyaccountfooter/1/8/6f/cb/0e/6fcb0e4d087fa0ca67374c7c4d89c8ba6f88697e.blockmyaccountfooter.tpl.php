@@ -5,11 +5,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '6fcb0e4d087fa0ca67374c7c4d89c8ba6f88697e' => 
     array (
       0 => 'C:\\xampp\\htdocs\\prestashop\\themes\\default\\modules\\blockmyaccountfooter\\blockmyaccountfooter.tpl',
-      1 => 1381145310,
+      1 => 1384260169,
       2 => 'file',
     ),
   ),
   'nocache_hash' => '5405272843254b137-84697376',
+  'cache_lifetime' => 31536000,
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_528222874e2960_68560740',
   'variables' => 
   array (
     'link' => 0,
@@ -18,11 +21,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'HOOK_BLOCK_MY_ACCOUNT' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_52728432681872_12193670',
-  'cache_lifetime' => 31536000,
 ),true); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_52728432681872_12193670')) {function content_52728432681872_12193670($_smarty_tpl) {?>
+<?php if ($_valid && !is_callable('content_528222874e2960_68560740')) {function content_528222874e2960_68560740($_smarty_tpl) {?>
 <!-- Block myaccount module -->
 <div class="block myaccount">
 	<p class="title_block"><a href="http://localhost/prestashop/index.php?controller=my-account" title="Gérer mon compte client" rel="nofollow">Mon compte</a></p>

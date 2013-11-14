@@ -75,7 +75,6 @@ $(document).ready(function() {
 </script>
 
 <h1>{if !isset($email_create)}{l s='Authentication'}{else}{l s='Create an account'}{/if}</h1>
-{if !isset($back) || $back != 'my-account'}{assign var='current_step' value='login'}{include file="$tpl_dir./order-steps.tpl"}{/if}
 {include file="$tpl_dir./errors.tpl"}
 {assign var='stateExist' value=false}
 {assign var="postCodeExist" value=false}
@@ -180,7 +179,7 @@ $(document).ready(function() {
 			<h3>{l s='Already registered?'}</h3>
 			<div class="form_content clearfix">
 				<p class="text">
-					<label for="email">{l s='Email address'}</label>
+					<label for="login">{l s='Login'}</label>
 					<span><input type="text" id="email" name="email" value="{if isset($smarty.post.email)}{$smarty.post.email|stripslashes}{/if}" class="account_input" /></span>
 				</p>
 				<p class="text">
@@ -380,6 +379,21 @@ $(document).ready(function() {
 	{$HOOK_CREATE_ACCOUNT_TOP}
 	<fieldset class="account_creation">
 		<h3>{l s='Your personal information'}</h3>
+		<h4> Informations du compte </h4>
+		<p class="required text">
+			<label for="login">{l s='Login'} <sup>*</sup></label>
+			<input type="text" class="text" id="login" name="login" value="{if isset($smarty.post.login)}{$smarty.post.login}{/if}" />
+		</p>
+		<p class="required password">
+			<label for="passwd">{l s='Password'} <sup>*</sup></label>
+			<input type="password" class="text" name="passwd" id="passwd" />
+			<span class="form_info">{l s='(Five characters minimum)'}</span>
+		</p>
+		<p class="required text">
+			<label for="email">{l s='Email'} <sup>*</sup></label>
+			<input type="text" class="text" id="email" name="email" value="{if isset($smarty.post.email)}{$smarty.post.email}{/if}" />
+		</p>
+		<h4> Informations personnelles </h4>
 		<p class="radio required">
 			<span>{l s='Title'}</span>
 			{foreach from=$genders key=k item=gender}
@@ -394,15 +408,6 @@ $(document).ready(function() {
 		<p class="required text">
 			<label for="customer_lastname">{l s='Last name'} <sup>*</sup></label>
 			<input onkeyup="$('#lastname').val(this.value);" type="text" class="text" id="customer_lastname" name="customer_lastname" value="{if isset($smarty.post.customer_lastname)}{$smarty.post.customer_lastname}{/if}" />
-		</p>
-		<p class="required text">
-			<label for="email">{l s='Email'} <sup>*</sup></label>
-			<input type="text" class="text" id="email" name="email" value="{if isset($smarty.post.email)}{$smarty.post.email}{/if}" />
-		</p>
-		<p class="required password">
-			<label for="passwd">{l s='Password'} <sup>*</sup></label>
-			<input type="password" class="text" name="passwd" id="passwd" />
-			<span class="form_info">{l s='(Five characters minimum)'}</span>
 		</p>
 		<p class="select">
 			<span>{l s='Date of Birth'}</span>

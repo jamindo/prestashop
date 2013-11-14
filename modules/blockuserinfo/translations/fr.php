@@ -12,8 +12,7 @@ $_MODULE['<{blockuserinfo}prestashop>blockuserinfo_068f80c7519d0528fb08e82137a72
 $_MODULE['<{blockuserinfo}prestashop>blockuserinfo_9e65b51e82f2a9b9f72ebe3e083582bb'] = '(vide)';
 $_MODULE['<{blockuserinfo}prestashop>blockuserinfo_2cbfb6731610056e1d0aaacde07096c1'] = 'Voir mon compte client';
 $_MODULE['<{blockuserinfo}prestashop>blockuserinfo_a0623b78a5f2cfe415d9dbbd4428ea40'] = 'Votre compte';
-$_MODULE['<{blockuserinfo}prestashop>blockuserinfo_83218ac34c1834c26781fe4bde918ee4'] = 'Bienvenue';
+$_MODULE['<{blockuserinfo}prestashop>blockuserinfo_83218ac34c1834c26781fe4bde918ee4'] = 'Login';
 $_MODULE['<{blockuserinfo}prestashop>blockuserinfo_4b877ba8588b19f1b278510bf2b57ebb'] = 'Me déconnecter';
 $_MODULE['<{blockuserinfo}prestashop>blockuserinfo_4394c8d8e63c470de62ced3ae85de5ae'] = 'déconnexion';
-$_MODULE['<{blockuserinfo}prestashop>blockuserinfo_b145abfd6b2f88971d725cbd94a5879f'] = 'Identifiez-vous';
-$_MODULE['<{blockuserinfo}prestashop>blockuserinfo_99dea78007133396a7b8ed70578ac6ae'] = 'Identifiez-vous';
+$_MODULE['<{blockuserinfo}prestashop>blockuserinfo_99dea78007133396a7b8ed70578ac6ae'] = 'Login';

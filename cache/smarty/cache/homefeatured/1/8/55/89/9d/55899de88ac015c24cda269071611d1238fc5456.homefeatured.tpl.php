@@ -5,11 +5,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '55899de88ac015c24cda269071611d1238fc5456' => 
     array (
       0 => 'C:\\xampp\\htdocs\\prestashop\\themes\\default\\modules\\homefeatured\\homefeatured.tpl',
-      1 => 1381145310,
+      1 => 1384260113,
       2 => 'file',
     ),
   ),
   'nocache_hash' => '932152728431e8d106-22570388',
+  'cache_lifetime' => 31536000,
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_5282228705baa8_93881145',
   'variables' => 
   array (
     'products' => 0,
@@ -29,11 +32,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'static_token' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_527284322aef20_33725471',
-  'cache_lifetime' => 31536000,
 ),true); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_527284322aef20_33725471')) {function content_527284322aef20_33725471($_smarty_tpl) {?>
+<?php if ($_valid && !is_callable('content_5282228705baa8_93881145')) {function content_5282228705baa8_93881145($_smarty_tpl) {?>
 <!-- MODULE Home Featured Products -->
 <div id="featured-products_block_center" class="block products_block clearfix">
 	<p class="title_block">Produits phares</p>

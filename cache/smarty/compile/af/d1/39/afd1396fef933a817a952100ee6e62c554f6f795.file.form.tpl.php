@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-10-31 17:26:24
+<?php /* Smarty version Smarty-3.1.14, created on 2013-11-12 13:56:44
          compiled from "C:\xampp\htdocs\prestashop\admin0556\themes\default\template\controllers\employees\helpers\form\form.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:23542527284b0aa1847-70976391%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,25 +7,25 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'afd1396fef933a817a952100ee6e62c554f6f795' => 
     array (
       0 => 'C:\\xampp\\htdocs\\prestashop\\admin0556\\themes\\default\\template\\controllers\\employees\\helpers\\form\\form.tpl',
-      1 => 1381145310,
+      1 => 1384260135,
       2 => 'file',
     ),
     'a500c740d0fdd9d947e2c5a313937f9be229e942' => 
     array (
       0 => 'C:\\xampp\\htdocs\\prestashop\\admin0556\\themes\\default\\template\\helpers\\form\\form.tpl',
-      1 => 1381145310,
+      1 => 1384260169,
       2 => 'file',
     ),
     'e197459b2fb09492072cbf6bd9ba135d84e2a139' => 
     array (
       0 => 'C:\\xampp\\htdocs\\prestashop\\admin0556\\themes\\default\\template\\helpers\\form\\form_group.tpl',
-      1 => 1381145310,
+      1 => 1384260170,
       2 => 'file',
     ),
     '8b8f8691420e8741c1dd9527943e314935f95256' => 
     array (
       0 => 'C:\\xampp\\htdocs\\prestashop\\admin0556\\themes\\default\\template\\helpers\\form\\form_category.tpl',
-      1 => 1381145310,
+      1 => 1384260170,
       2 => 'file',
     ),
   ),
@@ -33,6 +33,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_527284b1863498_86659842',
   'variables' => 
   array (
     'show_toolbar' => 0,
@@ -79,8 +81,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'allowEmployeeFormLang' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_527284b1863498_86659842',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_527284b1863498_86659842')) {function content_527284b1863498_86659842($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_escape')) include 'C:\\xampp\\htdocs\\prestashop\\tools\\smarty\\plugins\\modifier.escape.php';
 ?>
@@ -613,7 +613,7 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
 									<?php /*  Call merged included template "helpers/form/form_group.tpl" */
 $_tpl_stack[] = $_smarty_tpl;
  $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate('helpers/form/form_group.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '23542527284b0aa1847-70976391');
-content_527284b13951f3_50252948($_smarty_tpl);
+content_5282258d131781_47948051($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "helpers/form/form_group.tpl" */?>
 								<?php }elseif($_smarty_tpl->tpl_vars['input']->value['type']=='shop'){?>
 									<?php echo $_smarty_tpl->tpl_vars['input']->value['html'];?>
@@ -622,7 +622,7 @@ $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "helpers/for
 									<?php /*  Call merged included template "helpers/form/form_category.tpl" */
 $_tpl_stack[] = $_smarty_tpl;
  $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate('helpers/form/form_category.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array('categories'=>$_smarty_tpl->tpl_vars['input']->value['values']), 0, '23542527284b0aa1847-70976391');
-content_527284b1403454_61388505($_smarty_tpl);
+content_5282258d1a0436_40283681($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "helpers/form/form_category.tpl" */?>
 								<?php }elseif($_smarty_tpl->tpl_vars['input']->value['type']=='categories_select'){?>
 									<?php echo $_smarty_tpl->tpl_vars['input']->value['category_tree'];?>
@@ -902,9 +902,9 @@ $_smarty_tpl->tpl_vars['language']->_loop = true;
 
 	</script>
 <?php }?>
-<?php }} ?><?php /* Smarty version Smarty-3.1.14, created on 2013-10-31 17:26:25
+<?php }} ?><?php /* Smarty version Smarty-3.1.14, created on 2013-11-12 13:56:45
          compiled from "C:\xampp\htdocs\prestashop\admin0556\themes\default\template\helpers\form\form_group.tpl" */ ?>
-<?php if ($_valid && !is_callable('content_527284b13951f3_50252948')) {function content_527284b13951f3_50252948($_smarty_tpl) {?>
+<?php if ($_valid && !is_callable('content_5282258d131781_47948051')) {function content_5282258d131781_47948051($_smarty_tpl) {?>
 
 <?php if (count($_smarty_tpl->tpl_vars['groups']->value)&&isset($_smarty_tpl->tpl_vars['groups']->value)){?>
 <table cellspacing="0" cellpadding="0" class="table" style="width:28em;">
@@ -942,9 +942,9 @@ $_smarty_tpl->tpl_vars['group']->_loop = true;
 <?php }else{ ?>
 <p><?php echo smartyTranslate(array('s'=>'No group created'),$_smarty_tpl);?>
 </p>
-<?php }?><?php }} ?><?php /* Smarty version Smarty-3.1.14, created on 2013-10-31 17:26:25
+<?php }?><?php }} ?><?php /* Smarty version Smarty-3.1.14, created on 2013-11-12 13:56:45
          compiled from "C:\xampp\htdocs\prestashop\admin0556\themes\default\template\helpers\form\form_category.tpl" */ ?>
-<?php if ($_valid && !is_callable('content_527284b1403454_61388505')) {function content_527284b1403454_61388505($_smarty_tpl) {?><?php if (!is_callable('smarty_function_implode')) include 'C:\\xampp\\htdocs\\prestashop\\tools\\smarty\\plugins\\function.implode.php';
+<?php if ($_valid && !is_callable('content_5282258d1a0436_40283681')) {function content_5282258d1a0436_40283681($_smarty_tpl) {?><?php if (!is_callable('smarty_function_implode')) include 'C:\\xampp\\htdocs\\prestashop\\tools\\smarty\\plugins\\function.implode.php';
 ?>
 <?php if (count($_smarty_tpl->tpl_vars['categories']->value)&&isset($_smarty_tpl->tpl_vars['categories']->value)){?>
 	<script type="text/javascript">

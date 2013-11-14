@@ -5,22 +5,22 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '6f09f29040f5cb1f914a96dbaa56bcdacc7fcee7' => 
     array (
       0 => 'C:\\xampp\\htdocs\\prestashop\\themes\\default\\modules\\blockcontact\\blockcontact.tpl',
-      1 => 1381145310,
+      1 => 1384260113,
       2 => 'file',
     ),
   ),
   'nocache_hash' => '491552728431b51562-60865021',
+  'cache_lifetime' => 31536000,
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_528222868155a1_57219349',
   'variables' => 
   array (
     'telnumber' => 0,
     'email' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_52728431c0a1e3_77730715',
-  'cache_lifetime' => 31536000,
 ),true); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_52728431c0a1e3_77730715')) {function content_52728431c0a1e3_77730715($_smarty_tpl) {?>
+<?php if ($_valid && !is_callable('content_528222868155a1_57219349')) {function content_528222868155a1_57219349($_smarty_tpl) {?>
 <div id="contact_block" class="block">
 	<p class="title_block">Contactez-nous</p>
 	<div class="block_content clearfix">
