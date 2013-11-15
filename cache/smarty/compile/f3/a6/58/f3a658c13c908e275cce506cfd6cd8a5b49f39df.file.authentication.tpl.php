@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-11-14 10:57:57
+<?php /* Smarty version Smarty-3.1.14, created on 2013-11-15 16:28:47
          compiled from "C:\xampp\htdocs\prestashop\themes\default\authentication.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:20305527281977be2c4-07656166%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'f3a658c13c908e275cce506cfd6cd8a5b49f39df' => 
     array (
       0 => 'C:\\xampp\\htdocs\\prestashop\\themes\\default\\authentication.tpl',
-      1 => 1384423072,
+      1 => 1384529236,
       2 => 'file',
     ),
   ),
@@ -268,7 +268,7 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
 </h3>
 			<div class="form_content clearfix">
 				<p class="text">
-					<label for="login"><?php echo smartyTranslate(array('s'=>'Login'),$_smarty_tpl);?>
+					<label for="login"><?php echo smartyTranslate(array('s'=>'Email'),$_smarty_tpl);?>
 </label>
 					<span><input type="text" id="email" name="email" value="<?php if (isset($_POST['email'])){?><?php echo stripslashes($_POST['email']);?>
 <?php }?>" class="account_input" /></span>
@@ -559,8 +559,10 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
 		<p class="required text">
 			<label for="login"><?php echo smartyTranslate(array('s'=>'Login'),$_smarty_tpl);?>
  <sup>*</sup></label>
-			<input type="text" class="text" id="login" name="login" value="<?php if (isset($_POST['login'])){?><?php echo $_POST['login'];?>
+			<input onkeyup="$('#login').val(this.value);" type="text" class="text" id="customer_firstname" name="customer_login" value="<?php if (isset($_POST['customer_login'])){?><?php echo $_POST['customer_login'];?>
 <?php }?>" />
+			<span class="form_info"><?php echo smartyTranslate(array('s'=>'(Only numbers and letters and must starts with a letter)'),$_smarty_tpl);?>
+</span>
 		</p>
 		<p class="required password">
 			<label for="passwd"><?php echo smartyTranslate(array('s'=>'Password'),$_smarty_tpl);?>

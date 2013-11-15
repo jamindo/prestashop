@@ -48,6 +48,17 @@ class ValidateCore
 	}
 
 	/**
+	 * Check for login validity
+	 *
+	 * @param string $login login address to validate
+	 * @return boolean Validity is ok or not
+	 */
+	public static function isLogin($login)
+	{
+		return !empty($login) && preg_match(Tools::cleanNonUnicodeSupport('/^[A-Za-z][A-Za-z0-9]{5,31}$/'), stripslashes($login));
+	}
+
+	/**
 	 * Check for module URL validity
 	 *
 	 * @param string $url module URL to validate

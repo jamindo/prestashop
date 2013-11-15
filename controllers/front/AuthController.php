@@ -386,12 +386,18 @@ class AuthControllerCore extends FrontController
 		if (Validate::isEmail($email = Tools::getValue('email')) && !empty($email))
 			if (Customer::customerExists($email))
 				$this->errors[] = Tools::displayError('An account using this email address has already been registered.', false);
+		// Checked the login is unique
+			if (Validate::isLogin($login = Tools::getValue('customer_login')) && !empty($login))
+			if (Customer::customerLoginExists($login))
+				$this->errors[] = Tools::displayError('Login already used, please choose an available one.', false);
+		
 		// Preparing customer
 		$customer = new Customer();
 		$lastnameAddress = Tools::getValue('lastname');
-		$firstnameAddress = Tools::getValue('firstname');		
+		$firstnameAddress = Tools::getValue('firstname');
 		$_POST['lastname'] = Tools::getValue('customer_lastname');
 		$_POST['firstname'] = Tools::getValue('customer_firstname');
+		$_POST['login'] = Tools::getValue('customer_login');
 		
 		$error_phone = false;
 		if (Configuration::get('PS_ONE_PHONE_AT_LEAST'))

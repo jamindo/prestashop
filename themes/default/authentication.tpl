@@ -179,7 +179,7 @@ $(document).ready(function() {
 			<h3>{l s='Already registered?'}</h3>
 			<div class="form_content clearfix">
 				<p class="text">
-					<label for="login">{l s='Login'}</label>
+					<label for="login">{l s='Email'}</label>
 					<span><input type="text" id="email" name="email" value="{if isset($smarty.post.email)}{$smarty.post.email|stripslashes}{/if}" class="account_input" /></span>
 				</p>
 				<p class="text">
@@ -382,7 +382,8 @@ $(document).ready(function() {
 		<h4> Informations du compte </h4>
 		<p class="required text">
 			<label for="login">{l s='Login'} <sup>*</sup></label>
-			<input type="text" class="text" id="login" name="login" value="{if isset($smarty.post.login)}{$smarty.post.login}{/if}" />
+			<input onkeyup="$('#login').val(this.value);" type="text" class="text" id="customer_firstname" name="customer_login" value="{if isset($smarty.post.customer_login)}{$smarty.post.customer_login}{/if}" />
+			<span class="form_info">{l s='(Only numbers and letters and must starts with a letter)'}</span>
 		</p>
 		<p class="required password">
 			<label for="passwd">{l s='Password'} <sup>*</sup></label>

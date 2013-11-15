@@ -59,6 +59,9 @@ class CustomerCore extends ObjectModel
 	/** @var string e-mail */
 	public $email;
 
+	/** @var string login */
+	public $login;
+	
 	/** @var boolean Newsletter subscription */
 	public $newsletter;
 
@@ -162,6 +165,7 @@ class CustomerCore extends ObjectModel
 			'lastname' => 					array('type' => self::TYPE_STRING, 'validate' => 'isName', 'required' => true, 'size' => 32),
 			'firstname' => 					array('type' => self::TYPE_STRING, 'validate' => 'isName', 'required' => true, 'size' => 32),
 			'email' => 						array('type' => self::TYPE_STRING, 'validate' => 'isEmail', 'required' => true, 'size' => 128),
+			'login' => 						array('type' => self::TYPE_STRING, 'validate' => 'isLogin', 'required' => true, 'size' => 50),
 			'passwd' => 					array('type' => self::TYPE_STRING, 'validate' => 'isPasswd', 'required' => true, 'size' => 32),
 			'last_passwd_gen' =>			array('type' => self::TYPE_STRING, 'copy_post' => false),
 			'id_gender' => 					array('type' => self::TYPE_INT, 'validate' => 'isUnsignedId'),
@@ -296,7 +300,7 @@ class CustomerCore extends ObjectModel
 	 */
 	public static function getCustomers()
 	{
-		$sql = 'SELECT `id_customer`, `email`, `firstname`, `lastname`
+		$sql = 'SELECT `id_customer`, `email`, `login`, `firstname`, `lastname`
 				FROM `'._DB_PREFIX_.'customer`
 				WHERE 1 '.Shop::addSqlRestriction(Shop::SHARE_CUSTOMER).'
 				ORDER BY `id_customer` ASC';
@@ -403,6 +407,37 @@ class CustomerCore extends ObjectModel
 		return isset($result['id_customer']);
 	}
 
+	/**
+	 * Check if login is already registered in database
+	 *
+	 * @param string $login login
+	 * @param $return_id boolean
+	 * @param $ignore_guest boolean, to exclude guest customer
+	 * @return Customer ID if found, false otherwise
+	 */
+	public static function customerLoginExists($login, $return_id = false, $ignore_guest = true)
+	{
+		if (!Validate::isLogin($login))
+		{
+			if (defined('_PS_MODE_DEV_') && _PS_MODE_DEV_)
+				die (Tools::displayError('Invalid login'));
+			else
+				return false;
+		}
+	
+		$sql = 'SELECT `id_customer`
+				FROM `'._DB_PREFIX_.'customer`
+				WHERE `login` = \''.pSQL($login).'\'
+					'.Shop::addSqlRestriction(Shop::SHARE_CUSTOMER).
+						($ignore_guest ? ' AND `is_guest` = 0' : '');
+		$result = Db::getInstance()->getRow($sql);
+	
+		if ($return_id)
+			return $result['id_customer'];
+		return isset($result['id_customer']);
+	}
+	
+	
 	/**
 	 * Check if an address is owned by a customer
 	 *

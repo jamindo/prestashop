@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-10-31 17:27:48
+<?php /* Smarty version Smarty-3.1.14, created on 2013-11-15 15:08:22
          compiled from "C:\xampp\htdocs\prestashop\modules\gamification\views\templates\admin\gamification\helpers\view\view.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2294852728504b556b9-37136135%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '735ace6a3471010f31e3846b4eb3abd17232c180' => 
     array (
       0 => 'C:\\xampp\\htdocs\\prestashop\\modules\\gamification\\views\\templates\\admin\\gamification\\helpers\\view\\view.tpl',
-      1 => 1383236576,
+      1 => 1384260153,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_52728504ca28c1_92760909',
   'variables' => 
   array (
     'current_level_percent' => 0,
@@ -28,8 +30,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'badge' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_52728504ca28c1_92760909',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_52728504ca28c1_92760909')) {function content_52728504ca28c1_92760909($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_escape')) include 'C:\\xampp\\htdocs\\prestashop\\tools\\smarty\\plugins\\modifier.escape.php';
 ?>

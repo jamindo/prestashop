@@ -120,6 +120,7 @@ $_LANG['authentication_fe66abce284ec8589e7d791185b5c442'] = 'Téléphone domicil
 $_LANG['authentication_41c2fff4867cc204120f001e7af20f7a'] = 'Téléphone portable';
 $_LANG['authentication_d973a0b6f38ebe7c83094d3dc4e04ae5'] = 'Donnez un titre à cette adresse pour la retrouver plus facilement';
 $_LANG['authentication_0ba7583639a274c434bbe6ef797115a4'] = 'S\'inscrire';
+$_LANG['authentication_0cc4aa16322380f29dca1ad264cb5a38'] = '(Ne doit contenir que des lettres et des chiffres et commencer par une lettre)';
 $_LANG['best-sales_3cb29f0ccc5fd220a97df89dafe46290'] = 'Meilleures ventes';
 $_LANG['best-sales_73d3cc7826075c127caaadb0e20162ab'] = 'Pas de meilleures ventes pour le moment.';
 $_LANG['best-sales_d3da97e2d9aee5c8fbe03156ad051c99'] = 'Plus d\'infos';
