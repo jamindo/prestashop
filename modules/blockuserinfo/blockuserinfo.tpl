@@ -33,11 +33,17 @@
 	</ul>
 	<p id="header_user_info">
 		{if $logged}
-			<a href="{$link->getPageLink('my-account', true)|escape:'html'}" title="{l s='View my customer account' mod='blockuserinfo'}" class="account" rel="nofollow"><span>{$cookie->customer_firstname} {$cookie->customer_lastname}</span></a>
+		<span>{$cookie->customer_login}</span>
+			<br></br>
+			<a href="localhost/prestashop/index.php" title="{l s='View my current bid' mod='blockuserinfo'}" class="myAccount" rel="nofollow">{l s='My current bid' mod='blockuserinfo'}</a>
+			<br></br>
+			<a href="{$link->getPageLink('my-account', true)|escape:'html'}" title="{l s='View my customer account' mod='blockuserinfo'}" class="myAccount" rel="nofollow">{l s='My account' mod='blockuserinfo'}</a>&nbsp;&nbsp;&nbsp;&nbsp;
 			<a href="{$link->getPageLink('index', true, NULL, "mylogout")|escape:'html'}" title="{l s='Log me out' mod='blockuserinfo'}" class="logout" rel="nofollow">{l s='Log out' mod='blockuserinfo'}</a>
+			<br></br>
+			<h4>Mon solde: x bukyz</h4>
 		{else}
 		<form action="{$link->getPageLink('authentication', true)|escape:'html'}" method="post" id="login_form" class="std">
-			Login:&nbsp;&nbsp;&nbsp;Mot de passe:
+			Email:&nbsp;&nbsp;&nbsp;Mot de passe:
 			<br></br>
 			<input type="text" id="email" name="email" value="{if isset($smarty.post.email)}{$smarty.post.email|stripslashes}{/if}" class="account_input" />
 			<input type="password" id="passwd" name="passwd" value="{if isset($smarty.post.passwd)}{$smarty.post.passwd|stripslashes}{/if}" class="account_input" />

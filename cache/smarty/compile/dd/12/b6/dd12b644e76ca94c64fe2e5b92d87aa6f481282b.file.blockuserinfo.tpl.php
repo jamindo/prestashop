@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-11-14 09:39:07
+<?php /* Smarty version Smarty-3.1.14, created on 2013-11-16 10:48:45
          compiled from "C:\xampp\htdocs\prestashop\modules\blockuserinfo\blockuserinfo.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1790052728430a8f054-85627252%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'dd12b644e76ca94c64fe2e5b92d87aa6f481282b' => 
     array (
       0 => 'C:\\xampp\\htdocs\\prestashop\\modules\\blockuserinfo\\blockuserinfo.tpl',
-      1 => 1384418337,
+      1 => 1384595182,
       2 => 'file',
     ),
   ),
@@ -43,19 +43,27 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 	</ul>
 	<p id="header_user_info">
 		<?php if ($_smarty_tpl->tpl_vars['logged']->value){?>
+		<span><?php echo $_smarty_tpl->tpl_vars['cookie']->value->customer_login;?>
+</span>
+			<br></br>
+			<a href="localhost/prestashop/index.php" title="<?php echo smartyTranslate(array('s'=>'View my current bid','mod'=>'blockuserinfo'),$_smarty_tpl);?>
+" class="myAccount" rel="nofollow"><?php echo smartyTranslate(array('s'=>'My current bid','mod'=>'blockuserinfo'),$_smarty_tpl);?>
+</a>
+			<br></br>
 			<a href="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['link']->value->getPageLink('my-account',true), ENT_QUOTES, 'UTF-8', true);?>
 " title="<?php echo smartyTranslate(array('s'=>'View my customer account','mod'=>'blockuserinfo'),$_smarty_tpl);?>
-" class="account" rel="nofollow"><span><?php echo $_smarty_tpl->tpl_vars['cookie']->value->customer_firstname;?>
- <?php echo $_smarty_tpl->tpl_vars['cookie']->value->customer_lastname;?>
-</span></a>
+" class="myAccount" rel="nofollow"><?php echo smartyTranslate(array('s'=>'My account','mod'=>'blockuserinfo'),$_smarty_tpl);?>
+</a>&nbsp;&nbsp;&nbsp;&nbsp;
 			<a href="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['link']->value->getPageLink('index',true,null,"mylogout"), ENT_QUOTES, 'UTF-8', true);?>
 " title="<?php echo smartyTranslate(array('s'=>'Log me out','mod'=>'blockuserinfo'),$_smarty_tpl);?>
 " class="logout" rel="nofollow"><?php echo smartyTranslate(array('s'=>'Log out','mod'=>'blockuserinfo'),$_smarty_tpl);?>
 </a>
+			<br></br>
+			<h4>Mon solde: x bukyz</h4>
 		<?php }else{ ?>
 		<form action="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['link']->value->getPageLink('authentication',true), ENT_QUOTES, 'UTF-8', true);?>
 " method="post" id="login_form" class="std">
-			Login:&nbsp;&nbsp;&nbsp;Mot de passe:
+			Email:&nbsp;&nbsp;&nbsp;Mot de passe:
 			<br></br>
 			<input type="text" id="email" name="email" value="<?php if (isset($_POST['email'])){?><?php echo stripslashes($_POST['email']);?>
 <?php }?>" class="account_input" />
