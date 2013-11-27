@@ -43,7 +43,7 @@ class blocksocial extends Module
 	
 	public function install()
 	{
-		return (parent::install() AND Configuration::updateValue('blocksocial_facebook', '') && Configuration::updateValue('blocksocial_twitter', '') && Configuration::updateValue('blocksocial_rss', '') && $this->registerHook('displayHeader') && $this->registerHook('displayFooter'));
+		return (parent::install() AND Configuration::updateValue('blocksocial_facebook', '') && Configuration::updateValue('blocksocial_twitter', '') && Configuration::updateValue('blocksocial_rss', '') && $this->registerHook('displayHeader') && $this->registerHook('displayFooter') && $this->registerHook('displayRightColumn'));
 	}
 	
 	public function uninstall()
@@ -99,6 +99,11 @@ class blocksocial extends Module
 			));
 
 		return $this->display(__FILE__, 'blocksocial.tpl', $this->getCacheId());
+	}
+	
+	public function hookDisplayRightColumn()
+	{
+		return $this->hookDisplayFooter();
 	}
 }
 ?>

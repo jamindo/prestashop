@@ -12,19 +12,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'nocache_hash' => '491552728431b51562-60865021',
   'cache_lifetime' => 31536000,
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_528222868155a1_57219349',
-  'variables' => 
-  array (
-    'telnumber' => 0,
-    'email' => 0,
-  ),
+  'unifunc' => 'content_5296100647ebd6_64410609',
   'has_nocache_code' => false,
 ),true); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_528222868155a1_57219349')) {function content_528222868155a1_57219349($_smarty_tpl) {?>
+<?php if ($_valid && !is_callable('content_5296100647ebd6_64410609')) {function content_5296100647ebd6_64410609($_smarty_tpl) {?>
 <div id="contact_block" class="block">
 	<p class="title_block">Contactez-nous</p>
 	<div class="block_content clearfix">
 			<p>Notre service client est disponible 24h/24, 7j/7</p>
-			<p class="tel"><span class="label">Tél. :</span>0123-456-789</p>			<a href="mailto:sales@yourcompany.com">Contacter notre service client</a>	</div>
+			<p class="tel"><span class="label">Tél. :</span>adzadz</p>			<a href="mailto:zdazdadza">Contacter notre service client</a>	</div>
 </div>
 <?php }} ?>

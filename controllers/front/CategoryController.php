@@ -74,7 +74,6 @@ class CategoryControllerCore extends FrontController
 		$id_category = (int)Tools::getValue('id_category');
 		if (!$id_category || !Validate::isUnsignedId($id_category))
 			$this->errors[] = Tools::displayError('Missing category ID');
-
 		// Instantiate category
 		$this->category = new Category($id_category, $this->context->language->id);
 
