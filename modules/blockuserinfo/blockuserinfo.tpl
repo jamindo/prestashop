@@ -40,7 +40,7 @@
 			<a href="{$link->getPageLink('my-account', true)|escape:'html'}" title="{l s='View my customer account' mod='blockuserinfo'}" class="myAccount" rel="nofollow">{l s='My account' mod='blockuserinfo'}</a>&nbsp;&nbsp;&nbsp;&nbsp;
 			<a href="{$link->getPageLink('index', true, NULL, "mylogout")|escape:'html'}" title="{l s='Log me out' mod='blockuserinfo'}" class="logout" rel="nofollow">{l s='Log out' mod='blockuserinfo'}</a>
 			<br></br>
-			<h4>Mon solde: x bukyz</h4>
+			<h4>Mon solde: {$cookie->nb_credits} bukyz</h4>
 		{else}
 		<form action="{$link->getPageLink('authentication', true)|escape:'html'}" method="post" id="login_form" class="std">
 			Email:&nbsp;&nbsp;&nbsp;Mot de passe:

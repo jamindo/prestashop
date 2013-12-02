@@ -300,6 +300,7 @@ class AuthControllerCore extends FrontController
 				$this->context->cookie->is_guest = $customer->isGuest();
 				$this->context->cookie->passwd = $customer->passwd;
 				$this->context->cookie->email = $customer->email;
+				$this->context->cookie->nb_credits = $customer->countCredits($customer->id);
 				
 				// Add customer to the context
 				$this->context->customer = $customer;
@@ -679,6 +680,7 @@ class AuthControllerCore extends FrontController
 		$this->context->cookie->customer_firstname = $customer->firstname;
 		$this->context->cookie->passwd = $customer->passwd;
 		$this->context->cookie->logged = 1;
+		$this->context->cookie->nb_credits = 0;
 		// if register process is in two steps, we display a message to confirm account creation
 		if (!Configuration::get('PS_REGISTRATION_PROCESS_TYPE'))
 			$this->context->cookie->account_created = 1;
