@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-11-16 10:48:45
+<?php /* Smarty version Smarty-3.1.14, created on 2013-11-27 17:09:25
          compiled from "C:\xampp\htdocs\prestashop\modules\blockuserinfo\blockuserinfo.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1790052728430a8f054-85627252%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'dd12b644e76ca94c64fe2e5b92d87aa6f481282b' => 
     array (
       0 => 'C:\\xampp\\htdocs\\prestashop\\modules\\blockuserinfo\\blockuserinfo.tpl',
-      1 => 1384595182,
+      1 => 1385566764,
       2 => 'file',
     ),
   ),
