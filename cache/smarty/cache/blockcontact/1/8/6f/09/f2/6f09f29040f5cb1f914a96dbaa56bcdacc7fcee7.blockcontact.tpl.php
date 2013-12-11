@@ -5,14 +5,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '6f09f29040f5cb1f914a96dbaa56bcdacc7fcee7' => 
     array (
       0 => 'C:\\xampp\\htdocs\\prestashop\\themes\\default\\modules\\blockcontact\\blockcontact.tpl',
-      1 => 1383473332,
+      1 => 1386759254,
       2 => 'file',
     ),
   ),
   'nocache_hash' => '491552728431b51562-60865021',
   'cache_lifetime' => 31536000,
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_52764fcb6c3c61_70109612',
+  'unifunc' => 'content_52a847a73c5371_28839834',
   'variables' => 
   array (
     'telnumber' => 0,
@@ -20,11 +20,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
 ),true); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_52764fcb6c3c61_70109612')) {function content_52764fcb6c3c61_70109612($_smarty_tpl) {?>
+<?php if ($_valid && !is_callable('content_52a847a73c5371_28839834')) {function content_52a847a73c5371_28839834($_smarty_tpl) {?>
 <div id="contact_block" class="block">
 	<p class="title_block">Contactez-nous</p>
 	<div class="block_content clearfix">
 			<p>Notre service client est disponible 24h/24, 7j/7</p>
-			<p class="tel"><span class="label">Tél. :</span>0123-456-789</p>			<a href="mailto:sales@yourcompany.com">Contacter notre service client</a>	</div>
+			<p class="tel"><span class="label">Tél. :</span>adzadz</p>			<a href="mailto:zdazdadza">Contacter notre service client</a>	</div>
 </div>
 <?php }} ?>
