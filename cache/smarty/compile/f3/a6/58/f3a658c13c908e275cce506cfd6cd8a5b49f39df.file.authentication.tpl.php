@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-11-07 11:26:13
+<?php /* Smarty version Smarty-3.1.14, created on 2013-12-11 15:00:00
          compiled from "C:\xampp\htdocs\prestashop\themes\default\authentication.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:20305527281977be2c4-07656166%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'f3a658c13c908e275cce506cfd6cd8a5b49f39df' => 
     array (
       0 => 'C:\\xampp\\htdocs\\prestashop\\themes\\default\\authentication.tpl',
-      1 => 1383473348,
+      1 => 1386759299,
       2 => 'file',
     ),
   ),

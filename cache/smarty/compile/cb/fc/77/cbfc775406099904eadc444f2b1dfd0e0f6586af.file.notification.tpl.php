@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-11-03 14:29:41
+<?php /* Smarty version Smarty-3.1.14, created on 2013-12-11 12:10:43
          compiled from "C:\xampp\htdocs\prestashop\modules\gamification\views\templates\hook\notification.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:28873527284bc80e078-13762777%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'cbfc775406099904eadc444f2b1dfd0e0f6586af' => 
     array (
       0 => 'C:\\xampp\\htdocs\\prestashop\\modules\\gamification\\views\\templates\\hook\\notification.tpl',
-      1 => 1383473375,
+      1 => 1386759363,
       2 => 'file',
     ),
   ),
