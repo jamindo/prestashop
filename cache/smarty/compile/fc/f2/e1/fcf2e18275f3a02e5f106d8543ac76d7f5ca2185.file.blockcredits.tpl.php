@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-11-27 21:23:04
+<?php /* Smarty version Smarty-3.1.14, created on 2013-12-12 11:20:44
          compiled from "C:\xampp\htdocs\prestashop\modules\blockcredits\blockcredits.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:15763529654a85c8c50-17777246%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1154552a98dfc1f4b91-33444215%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,7 +11,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '15763529654a85c8c50-17777246',
+  'nocache_hash' => '1154552a98dfc1f4b91-33444215',
   'function' => 
   array (
   ),
@@ -21,9 +21,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_529654a8615f46_82421785',
+  'unifunc' => 'content_52a98dfc1feec6_01041779',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_529654a8615f46_82421785')) {function content_529654a8615f46_82421785($_smarty_tpl) {?><!-- Block inscription -->
+<?php if ($_valid && !is_callable('content_52a98dfc1feec6_01041779')) {function content_52a98dfc1feec6_01041779($_smarty_tpl) {?><!-- Block inscription -->
 <?php if ($_smarty_tpl->tpl_vars['logged']->value){?>
 <div id="credits_block" class="block">
 <h4>Acheter des Buky'z</h4>

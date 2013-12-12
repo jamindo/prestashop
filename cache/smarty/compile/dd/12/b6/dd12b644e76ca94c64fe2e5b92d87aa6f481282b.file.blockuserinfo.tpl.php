@@ -1,22 +1,20 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-12-02 16:27:23
+<?php /* Smarty version Smarty-3.1.14, created on 2013-12-12 11:20:43
          compiled from "C:\xampp\htdocs\prestashop\modules\blockuserinfo\blockuserinfo.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1790052728430a8f054-85627252%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:2767752a98dfbc570d8-32898580%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'dd12b644e76ca94c64fe2e5b92d87aa6f481282b' => 
     array (
       0 => 'C:\\xampp\\htdocs\\prestashop\\modules\\blockuserinfo\\blockuserinfo.tpl',
-      1 => 1385998038,
+      1 => 1386062352,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1790052728430a8f054-85627252',
+  'nocache_hash' => '2767752a98dfbc570d8-32898580',
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_52728430b781b6_40279541',
   'variables' => 
   array (
     'PS_CATALOG_MODE' => 0,
@@ -31,8 +29,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'back' => 0,
   ),
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_52a98dfbd96042_66326841',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_52728430b781b6_40279541')) {function content_52728430b781b6_40279541($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_escape')) include 'C:\\xampp\\htdocs\\prestashop\\tools\\smarty\\plugins\\modifier.escape.php';
+<?php if ($_valid && !is_callable('content_52a98dfbd96042_66326841')) {function content_52a98dfbd96042_66326841($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_escape')) include 'C:\\xampp\\htdocs\\prestashop\\tools\\smarty\\plugins\\modifier.escape.php';
 ?>
 
 <!-- Block user information module HEADER -->
@@ -66,7 +66,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 			<br></br>
 			<h4>Mon solde: <?php echo $_smarty_tpl->tpl_vars['cookie']->value->nb_credits;?>
  bukyz</h4>
-			        <ul id="header_nav">
+			 <ul id="header_nav">
                 <?php if (!$_smarty_tpl->tpl_vars['PS_CATALOG_MODE']->value){?>
                 <li id="shopping_cart">
                         <a href="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['link']->value->getPageLink($_smarty_tpl->tpl_vars['order_process']->value,true), ENT_QUOTES, 'UTF-8', true);?>
@@ -107,9 +107,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 " method="post" id="login_form" class="std">
 			Email:&nbsp;&nbsp;&nbsp;Mot de passe:
 			<br></br>
-			<input type="text" id="email" name="email" value="<?php if (isset($_POST['email'])){?><?php echo stripslashes($_POST['email']);?>
+			<input type="text" id="email" name="email" style="width: 150px" value="<?php if (isset($_POST['email'])){?><?php echo stripslashes($_POST['email']);?>
 <?php }?>" class="account_input" />
-			<input type="password" id="passwd" name="passwd" value="<?php if (isset($_POST['passwd'])){?><?php echo stripslashes($_POST['passwd']);?>
+			<input type="password" id="passwd" name="passwd" style="width: 150px" value="<?php if (isset($_POST['passwd'])){?><?php echo stripslashes($_POST['passwd']);?>
 <?php }?>" class="account_input" />
 			<?php if (isset($_smarty_tpl->tpl_vars['back']->value)){?><input type="hidden" class="hidden" name="back" value="<?php echo smarty_modifier_escape($_smarty_tpl->tpl_vars['back']->value, 'htmlall', 'UTF-8');?>
 " /><?php }?>

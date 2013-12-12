@@ -3,6 +3,8 @@
 #header_right #header_user {
 	clear:both;
 	float: right;
+	height:150px;
+	width:400px;
 	margin-top:8px;
 	border-left:1px solid #000;
 	border-right:1px solid #000;

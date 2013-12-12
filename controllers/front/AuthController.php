@@ -331,7 +331,7 @@ class AuthControllerCore extends FrontController
 				{
 					if ($back = Tools::getValue('back'))
 						Tools::redirect(html_entity_decode($back));
-					Tools::redirect('index.php?controller='.(($this->authRedirection !== false) ? urlencode($this->authRedirection) : 'my-account'));
+					Tools::redirect('index.php?controller='.(($this->authRedirection !== false) ? urlencode($this->authRedirection) : 'index'));
 				}
 			}
 		}
