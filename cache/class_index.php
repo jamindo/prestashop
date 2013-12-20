@@ -220,6 +220,8 @@
   'BestSalesControllerCore' => 'controllers/front/BestSalesController.php',
   'Bid' => '',
   'BidCore' => 'classes/Bid.php',
+  'BidController' => '',
+  'BidControllerCore' => 'controllers/front/BidController.php',
   'Blowfish' => '',
   'BlowfishCore' => 'classes/Blowfish.php',
   'CMS' => '',
