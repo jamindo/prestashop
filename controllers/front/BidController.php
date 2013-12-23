@@ -68,12 +68,13 @@ class BidControllerCore extends FrontController
 			Credit::turnCreditStatus($chosen_credit);
 			CreditOnBid::placeCreditOnBid($chosen_credit , $bid_id , $simpleBid);
 			$this->context->cookie->nb_credits = Credit::countCredits($customer_id);
-			$lowest_bid = CreditOnBid::getLowestBid($bid_id);
-			
-			/*$this->bid_sucess = true;
+			$low = $this->getBidResult($bid_id, $simpleBid);
+			/*
+			$this->bid_sucess = true;
 			$this->context->smarty->assign('simpleBid', $simpleBid);
 			$bid_id = Tools::getValue('bidId');
-			$this->context->smarty->assign('currentBid', $bid_id);*/
+			$this->context->smarty->assign('currentBid', $bid_id);
+			*/
 		}
 	}
 	
@@ -107,5 +108,19 @@ class BidControllerCore extends FrontController
 				$this->context->smarty->assign('closedBid', $closedBid);
 				$this->bid_sucess = true;*/
 		}
+	}
+	
+	protected function getBidResult($bid_id, $bid_value)
+	{
+		$lowest_bid = CreditOnBid::getLowestUniqueBid($bid_id);
+		$nb_bid_for_value = CreditOnBid::countBidWithValue($bid_value);
+		if($bid_value == $lowest_bid){
+			$bid_result = 1;
+		} else if($bid_value > $lowest_bid && $nb_bid_for_value == 1) {
+			$bid_result = 2;
+		} else {
+			$bid_result = 3;
+		}
+		return $bid_result;
 	}
 }

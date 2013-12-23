@@ -45,15 +45,6 @@ class BidCore extends ObjectModel
 
 		);
 	
-	public static function updateLowestBid($id_bid , $lowBid)
-	{
-		Db::getInstance()->execute('
-			UPDATE '._DB_PREFIX_.'bid
-			SET `lowest_bid`= '.(double)$lowBid.'
-			WHERE id_bid = '.(int)$id_bid.'
-		');
-	}
-	
 	/**
  	* Get All Bids from db
  	*/

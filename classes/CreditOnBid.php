@@ -31,11 +31,22 @@ class CreditOnBidCore extends ObjectModel
 			VALUES('.$id_credit.','.$id_bid.','.$bid_value.')');
 	}
 	
-	public static function getLowestBid($id_bid)
+	public static function getLowestUniqueBid($id_bid)
 	{
 		return $sql = Db::getInstance()->getValue('
 				SELECT MIN(bid_value) 
 				FROM '._DB_PREFIX_.'credit_on_bid
-				WHERE id_bid = '.(int)$id_bid.'');
+				WHERE id_bid = '.(int)$id_bid.'
+				GROUP BY bid_value
+				HAVING COUNT(bid_value) < 2');
+	}
+	
+	public static function countBidWithValue($bid_value)
+	{
+		return $nb_of_bids = (int)Db::getInstance()->getValue('
+				SELECT COUNT(`id_credit_on_bid`)
+				FROM `'._DB_PREFIX_.'credit_on_bid`
+				WHERE `bid_value`= '.(double)$bid_value.'
+				');
 	}
 }
