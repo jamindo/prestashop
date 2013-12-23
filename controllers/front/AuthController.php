@@ -300,7 +300,7 @@ class AuthControllerCore extends FrontController
 				$this->context->cookie->is_guest = $customer->isGuest();
 				$this->context->cookie->passwd = $customer->passwd;
 				$this->context->cookie->email = $customer->email;
-				$this->context->cookie->nb_credits = $customer->countCredits($customer->id);
+				$this->context->cookie->nb_credits = Credit::countCredits($customer->id);
 				
 				// Add customer to the context
 				$this->context->customer = $customer;

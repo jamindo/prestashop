@@ -719,29 +719,6 @@ class CustomerCore extends ObjectModel
 		return (int)$ids['id_country'] ? $ids['id_country'] : Configuration::get('PS_COUNTRY_DEFAULT');
 	}
 
-	public static function countCredits($id_customer)
-	{
-		return $nb_of_credits = (int)Db::getInstance()->getValue('
-				SELECT COUNT(`id_customer`)
-				FROM `'._DB_PREFIX_.'credit`
-				WHERE `id_customer`= '.(int)$id_customer.'
-				');
-	}
-	
-	public static function hasEphemeralCredit($id_customer)
-	{
-		$ephemeral_credit = (int)Db::getInstance()->getValue('
-				SELECT COUNT(`id_customer`)
-				FROM `'._DB_PREFIX_.'credit`
-				WHERE `id_customer`= '.(int)$id_customer.'
-				AND `is_on_bid`= 1 ');
-		if($ephemeral_credit > 0 ){
-			return true;
-		} else {
-			return false;
-		}
-	}
-	
 	public function toggleStatus()
 	{
 		parent::toggleStatus();

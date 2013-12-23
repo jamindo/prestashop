@@ -27,4 +27,31 @@ class CreditCore extends ObjectModel
 					'is_on_bid' => 				array('type' => self::TYPE_BOOL, 'validate' => 'isBool'),
 					),
 			);
+	
+	public static function countCredits($id_customer)
+	{
+		return $nb_of_credits = (int)Db::getInstance()->getValue('
+				SELECT COUNT(`id_customer`)
+				FROM `'._DB_PREFIX_.'credit`
+				WHERE `id_customer`= '.(int)$id_customer.'
+				AND `is_on_bid`= 0 ');
+	}
+	
+	public static function getFirstAvailableCredit($id_customer)
+	{
+		return $credits = Db::getInstance()->getValue('
+				SELECT `id_credit`
+				FROM `'._DB_PREFIX_.'credit`
+				WHERE `id_customer`= '.(int)$id_customer.'
+				AND `is_on_bid`= 0 ');
+	}
+	
+	public static function turnCreditStatus($id_credit)
+	{
+		Db::getInstance()->execute('
+			UPDATE '._DB_PREFIX_.'credit
+			SET `is_on_bid`= 1 
+			WHERE id_credit = '.(int)$id_credit.'
+		');
+	}
 }

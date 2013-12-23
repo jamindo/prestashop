@@ -294,6 +294,8 @@
   'CountyCore' => 'classes/County.php',
   'Credit' => '',
   'CreditCore' => 'classes/Credit.php',
+  'CreditOnBid' => '',
+  'CreditOnBidCore' => 'classes/CreditOnBid.php',
   'Currency' => '',
   'CurrencyCore' => 'classes/Currency.php',
   'Customer' => '',
