@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-10-31 17:13:21
+<?php /* Smarty version Smarty-3.1.14, created on 2013-12-13 21:38:42
          compiled from "C:\xampp\htdocs\prestashop\themes\default\mobile\index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:13379527281a1b7bfe3-76787703%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '33ccc68ff5698e445cb89ecbc1f97a0ac6879209' => 
     array (
       0 => 'C:\\xampp\\htdocs\\prestashop\\themes\\default\\mobile\\index.tpl',
-      1 => 1381145310,
+      1 => 1386759421,
       2 => 'file',
     ),
   ),
@@ -15,9 +15,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
-  'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
   'unifunc' => 'content_527281a1b862b1_30326338',
+  'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_527281a1b862b1_30326338')) {function content_527281a1b862b1_30326338($_smarty_tpl) {?>
 	<div data-role="content" id="content">

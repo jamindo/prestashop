@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-10-31 17:13:17
+<?php /* Smarty version Smarty-3.1.14, created on 2013-12-13 21:39:26
          compiled from "C:\xampp\htdocs\prestashop\themes\default\mobile\authentication-choice.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:245125272819d15e312-81924982%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'fa6ce94bf1ef2c35878c3e88115ea69df0a0952c' => 
     array (
       0 => 'C:\\xampp\\htdocs\\prestashop\\themes\\default\\mobile\\authentication-choice.tpl',
-      1 => 1381145310,
+      1 => 1386759308,
       2 => 'file',
     ),
   ),
@@ -15,14 +15,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_5272819d323f39_65740137',
   'variables' => 
   array (
     'link' => 0,
     'back' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_5272819d323f39_65740137',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5272819d323f39_65740137')) {function content_5272819d323f39_65740137($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_escape')) include 'C:\\xampp\\htdocs\\prestashop\\tools\\smarty\\plugins\\modifier.escape.php';
 ?><div data-role="content" id="content">

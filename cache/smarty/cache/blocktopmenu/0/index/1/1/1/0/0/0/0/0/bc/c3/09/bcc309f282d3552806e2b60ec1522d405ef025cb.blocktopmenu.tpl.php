@@ -12,21 +12,16 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'nocache_hash' => '2398952728430c975d8-47336921',
   'cache_lifetime' => 31536000,
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_52a847a7250598_08471381',
-  'variables' => 
-  array (
-    'MENU' => 0,
-    'MENU_SEARCH' => 0,
-    'link' => 0,
-  ),
+  'unifunc' => 'content_52b5b62628ee32_23289221',
   'has_nocache_code' => false,
 ),true); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_52a847a7250598_08471381')) {function content_52a847a7250598_08471381($_smarty_tpl) {?>	
+<?php if ($_valid && !is_callable('content_52b5b62628ee32_23289221')) {function content_52b5b62628ee32_23289221($_smarty_tpl) {?>	
 	<!-- Menu -->
 	<div class="sf-contener clearfix">
 		<ul class="sf-menu clearfix">
 			<li><a href="http://localhost/prestashop/index.php?id_cms=7&amp;controller=cms">Enchères en cours</a></li>
 <li><a href="http://localhost/prestashop/index.php?id_cms=8&amp;controller=cms">Enchères terminées</a></li>
+<li><a href="buy-credits.php">Obtenir des BukyZ</a></li>
 <li><a href="http://localhost/prestashop/index.php?id_cms=6&amp;controller=cms">Comment ça marche?</a></li>
 
 					</ul>
