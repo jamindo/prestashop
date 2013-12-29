@@ -3,7 +3,6 @@
 class BidControllerCore extends FrontController
 {
 	public $php_self = 'bid';
-	public $authRedirection = 'bid';
 	
 	/**
 	 * @var boolean if bid sucess or not
@@ -17,7 +16,7 @@ class BidControllerCore extends FrontController
 	public function init()
 	{
 		parent::init();
-		$this->setTemplate(_PS_THEME_DIR_.'bid-result.tpl');
+		$this->setTemplate(_PS_THEME_DIR_.'bid-info.tpl');
 	}
 	
 	/**
@@ -66,10 +65,10 @@ class BidControllerCore extends FrontController
 			if($nb_credits = $this->context->cookie->nb_credits == 0){
 				
 			} else {
-				$credit_selected = Credit::getFirstAvailableCredit($customer_id);
+				/*$credit_selected = Credit::getFirstAvailableCredit($customer_id);
 				$chosen_credit = $credit_selected['id_credit'];
 				Credit::turnCreditStatus($chosen_credit);
-				CreditOnBid::placeCreditOnBid($chosen_credit , $bid_id , $simpleBid);
+				CreditOnBid::placeCreditOnBid($chosen_credit , $bid_id , $simpleBid);*/
 				$this->context->cookie->nb_credits = Credit::countCredits($customer_id);
 				
 				$bids = array($simpleBid);
