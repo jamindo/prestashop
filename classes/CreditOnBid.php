@@ -14,6 +14,8 @@ class CreditOnBidCore extends ObjectModel
 	/** @var double value bidded */
 	public $bid_value;
 	
+	public $bid_date;
+	
 	public static $definition = array(
 			'table' => 'credit_on_bid',
 			'primary' => 'id_credit_on_bid',
@@ -21,6 +23,7 @@ class CreditOnBidCore extends ObjectModel
 					'id_credit' => 				array('type' => self::TYPE_INT),
 					'id_bid' => 				array('type' => self::TYPE_INT),
 					'bid_value' => 				array('type' => self::TYPE_DOUBLE),
+					'bid_date'  => 				array('type' => self::TYPE_DATE),
 			),
 	);
 	
@@ -49,4 +52,23 @@ class CreditOnBidCore extends ObjectModel
 				WHERE `bid_value`= '.(double)$bid_value.'
 				');
 	}
+	
+	public static function getAllCreditOnBidPerCustomer($id_bid , $id_customer)
+	{
+		return $all_on_bid = Db::getInstance()->executeS('
+				SELECT * 
+				FROM `'._DB_PREFIX_.'credit_on_bid`
+				WHERE `id_credit` = ( SELECT `id_credit`
+								   FROM `'._DB_PREFIX_.'credit`
+								   WHERE `id_customer` = '.(int)$id_customer.')
+				AND `id_bid` = '.(int)$id_bid.'');
+	}
+	public static function getAllCreditOnBid($id_bid)
+	{
+		return $all_on_bid = Db::getInstance()->executeS('
+				SELECT *
+				FROM `'._DB_PREFIX_.'credit_on_bid`
+				WHERE id_bid = '.(int)$id_bid.'');
+	}
+	
 }

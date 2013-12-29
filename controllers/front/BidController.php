@@ -63,18 +63,26 @@ class BidControllerCore extends FrontController
 		} elseif($logged == 0){
 			$this->errors[] = Tools::displayError('Veuillez vous connecter pour placer une enchere');
 		} else {
-			$credit_selected = Credit::getFirstAvailableCredit($customer_id);
-			$chosen_credit = $credit_selected['id_credit'];
-			Credit::turnCreditStatus($chosen_credit);
-			CreditOnBid::placeCreditOnBid($chosen_credit , $bid_id , $simpleBid);
-			$this->context->cookie->nb_credits = Credit::countCredits($customer_id);
-			$low = $this->getBidResult($bid_id, $simpleBid);
-			/*
-			$this->bid_sucess = true;
-			$this->context->smarty->assign('simpleBid', $simpleBid);
-			$bid_id = Tools::getValue('bidId');
-			$this->context->smarty->assign('currentBid', $bid_id);
-			*/
+			if($nb_credits = $this->context->cookie->nb_credits == 0){
+				
+			} else {
+				$credit_selected = Credit::getFirstAvailableCredit($customer_id);
+				$chosen_credit = $credit_selected['id_credit'];
+				Credit::turnCreditStatus($chosen_credit);
+				CreditOnBid::placeCreditOnBid($chosen_credit , $bid_id , $simpleBid);
+				$this->context->cookie->nb_credits = Credit::countCredits($customer_id);
+				
+				$bids = array($simpleBid);
+				$results = array($this->getBidResult($bid_id, $simpleBid));
+					
+				$bid = Bid::getBidWithIdentifier($bid_id);
+				$selected_bid = $bid[0];
+				$this->context->smarty->assign('selected_bid', $selected_bid);
+				$this->context->smarty->assign('bids', $bids);
+				$this->context->smarty->assign('table_size', 1);
+				$this->context->smarty->assign('results', $results);
+				$this->bid_sucess = true;
+			}
 		}
 	}
 	
@@ -88,6 +96,8 @@ class BidControllerCore extends FrontController
 		$logged = $this->context->cookie->logged;
 		$nb_credits = $this->context->cookie->nb_credits;
 		$customer_id = $this->context->cookie->id_customer;
+		$bid_id = Tools::getValue('bidId');
+		
 		if (empty($startBid) || empty($closedBid)){
 			$this->errors[] = Tools::displayError('Veuillez rentrer les deux valeurs');
 		} elseif ($startBid < 0.01 || $closedBid < 0.01) {
@@ -99,15 +109,38 @@ class BidControllerCore extends FrontController
 		} elseif($logged == 0){
 			$this->errors[] = Tools::displayError('Veuillez vous connecter pour placer une enchere');
 		}  else {
-				$nb_of_credits_necessary = ((($closedBid - $startBid)*100)+1);
-				/*
-				$this->context->smarty->assign('nb_credits', $nb_of_credits_necessary);
-				$bid_id = Tools::getValue('bidId');
-				$this->context->smarty->assign('bidId', $bid_id);
-				$this->context->smarty->assign('startBid', $startBid);
-				$this->context->smarty->assign('closedBid', $closedBid);
-				$this->bid_sucess = true;*/
-		}
+				$nb_of_credits_necessary = (int)((($closedBid - $startBid)*100)+1);
+				if($nb_of_credits_necessary > $nb_credits)
+				{
+					
+				} else {
+					$bids = array();
+					$results = array();
+					$cpt = 0;
+						for($current = $startBid ; $current <= $closedBid ; $current +=.01)
+						{	
+							$credit_selected = Credit::getFirstAvailableCredit($customer_id);
+							$chosen_credit = $credit_selected['id_credit'];
+							Credit::turnCreditStatus($chosen_credit);
+							CreditOnBid::placeCreditOnBid($chosen_credit,$bid_id,$current);
+
+							$bids[$cpt] = $current;
+							$results[$cpt] = $this->getBidResult($bid_id, $current);
+							$cpt++;
+						}
+						
+						$bids = Bid::getBidWithIdentifier($bid_id);
+						$selected_bid = $bids[0];
+						$this->context->smarty->assign('selected_bid', $selected_bid);
+						
+						$this->context->cookie->nb_credits = Credit::countCredits($customer_id);
+						$this->context->smarty->assign('bids', $bids);
+						$this->context->smarty->assign('table_size', $nb_of_credits_necessary);
+						$this->context->smarty->assign('results', $results);
+					}
+					
+					$this->bid_sucess = true;
+				}
 	}
 	
 	protected function getBidResult($bid_id, $bid_value)
@@ -115,11 +148,11 @@ class BidControllerCore extends FrontController
 		$lowest_bid = CreditOnBid::getLowestUniqueBid($bid_id);
 		$nb_bid_for_value = CreditOnBid::countBidWithValue($bid_value);
 		if($bid_value == $lowest_bid){
-			$bid_result = 1;
+			$bid_result = 'Enchere unique la plus basse';
 		} else if($bid_value > $lowest_bid && $nb_bid_for_value == 1) {
-			$bid_result = 2;
+			$bid_result = 'Enchere unique mais trop haute';
 		} else {
-			$bid_result = 3;
+			$bid_result = 'Enchere non unique';
 		}
 		return $bid_result;
 	}

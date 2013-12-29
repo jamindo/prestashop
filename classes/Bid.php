@@ -45,6 +45,15 @@ class BidCore extends ObjectModel
 
 		);
 	
+	
+	public static function getBidWithIdentifier($bid_id){
+		$bid = Db::getInstance()->executeS(
+				'SELECT * FROM `'._DB_PREFIX_.'bid`
+				 WHERE id_bid = '.(int)$bid_id.'
+				');
+		return $bid;
+	}
+	
 	/**
  	* Get All Bids from db
  	*/
