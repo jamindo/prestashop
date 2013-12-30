@@ -6,7 +6,7 @@
 	<ul id="bid_list" class="clear">
 		{foreach from=$bids item=bid name=bids}
 		<li>
-			<h2>{$bid.product_name} </h2>
+			<h2><a href="index.php?controller=bid?id={$bid.id_bid}">{$bid.product_name}</a></h2>
 			<div class="center_block">
 				<span class="timeRemainingBeforeExpiration">Temps restant:</span> 
 				<br></br> 

@@ -14,6 +14,9 @@ class BidCore extends ObjectModel
 	/** @var string product link */
 	public $product_image;
 	
+	/** @var string product link */
+	public $product_image_big;
+	
 	/** @var float Price in euros */
 	public $product_value;
 	
@@ -37,6 +40,7 @@ class BidCore extends ObjectModel
 					'product_value' =>			array('type' => self::TYPE_FLOAT),
 					'product_description' =>    array('type' => self::TYPE_HTML, 'lang' => true, 'validate' => 'isCleanHtml'),
 					'product_image' =>          array('type' => self::TYPE_HTML, 'lang' => true, 'validate' => 'isCleanHtml'),
+					'product_image_big' =>      array('type' => self::TYPE_HTML, 'lang' => true, 'validate' => 'isCleanHtml'),
 					'product_link_rewrite' => 	array('type' => self::TYPE_STRING, 'lang' => true, 'validate' => 'isLinkRewrite', 'required' => true, 'size' => 128),
 					'type' => 					array('type' => self::TYPE_INT),
 					'expiration_date' => 		array('type' => self::TYPE_DATE, 'validate' => 'isDateFormat'),

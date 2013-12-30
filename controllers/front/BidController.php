@@ -4,9 +4,6 @@ class BidControllerCore extends FrontController
 {
 	public $php_self = 'bid';
 	
-	/**
-	 * @var boolean if bid sucess or not
-	 */
 	protected $bid_sucess; 
 	
 	/**
@@ -16,7 +13,11 @@ class BidControllerCore extends FrontController
 	public function init()
 	{
 		parent::init();
-		$this->setTemplate(_PS_THEME_DIR_.'bid-info.tpl');
+		$bid_id = (int)Tools::getValue('id');
+		$bid = Bid::getBidWithIdentifier($bid_id);
+		$selected_bid = $bid[0];
+		$this->context->smarty->assign('selected_bid', $selected_bid);
+		$this->setTemplate(_PS_THEME_DIR_.'bid-detail.tpl');
 	}
 	
 	/**
@@ -80,7 +81,7 @@ class BidControllerCore extends FrontController
 				$this->context->smarty->assign('bids', $bids);
 				$this->context->smarty->assign('table_size', 1);
 				$this->context->smarty->assign('results', $results);
-				$this->bid_sucess = true;
+				$this->context->smarty->assign('bid_sucess', true);
 			}
 		}
 	}
@@ -147,11 +148,11 @@ class BidControllerCore extends FrontController
 		$lowest_bid = CreditOnBid::getLowestUniqueBid($bid_id);
 		$nb_bid_for_value = CreditOnBid::countBidWithValue($bid_value);
 		if($bid_value == $lowest_bid){
-			$bid_result = 'Enchere unique la plus basse';
+			$bid_result = 1 ;
 		} else if($bid_value > $lowest_bid && $nb_bid_for_value == 1) {
-			$bid_result = 'Enchere unique mais trop haute';
+			$bid_result = 2;
 		} else {
-			$bid_result = 'Enchere non unique';
+			$bid_result = 3;
 		}
 		return $bid_result;
 	}
