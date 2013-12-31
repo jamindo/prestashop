@@ -18,6 +18,7 @@ class BidControllerCore extends FrontController
 		$selected_bid = $bid[0];
 		$this->context->smarty->assign('selected_bid', $selected_bid);
 		$this->setTemplate(_PS_THEME_DIR_.'bid-detail.tpl');
+		$this->addCSS(_THEME_CSS_DIR_.'bid-detail.css');
 	}
 	
 	/**
