@@ -55,14 +55,15 @@ class CreditOnBidCore extends ObjectModel
 	
 	public static function getAllCreditOnBidPerCustomer($id_bid , $id_customer)
 	{
-		return $all_on_bid = Db::getInstance()->executeS('
-				SELECT * 
-				FROM `'._DB_PREFIX_.'credit_on_bid`
-				WHERE `id_credit` = ( SELECT `id_credit`
-								   FROM `'._DB_PREFIX_.'credit`
-								   WHERE `id_customer` = '.(int)$id_customer.')
-				AND `id_bid` = '.(int)$id_bid.'');
+		return Db::getInstance()->executeS('
+				SELECT DISTINCT b.*
+				FROM `'._DB_PREFIX_.'credit_on_bid` b ,`'._DB_PREFIX_.'credit` c
+				WHERE b.`id_bid` = '.$id_bid.'
+				AND  c.`id_customer` = '.$id_customer.'
+				ORDER BY b.`bid_value`'
+			);
 	}
+	
 	public static function getAllCreditOnBid($id_bid)
 	{
 		return $all_on_bid = Db::getInstance()->executeS('

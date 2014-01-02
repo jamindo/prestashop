@@ -16,6 +16,18 @@ class BidControllerCore extends FrontController
 		$bid_id = (int)Tools::getValue('id');
 		$bid = Bid::getBidWithIdentifier($bid_id);
 		$selected_bid = $bid[0];
+		$customer_id = $this->context->cookie->id_customer;
+		$credits = CreditOnBid::getAllCreditOnBidPerCustomer($bid_id,$customer_id);
+		if($credits){
+			$result_history = array();
+			for($i = 0 ; $i <= count($credits); $i++){
+				$credit = $credits[$i];
+				$result_history[$i] = $this->getBidResult($bid_id, $credit['bid_value']);
+			}
+			$this->context->smarty->assign('credits_history', $credits);
+			$this->context->smarty->assign('result_history', $result_history);
+			$this-$this->context->smarty->assign('nb_results_history', count($credits)-1);
+		}
 		$this->context->smarty->assign('selected_bid', $selected_bid);
 		$this->setTemplate(_PS_THEME_DIR_.'bid-detail.tpl');
 		$this->addCSS(_THEME_CSS_DIR_.'bid-detail.css');
@@ -67,12 +79,11 @@ class BidControllerCore extends FrontController
 			if($nb_credits = $this->context->cookie->nb_credits == 0){
 				
 			} else {
-				/*$credit_selected = Credit::getFirstAvailableCredit($customer_id);
+				$credit_selected = Credit::getFirstAvailableCredit($customer_id);
 				$chosen_credit = $credit_selected['id_credit'];
 				Credit::turnCreditStatus($chosen_credit);
-				CreditOnBid::placeCreditOnBid($chosen_credit , $bid_id , $simpleBid);*/
+				CreditOnBid::placeCreditOnBid($chosen_credit , $bid_id , $simpleBid);
 				$this->context->cookie->nb_credits = Credit::countCredits($customer_id);
-				
 				$bids = array($simpleBid);
 				$results = array($this->getBidResult($bid_id, $simpleBid));
 					
