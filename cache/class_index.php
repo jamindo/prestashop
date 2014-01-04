@@ -499,6 +499,8 @@
   'PdfOrderReturnControllerCore' => 'controllers/front/PdfOrderReturnController.php',
   'PdfOrderSlipController' => '',
   'PdfOrderSlipControllerCore' => 'controllers/front/PdfOrderSlipController.php',
+  'PersonalHistoryController' => '',
+  'PersonalHistoryControllerCore' => 'controllers/front/PersonalHistoryController.php',
   'PrestaShopDatabaseException' => '',
   'PrestaShopDatabaseExceptionCore' => 'classes/exception/PrestaShopDatabaseException.php',
   'PrestaShopException' => '',

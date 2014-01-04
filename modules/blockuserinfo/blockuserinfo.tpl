@@ -25,7 +25,6 @@
 
 <!-- Block user information module HEADER -->
 <div id="header_user" {if $PS_CATALOG_MODE}class="header_user_catalog"{/if}>
-	<h3>Espace Client</h3>
 	<ul id="header_nav">
 		{if !$PS_CATALOG_MODE}
 		{/if}
@@ -33,18 +32,20 @@
 	</ul>
 	<p id="header_user_info">
 		{if $logged}
-		<span>{$cookie->customer_login}</span>
-			<br></br>
+		<div id="loggedblock">
+		<h3>{$cookie->customer_login}</h3>
 			<a href="localhost/prestashop/index.php" title="{l s='View my current bid' mod='blockuserinfo'}" class="myAccount" rel="nofollow">{l s='My current bid' mod='blockuserinfo'}</a>
 			<br></br>
 			<a href="{$link->getPageLink('my-account', true)|escape:'html'}" title="{l s='View my customer account' mod='blockuserinfo'}" class="myAccount" rel="nofollow">{l s='My account' mod='blockuserinfo'}</a>&nbsp;&nbsp;&nbsp;&nbsp;
 			<a href="{$link->getPageLink('index', true, NULL, "mylogout")|escape:'html'}" title="{l s='Log me out' mod='blockuserinfo'}" class="logout" rel="nofollow">{l s='Log out' mod='blockuserinfo'}</a>
 			<br></br>
 			<h4>Mon solde: {$cookie->nb_credits} bukyz</h4>
+		</div>
 		{else}
+		<div id="notloggedblock">
+		<h3>Espace Client</h3>
 		<form action="{$link->getPageLink('authentication', true)|escape:'html'}" method="post" id="login_form" class="std">
-			Email:&nbsp;&nbsp;&nbsp;Mot de passe:
-			<br></br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mot de passe
 			<input type="text" id="email" name="email" style="width: 150px" value="{if isset($smarty.post.email)}{$smarty.post.email|stripslashes}{/if}" class="account_input" />
 			<input type="password" id="passwd" name="passwd" style="width: 150px" value="{if isset($smarty.post.passwd)}{$smarty.post.passwd|stripslashes}{/if}" class="account_input" />
 			{if isset($back)}<input type="hidden" class="hidden" name="back" value="{$back|escape:'htmlall':'UTF-8'}" />{/if}
@@ -55,6 +56,7 @@
 				<a href="http://localhost/prestashop/index.php?controller=password" title="Récupérez votre mot de passe" rel="nofollow">Mot de passe oublie ? / </a>
 				<a href="http://localhost/prestashop/index.php?controller=authentication#account-creation" title="Register" class="login">Inscription</a>
 		</form>
+		</div>
 		{/if}
 	</p>
 </div>

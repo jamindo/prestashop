@@ -80,7 +80,8 @@ class BidControllerCore extends FrontController
 				
 			} else {
 				$credit_selected = Credit::getFirstAvailableCredit($customer_id);
-				$chosen_credit = $credit_selected['id_credit'];
+				$chosen_credit = $credit_selected;
+				Tools::redirect('prestashop/index.php?'.$chosen_credit.'');
 				Credit::turnCreditStatus($chosen_credit);
 				CreditOnBid::placeCreditOnBid($chosen_credit , $bid_id , $simpleBid);
 				$this->context->cookie->nb_credits = Credit::countCredits($customer_id);
@@ -132,7 +133,7 @@ class BidControllerCore extends FrontController
 						for($current = $startBid ; $current <= $closedBid ; $current +=.01)
 						{	
 							$credit_selected = Credit::getFirstAvailableCredit($customer_id);
-							$chosen_credit = $credit_selected['id_credit'];
+							$chosen_credit = $credit_selected;
 							Credit::turnCreditStatus($chosen_credit);
 							CreditOnBid::placeCreditOnBid($chosen_credit,$bid_id,$current);
 
@@ -144,14 +145,13 @@ class BidControllerCore extends FrontController
 						$bids = Bid::getBidWithIdentifier($bid_id);
 						$selected_bid = $bids[0];
 						$this->context->smarty->assign('selected_bid', $selected_bid);
-						
+						$this->bid_sucess = true;
 						$this->context->cookie->nb_credits = Credit::countCredits($customer_id);
 						$this->context->smarty->assign('bids', $bids);
 						$this->context->smarty->assign('table_size', $nb_of_credits_necessary);
 						$this->context->smarty->assign('results', $results);
+						$this->context->smarty->assign('bid_sucess', $bid_sucess);
 					}
-					
-					$this->bid_sucess = true;
 				}
 	}
 	

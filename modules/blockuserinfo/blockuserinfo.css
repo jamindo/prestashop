@@ -1,15 +1,21 @@
 /* block top user information */
 
-#header_right #header_user {
+#notloggedblock {
 	clear:both;
 	float: right;
-	height:150px;
+	height:120px;
 	width:400px;
 	margin-top:8px;
-	border-left:1px solid #000;
-	border-right:1px solid #000;
-	border-bottom:1px solid #000;
-	border-top:1px solid #000;
+
+}
+
+#loggedblock{
+	clear:both;
+	float: right;
+	height:120px;
+	width:200px;
+	margin-top:8px;
+
 }
 
 #header_right #header_user.header_user_catalog {
