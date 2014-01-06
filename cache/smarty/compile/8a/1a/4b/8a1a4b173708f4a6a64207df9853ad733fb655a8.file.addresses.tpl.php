@@ -1,20 +1,22 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-10-31 17:13:11
+<?php /* Smarty version Smarty-3.1.14, created on 2013-12-30 20:45:41
          compiled from "C:\xampp\htdocs\prestashop\themes\default\addresses.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:19576527281971b7001-35102271%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:262252c1cbc6645e87-59239377%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '8a1a4b173708f4a6a64207df9853ad733fb655a8' => 
     array (
       0 => 'C:\\xampp\\htdocs\\prestashop\\themes\\default\\addresses.tpl',
-      1 => 1381145310,
+      1 => 1388432729,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '19576527281971b7001-35102271',
+  'nocache_hash' => '262252c1cbc6645e87-59239377',
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_52c1cbc68aa102_68068649',
   'variables' => 
   array (
     'multipleAddresses' => 0,
@@ -35,10 +37,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'base_dir' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_527281974a1e00_64502141',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_527281974a1e00_64502141')) {function content_527281974a1e00_64502141($_smarty_tpl) {?><?php if (!is_callable('smarty_function_counter')) include 'C:\\xampp\\htdocs\\prestashop\\tools\\smarty\\plugins\\function.counter.php';
+<?php if ($_valid && !is_callable('content_52c1cbc68aa102_68068649')) {function content_52c1cbc68aa102_68068649($_smarty_tpl) {?><?php if (!is_callable('smarty_function_counter')) include 'C:\\xampp\\htdocs\\prestashop\\tools\\smarty\\plugins\\function.counter.php';
 if (!is_callable('smarty_modifier_replace')) include 'C:\\xampp\\htdocs\\prestashop\\tools\\smarty\\plugins\\modifier.replace.php';
 if (!is_callable('smarty_modifier_escape')) include 'C:\\xampp\\htdocs\\prestashop\\tools\\smarty\\plugins\\modifier.escape.php';
 ?>

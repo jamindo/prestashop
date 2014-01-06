@@ -294,11 +294,13 @@ class AuthControllerCore extends FrontController
 				$this->context->cookie->id_customer = (int)($customer->id);
 				$this->context->cookie->customer_lastname = $customer->lastname;
 				$this->context->cookie->customer_firstname = $customer->firstname;
+				$this->context->cookie->customer_login = $customer->login;
 				$this->context->cookie->logged = 1;
 				$customer->logged = 1;
 				$this->context->cookie->is_guest = $customer->isGuest();
 				$this->context->cookie->passwd = $customer->passwd;
 				$this->context->cookie->email = $customer->email;
+				$this->context->cookie->nb_credits = Credit::countCredits($customer->id);
 				
 				// Add customer to the context
 				$this->context->customer = $customer;
@@ -329,7 +331,7 @@ class AuthControllerCore extends FrontController
 				{
 					if ($back = Tools::getValue('back'))
 						Tools::redirect(html_entity_decode($back));
-					Tools::redirect('index.php?controller='.(($this->authRedirection !== false) ? urlencode($this->authRedirection) : 'my-account'));
+					Tools::redirect('index.php?controller='.(($this->authRedirection !== false) ? urlencode($this->authRedirection) : 'index'));
 				}
 			}
 		}
@@ -386,12 +388,18 @@ class AuthControllerCore extends FrontController
 		if (Validate::isEmail($email = Tools::getValue('email')) && !empty($email))
 			if (Customer::customerExists($email))
 				$this->errors[] = Tools::displayError('An account using this email address has already been registered.', false);
+		// Checked the login is unique
+			if (Validate::isLogin($login = Tools::getValue('customer_login')) && !empty($login))
+			if (Customer::customerLoginExists($login))
+				$this->errors[] = Tools::displayError('Login already used, please choose an available one.', false);
+		
 		// Preparing customer
 		$customer = new Customer();
 		$lastnameAddress = Tools::getValue('lastname');
-		$firstnameAddress = Tools::getValue('firstname');		
+		$firstnameAddress = Tools::getValue('firstname');
 		$_POST['lastname'] = Tools::getValue('customer_lastname');
 		$_POST['firstname'] = Tools::getValue('customer_firstname');
+		$_POST['login'] = Tools::getValue('customer_login');
 		
 		$error_phone = false;
 		if (Configuration::get('PS_ONE_PHONE_AT_LEAST'))
@@ -672,6 +680,7 @@ class AuthControllerCore extends FrontController
 		$this->context->cookie->customer_firstname = $customer->firstname;
 		$this->context->cookie->passwd = $customer->passwd;
 		$this->context->cookie->logged = 1;
+		$this->context->cookie->nb_credits = 0;
 		// if register process is in two steps, we display a message to confirm account creation
 		if (!Configuration::get('PS_REGISTRATION_PROCESS_TYPE'))
 			$this->context->cookie->account_created = 1;

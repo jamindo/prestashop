@@ -27,35 +27,36 @@
 <div id="header_user" {if $PS_CATALOG_MODE}class="header_user_catalog"{/if}>
 	<ul id="header_nav">
 		{if !$PS_CATALOG_MODE}
-		<li id="shopping_cart">
-			<a href="{$link->getPageLink($order_process, true)|escape:'html'}" title="{l s='View my shopping cart' mod='blockuserinfo'}" rel="nofollow">{l s='Cart' mod='blockuserinfo'}
-			<span class="ajax_cart_quantity{if $cart_qties == 0} hidden{/if}">{$cart_qties}</span>
-			<span class="ajax_cart_product_txt{if $cart_qties != 1} hidden{/if}">{l s='Product' mod='blockuserinfo'}</span>
-			<span class="ajax_cart_product_txt_s{if $cart_qties < 2} hidden{/if}">{l s='Products' mod='blockuserinfo'}</span>
-			<span class="ajax_cart_total{if $cart_qties == 0} hidden{/if}">
-				{if $cart_qties > 0}
-					{if $priceDisplay == 1}
-						{assign var='blockuser_cart_flag' value='Cart::BOTH_WITHOUT_SHIPPING'|constant}
-						{convertPrice price=$cart->getOrderTotal(false, $blockuser_cart_flag)}
-					{else}
-						{assign var='blockuser_cart_flag' value='Cart::BOTH_WITHOUT_SHIPPING'|constant}
-						{convertPrice price=$cart->getOrderTotal(true, $blockuser_cart_flag)}
-					{/if}
-				{/if}
-			</span>
-			<span class="ajax_cart_no_product{if $cart_qties > 0} hidden{/if}">{l s='(empty)' mod='blockuserinfo'}</span>
-			</a>
-		</li>
 		{/if}
-		<li id="your_account"><a href="{$link->getPageLink('my-account', true)|escape:'html'}" title="{l s='View my customer account' mod='blockuserinfo'}" rel="nofollow">{l s='Your Account' mod='blockuserinfo'}</a></li>
+		<li id="your_account"><a href="{$link->getPageLink('my-account', trhue)|escape:'html'}" title="{l s='View my customer account' mod='blockuserinfo'}" rel="nofollow">{l s='Your Account' mod='blockuserinfo'}</a></li>
 	</ul>
 	<p id="header_user_info">
-		{l s='Welcome' mod='blockuserinfo'}
 		{if $logged}
-			<a href="{$link->getPageLink('my-account', true)|escape:'html'}" title="{l s='View my customer account' mod='blockuserinfo'}" class="account" rel="nofollow"><span>{$cookie->customer_firstname} {$cookie->customer_lastname}</span></a>
+		<div id="loggedblock">
+		<h3>{$cookie->customer_login}</h3>
+			<a href="localhost/prestashop/index.php" title="{l s='View my current bid' mod='blockuserinfo'}" class="myAccount" rel="nofollow">{l s='My current bid' mod='blockuserinfo'}</a>
+			<br></br>
+			<a href="{$link->getPageLink('my-account', true)|escape:'html'}" title="{l s='View my customer account' mod='blockuserinfo'}" class="myAccount" rel="nofollow">{l s='My account' mod='blockuserinfo'}</a>&nbsp;&nbsp;&nbsp;&nbsp;
 			<a href="{$link->getPageLink('index', true, NULL, "mylogout")|escape:'html'}" title="{l s='Log me out' mod='blockuserinfo'}" class="logout" rel="nofollow">{l s='Log out' mod='blockuserinfo'}</a>
+			<br></br>
+			<h4>Mon solde: {$cookie->nb_credits} bukyz</h4>
+		</div>
 		{else}
-			<a href="{$link->getPageLink('my-account', true)|escape:'html'}" title="{l s='Login to your customer account' mod='blockuserinfo'}" class="login" rel="nofollow">{l s='Login' mod='blockuserinfo'}</a>
+		<div id="notloggedblock">
+		<h3>Espace Client</h3>
+		<form action="{$link->getPageLink('authentication', true)|escape:'html'}" method="post" id="login_form" class="std">
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mot de passe
+			<input type="text" id="email" name="email" style="width: 150px" value="{if isset($smarty.post.email)}{$smarty.post.email|stripslashes}{/if}" class="account_input" />
+			<input type="password" id="passwd" name="passwd" style="width: 150px" value="{if isset($smarty.post.passwd)}{$smarty.post.passwd|stripslashes}{/if}" class="account_input" />
+			{if isset($back)}<input type="hidden" class="hidden" name="back" value="{$back|escape:'htmlall':'UTF-8'}" />{/if}
+			<input type="submit" id="SubmitLogin" name="SubmitLogin" class="button" value="Ok">
+			<br></br>
+			<input type="checkbox" name="rememberMe" id="rememberMe" value="1" autocomplete="off">
+				<label for="rememberMe"> Se souvenir de moi</label> &nbsp;&nbsp;
+				<a href="http://localhost/prestashop/index.php?controller=password" title="Récupérez votre mot de passe" rel="nofollow">Mot de passe oublie ? / </a>
+				<a href="http://localhost/prestashop/index.php?controller=authentication#account-creation" title="Register" class="login">Inscription</a>
+		</form>
+		</div>
 		{/if}
 	</p>
 </div>

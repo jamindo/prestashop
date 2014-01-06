@@ -1,36 +1,33 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-10-31 17:13:46
+<?php /* Smarty version Smarty-3.1.14, created on 2014-01-04 18:10:02
          compiled from "C:\xampp\htdocs\prestashop\themes\default\my-account.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:7036527281bac26907-71977918%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1597452c196c314b415-99178782%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'f4718bc149681ec72418ca99768fd44b9091f8f0' => 
     array (
       0 => 'C:\\xampp\\htdocs\\prestashop\\themes\\default\\my-account.tpl',
-      1 => 1381145310,
+      1 => 1388855331,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '7036527281bac26907-71977918',
+  'nocache_hash' => '1597452c196c314b415-99178782',
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_52c196c324d021_08904237',
   'variables' => 
   array (
     'account_created' => 0,
     'has_customer_an_address' => 0,
     'link' => 0,
     'img_dir' => 0,
-    'returnAllowed' => 0,
-    'voucherAllowed' => 0,
-    'HOOK_CUSTOMER_ACCOUNT' => 0,
     'base_dir' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_527281baeb4004_34411191',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_527281baeb4004_34411191')) {function content_527281baeb4004_34411191($_smarty_tpl) {?>
+<?php if ($_valid && !is_callable('content_52c196c324d021_08904237')) {function content_52c196c324d021_08904237($_smarty_tpl) {?>
 
 <?php $_smarty_tpl->_capture_stack[0][] = array('path', null, null); ob_start(); ?><?php echo smartyTranslate(array('s'=>'My account'),$_smarty_tpl);?>
 <?php list($_capture_buffer, $_capture_assign, $_capture_append) = array_pop($_smarty_tpl->_capture_stack[0]);
@@ -61,26 +58,9 @@ icon/addrbook.gif" alt="<?php echo smartyTranslate(array('s'=>'Add my first addr
 " class="icon" /> <?php echo smartyTranslate(array('s'=>'Add my first address'),$_smarty_tpl);?>
 </a></li>
 	<?php }?>
-	<li><a href="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['link']->value->getPageLink('history',true), ENT_QUOTES, 'UTF-8', true);?>
-" title="<?php echo smartyTranslate(array('s'=>'Orders'),$_smarty_tpl);?>
+	<li><a href="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['link']->value->getPageLink('personal-history',true), ENT_QUOTES, 'UTF-8', true);?>
 "><img src="<?php echo $_smarty_tpl->tpl_vars['img_dir']->value;?>
-icon/order.gif" alt="<?php echo smartyTranslate(array('s'=>'Orders'),$_smarty_tpl);?>
-" class="icon" /> <?php echo smartyTranslate(array('s'=>'Order history and details '),$_smarty_tpl);?>
-</a></li>
-	<?php if ($_smarty_tpl->tpl_vars['returnAllowed']->value){?>
-		<li><a href="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['link']->value->getPageLink('order-follow',true), ENT_QUOTES, 'UTF-8', true);?>
-" title="<?php echo smartyTranslate(array('s'=>'Merchandise returns'),$_smarty_tpl);?>
-"><img src="<?php echo $_smarty_tpl->tpl_vars['img_dir']->value;?>
-icon/return.gif" alt="<?php echo smartyTranslate(array('s'=>'Merchandise returns'),$_smarty_tpl);?>
-" class="icon" /> <?php echo smartyTranslate(array('s'=>'My merchandise returns'),$_smarty_tpl);?>
-</a></li>
-	<?php }?>
-	<li><a href="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['link']->value->getPageLink('order-slip',true), ENT_QUOTES, 'UTF-8', true);?>
-" title="<?php echo smartyTranslate(array('s'=>'Credit slips'),$_smarty_tpl);?>
-"><img src="<?php echo $_smarty_tpl->tpl_vars['img_dir']->value;?>
-icon/slip.gif" alt="<?php echo smartyTranslate(array('s'=>'Credit slips'),$_smarty_tpl);?>
-" class="icon" /> <?php echo smartyTranslate(array('s'=>'My credit slips'),$_smarty_tpl);?>
-</a></li>
+icon/slip.gif" class="icon" /> Historique des encheres</a></li>
 	<li><a href="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['link']->value->getPageLink('addresses',true), ENT_QUOTES, 'UTF-8', true);?>
 " title="<?php echo smartyTranslate(array('s'=>'Addresses'),$_smarty_tpl);?>
 "><img src="<?php echo $_smarty_tpl->tpl_vars['img_dir']->value;?>
@@ -93,15 +73,11 @@ icon/addrbook.gif" alt="<?php echo smartyTranslate(array('s'=>'Addresses'),$_sma
 icon/userinfo.gif" alt="<?php echo smartyTranslate(array('s'=>'Information'),$_smarty_tpl);?>
 " class="icon" /> <?php echo smartyTranslate(array('s'=>'My personal information'),$_smarty_tpl);?>
 </a></li>
-	<?php if ($_smarty_tpl->tpl_vars['voucherAllowed']->value){?>
-		<li><a href="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['link']->value->getPageLink('discount',true), ENT_QUOTES, 'UTF-8', true);?>
+	<li><a href="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['link']->value->getPageLink('discount',true), ENT_QUOTES, 'UTF-8', true);?>
 " title="<?php echo smartyTranslate(array('s'=>'Vouchers'),$_smarty_tpl);?>
 "><img src="<?php echo $_smarty_tpl->tpl_vars['img_dir']->value;?>
 icon/voucher.gif" alt="<?php echo smartyTranslate(array('s'=>'Vouchers'),$_smarty_tpl);?>
-" class="icon" /> <?php echo smartyTranslate(array('s'=>'My vouchers'),$_smarty_tpl);?>
-</a></li>
-	<?php }?>
-	<?php echo $_smarty_tpl->tpl_vars['HOOK_CUSTOMER_ACCOUNT']->value;?>
+" class="icon" /> Achat de credit</a></li>
 
 </ul>
 <p><a href="<?php echo $_smarty_tpl->tpl_vars['base_dir']->value;?>

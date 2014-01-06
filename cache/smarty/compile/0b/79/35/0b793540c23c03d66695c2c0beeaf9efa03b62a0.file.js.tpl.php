@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-10-31 19:13:36
+<?php /* Smarty version Smarty-3.1.14, created on 2014-01-04 17:21:04
          compiled from "C:\xampp\htdocs\prestashop\admin0556\themes\default\template\controllers\modules\js.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:265352729dd02e6146-28515808%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:2785052c834f0806426-54013129%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '0b793540c23c03d66695c2c0beeaf9efa03b62a0' => 
     array (
       0 => 'C:\\xampp\\htdocs\\prestashop\\admin0556\\themes\\default\\template\\controllers\\modules\\js.tpl',
-      1 => 1381145310,
+      1 => 1384260125,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '265352729dd02e6146-28515808',
+  'nocache_hash' => '2785052c834f0806426-54013129',
   'function' => 
   array (
   ),
@@ -27,9 +27,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_52729dd03a3098_86823220',
+  'unifunc' => 'content_52c834f0890211_97224626',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_52729dd03a3098_86823220')) {function content_52729dd03a3098_86823220($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_replace')) include 'C:\\xampp\\htdocs\\prestashop\\tools\\smarty\\plugins\\modifier.replace.php';
+<?php if ($_valid && !is_callable('content_52c834f0890211_97224626')) {function content_52c834f0890211_97224626($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_replace')) include 'C:\\xampp\\htdocs\\prestashop\\tools\\smarty\\plugins\\modifier.replace.php';
 ?>
 
 <script type="text/javascript"><?php echo $_smarty_tpl->tpl_vars['autocompleteList']->value;?>

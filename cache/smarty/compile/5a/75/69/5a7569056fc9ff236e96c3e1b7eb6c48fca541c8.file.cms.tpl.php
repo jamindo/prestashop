@@ -1,26 +1,26 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-10-31 17:13:12
+<?php /* Smarty version Smarty-3.1.14, created on 2013-12-31 11:20:45
          compiled from "C:\xampp\htdocs\prestashop\themes\default\cms.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1294452728198ccd923-40835140%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1706852c29a7d9b4119-17651583%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '5a7569056fc9ff236e96c3e1b7eb6c48fca541c8' => 
     array (
       0 => 'C:\\xampp\\htdocs\\prestashop\\themes\\default\\cms.tpl',
-      1 => 1381145310,
+      1 => 1385320352,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1294452728198ccd923-40835140',
+  'nocache_hash' => '1706852c29a7d9b4119-17651583',
   'function' => 
   array (
   ),
   'variables' => 
   array (
-    'content_only' => 0,
     'cms' => 0,
     'cms_category' => 0,
     'base_dir' => 0,
+    'content_only' => 0,
     'link' => 0,
     'sub_category' => 0,
     'subcategory' => 0,
@@ -29,14 +29,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_52728198dde642_38398574',
+  'unifunc' => 'content_52c29a7db01b03_69375887',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_52728198dde642_38398574')) {function content_52728198dde642_38398574($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_escape')) include 'C:\\xampp\\htdocs\\prestashop\\tools\\smarty\\plugins\\modifier.escape.php';
+<?php if ($_valid && !is_callable('content_52c29a7db01b03_69375887')) {function content_52c29a7db01b03_69375887($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_escape')) include 'C:\\xampp\\htdocs\\prestashop\\tools\\smarty\\plugins\\modifier.escape.php';
 ?>
-<?php if (($_smarty_tpl->tpl_vars['content_only']->value==0)){?>
-	<?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['tpl_dir']->value)."./breadcrumb.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
-<?php }?>
 <?php if (isset($_smarty_tpl->tpl_vars['cms']->value)&&!isset($_smarty_tpl->tpl_vars['cms_category']->value)){?>
 	<?php if (!$_smarty_tpl->tpl_vars['cms']->value->active){?>
 		<br />

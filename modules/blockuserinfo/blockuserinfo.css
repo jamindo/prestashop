@@ -1,9 +1,21 @@
 /* block top user information */
 
-#header_right #header_user {
+#notloggedblock {
 	clear:both;
 	float: right;
+	height:120px;
+	width:400px;
 	margin-top:8px;
+
+}
+
+#loggedblock{
+	clear:both;
+	float: right;
+	height:120px;
+	width:200px;
+	margin-top:8px;
+
 }
 
 #header_right #header_user.header_user_catalog {
@@ -33,7 +45,7 @@
 
 /* account */
 #header_user #your_account {display:none;}
-#header_user #your_account a { background-image: url('img/icon/my-account.gif') }
+
 
 /* user infos */ 
 #header_user_info {
@@ -45,10 +57,6 @@
 }
 #header_user_info a {
 	display:inline-block;
-	margin:0 0 0 10px;
-	padding:3px 0 0 34px;
-	line-height: 11px;
-	border-left:1px solid #000
 }
 #header_user_info a.account {
 	border: none;
@@ -57,5 +65,4 @@
 	padding: 0;
 }
 *:first-child+html #header_user_info a {line-height:14px;}
-#header_user_info a.login {background: url('img/icon/login.gif') no-repeat 10px 0}
-#header_user_info a.logout {background: url('img/icon/logout.png') no-repeat 10px -1px}
+

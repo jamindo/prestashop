@@ -731,3 +731,4 @@ $_ERRORS['654f5d54c2bc6e5e9e40126325bfe0bb'] = 'Cette adresse n\'a pas pu être 
 $_ERRORS['fc2e88db6e13898dab6ddf3b44c5d68a'] = 'Votre fichier doit porter l\'extension .csv.';
 $_ERRORS['11594cc065ba4fed88f2034db31bedd0'] = 'Un montant total minimum de %1s (HT) est requis pour valider votre commande. Le montant actuel de votre commande est de %2s (HT).';
 $_ERRORS['0fc91048ea83b4097f8f0b9be4731bd4'] = 'Erreur - le fichier langue est manquant pour :';
+$_ERRORS['21314394161d6ca64f445fc4c0c4e796'] = 'Ce login est déja utilisé, veuillez en sélectionner un autre.';

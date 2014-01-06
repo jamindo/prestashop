@@ -23,7 +23,6 @@
 *  International Registered Trademark & Property of PrestaShop SA
 *}
 
-{include file="$tpl_dir./breadcrumb.tpl"}
 {include file="$tpl_dir./errors.tpl"}
 
 {if isset($category)}
@@ -36,10 +35,6 @@
 				{/if}
 			{/strip}
 		</h1>
-		
-		<div class="resumecat category-product-count">
-			{include file="$tpl_dir./category-count.tpl"}
-		</div>
 		
 		{if $scenes || $category->description || $category->id_image}
 		<div class="content_scene_cat">
@@ -92,27 +87,8 @@
 			<br class="clear"/>
 		</div>
 		{/if}
-
 		{if $products}
-			<div class="content_sortPagiBar">
-				{include file="$tpl_dir./pagination.tpl"}
-				<div class="sortPagiBar clearfix">
-					{include file="./product-sort.tpl"}
-					{include file="./product-compare.tpl"}
-					{include file="./nbr-product-page.tpl"}
-				</div>
-			</div>
-			
 			{include file="./product-list.tpl" products=$products}
-			
-			<div class="content_sortPagiBar">
-				<div class="sortPagiBar clearfix">
-					{include file="./product-sort.tpl" paginationId='bottom'}
-					{include file="./product-compare.tpl" paginationId='bottom'}
-					{include file="./nbr-product-page.tpl" paginationId='bottom'}
-				</div>
-				{include file="./pagination.tpl" paginationId='bottom'}
-			</div>
 		{/if}
 	{elseif $category->id}
 		<p class="warning">{l s='This category is currently unavailable.'}</p>

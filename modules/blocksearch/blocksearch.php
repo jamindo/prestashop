@@ -89,16 +89,6 @@ public function hookDisplayMobileHeader($params)
 		return $this->display(__FILE__, 'blocksearch.tpl', Tools::getValue('search_query') ? null : $this->getCacheId());
 	}
 
-	public function hookTop($params)
-	{
-		if (Tools::getValue('search_query') || !$this->isCached('blocksearch-top.tpl', $this->getCacheId('blocksearch-top')))
-		{
-			$this->calculHookCommon($params);
-			$this->smarty->assign('blocksearch_type', 'top');
-		}
-
-		return $this->display(__FILE__, 'blocksearch-top.tpl', Tools::getValue('search_query') ? null : $this->getCacheId('blocksearch-top'));
-	}
 
 	/**
 	 * _hookAll has to be called in each hookXXX methods. This is made to avoid code duplication.
