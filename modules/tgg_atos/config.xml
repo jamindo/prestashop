@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+        <module>
+            <name>tgg_atos</name>
+            <displayName><![CDATA[SIPS/ATOS]]></displayName>
+            <version><![CDATA[2.1.6]]></version>
+            <description><![CDATA[Module de paiement SIPS/ATOS par TrogloGeek.]]></description>
+            <author><![CDATA[]]></author>
+            <tab><![CDATA[payments_gateways]]></tab>
+	<confirmUninstall>Si vous désinstallez ce module, votre configuration sera perdue et les fichiers de certificat de production nettoyés. Seuls les logs subsisteront. Si vous souhaitez simplement stopper les paiment via ATOS pour les reprendre plus tard il est conseillé de désactiver le module plutôt que de le désinstaller. Procéder à la désinstallation ?</confirmUninstall>
+            <is_configurable>1</is_configurable>
+            <need_instance>1</need_instance>
+	<limited_countries></limited_countries>
+        </module>

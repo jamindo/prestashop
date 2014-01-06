@@ -81,7 +81,6 @@ class BidControllerCore extends FrontController
 			} else {
 				$credit_selected = Credit::getFirstAvailableCredit($customer_id);
 				$chosen_credit = $credit_selected;
-				Tools::redirect('prestashop/index.php?'.$chosen_credit.'');
 				Credit::turnCreditStatus($chosen_credit);
 				CreditOnBid::placeCreditOnBid($chosen_credit , $bid_id , $simpleBid);
 				$this->context->cookie->nb_credits = Credit::countCredits($customer_id);

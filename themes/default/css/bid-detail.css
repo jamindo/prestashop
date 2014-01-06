@@ -1,0 +1,25 @@
+
+#bid_detail div .center_block {
+        float:left;
+        width:auto;
+        padding:0 10px;
+		margin-top: 10px;
+}
+
+#bid_detail div .right_block {
+   float: left;
+   width: auto;
+   margin-left: 50px;
+   margin-bottom: 10px;
+   margin-right: 50px;
+}
+
+#bid_detail div .bottom_block {
+	margin-left:10px;
+	margin-bottom: 10px;
+}
+
+#bid_result div .bottom_result {
+	margin-left:10px;
+	margin-bottom: 10px;
+}

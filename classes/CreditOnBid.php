@@ -64,6 +64,27 @@ class CreditOnBidCore extends ObjectModel
 			);
 	}
 	
+	public static function getLastsCreditBiddedByCustomer($id_customer)
+	{
+		return Db::getInstance()->executeS('
+				SELECT DISTINCT b.*
+				FROM `'._DB_PREFIX_.'credit_on_bid` b ,`'._DB_PREFIX_.'credit` c
+				WHERE c.`id_customer` = '.$id_customer.'
+				ORDER BY b.`bid_date` DESC , b.`bid_value` ASC
+				LIMIT 20
+				');
+	}
+	
+	public static function getCreditsBiddedByCustomer($id_customer)
+	{
+		return Db::getInstance()->executeS('
+				SELECT DISTINCT b.`id_bid`
+				FROM `'._DB_PREFIX_.'credit_on_bid` b ,`'._DB_PREFIX_.'credit` c
+				WHERE c.`id_customer` = '.$id_customer.'
+				ORDER BY b.`id_bid`
+				');
+	}
+	
 	public static function getAllCreditOnBid($id_bid)
 	{
 		return $all_on_bid = Db::getInstance()->executeS('

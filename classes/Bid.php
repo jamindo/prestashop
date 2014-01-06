@@ -54,6 +54,7 @@ class BidCore extends ObjectModel
 		$bid = Db::getInstance()->executeS(
 				'SELECT * FROM `'._DB_PREFIX_.'bid`
 				 WHERE id_bid = '.(int)$bid_id.'
+				 LIMIT 1
 				');
 		return $bid;
 	}
