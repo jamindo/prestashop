@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-01-06 17:45:27
+<?php /* Smarty version Smarty-3.1.14, created on 2014-01-11 10:58:33
          compiled from "C:\xampp\htdocs\prestashop\modules\tgg_atos\tpl\tgg_atos-front-payment-redirect.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:348052cadda714e851-61786326%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'bd0ad8b3581981d0011ae397c7a5b814d37d38b4' => 
     array (
       0 => 'C:\\xampp\\htdocs\\prestashop\\modules\\tgg_atos\\tpl\\tgg_atos-front-payment-redirect.tpl',
-      1 => 1319889628,
+      1 => 1389030505,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_52cadda724e5b5_89798378',
   'variables' => 
   array (
     'tpl_dir' => 0,
@@ -28,8 +30,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'base_dir_ssl' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_52cadda724e5b5_89798378',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_52cadda724e5b5_89798378')) {function content_52cadda724e5b5_89798378($_smarty_tpl) {?><?php $_smarty_tpl->_capture_stack[0][] = array('path', null, null); ob_start(); ?><?php echo smartyTranslate(array('s'=>'Card payment','mod'=>'tgg_atos'),$_smarty_tpl);?>
 <?php list($_capture_buffer, $_capture_assign, $_capture_append) = array_pop($_smarty_tpl->_capture_stack[0]);

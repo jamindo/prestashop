@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-01-06 17:45:15
+<?php /* Smarty version Smarty-3.1.14, created on 2014-01-11 10:34:21
          compiled from "C:\xampp\htdocs\prestashop\modules\tgg_atos\tpl\tgg_atos-front-hookpayment.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2828852cadd9bab31d9-03894393%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'bf0394b037ae9d8e22ee6edf60ba16f347d0a414' => 
     array (
       0 => 'C:\\xampp\\htdocs\\prestashop\\modules\\tgg_atos\\tpl\\tgg_atos-front-hookpayment.tpl',
-      1 => 1319893631,
+      1 => 1389030506,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_52cadd9bcb0d77_40354913',
   'variables' => 
   array (
     'willSwitchCurrency' => 0,
@@ -34,8 +36,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '3t_total' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_52cadd9bcb0d77_40354913',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_52cadd9bcb0d77_40354913')) {function content_52cadd9bcb0d77_40354913($_smarty_tpl) {?><?php if ($_smarty_tpl->tpl_vars['willSwitchCurrency']->value){?>
 	<?php $_smarty_tpl->_capture_stack[0][] = array("willSwitchCurrency", null, null); ob_start(); ?><?php echo smartyTranslate(array('s'=>'This payment method will use a different currency to proceed with payment. %s will be used.','mod'=>'tgg_atos'),$_smarty_tpl);?>

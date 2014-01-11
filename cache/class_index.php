@@ -224,6 +224,8 @@
   'BidCore' => 'classes/Bid.php',
   'Blowfish' => '',
   'BlowfishCore' => 'classes/Blowfish.php',
+  'BuyCreditsController' => '',
+  'BuyCreditsControllerCore' => 'controllers/front/BuyCreditsController.php',
   'CMS' => '',
   'CMSCategory' => '',
   'CMSCategoryCore' => 'classes/CMSCategory.php',
