@@ -40,7 +40,7 @@
 	<li><a href="{$link->getPageLink('personal-history', true)|escape:'html'}"><img src="{$img_dir}icon/slip.gif" class="icon" /> Historique des encheres</a></li>
 	<li><a href="{$link->getPageLink('addresses', true)|escape:'html'}" title="{l s='Addresses'}"><img src="{$img_dir}icon/addrbook.gif" alt="{l s='Addresses'}" class="icon" /> {l s='My addresses'}</a></li>
 	<li><a href="{$link->getPageLink('identity', true)|escape:'html'}" title="{l s='Information'}"><img src="{$img_dir}icon/userinfo.gif" alt="{l s='Information'}" class="icon" /> {l s='My personal information'}</a></li>
-	<li><a href="{$link->getPageLink('discount', true)|escape:'html'}" title="{l s='Vouchers'}"><img src="{$img_dir}icon/voucher.gif" alt="{l s='Vouchers'}" class="icon" /> Achat de credit</a></li>
+	<li><a href="{$link->getPageLink('buy-credits', true)|escape:'html'}" "><img src="{$img_dir}icon/voucher.gif" class="icon" /> Achat de credit</a></li>
 
 </ul>
 <p><a href="{$base_dir}" title="{l s='Home'}"><img src="{$img_dir}icon/home.gif" alt="{l s='Home'}" class="icon" /></a><a href="{$base_dir}" title="{l s='Home'}">{l s='Home'}</a></p>

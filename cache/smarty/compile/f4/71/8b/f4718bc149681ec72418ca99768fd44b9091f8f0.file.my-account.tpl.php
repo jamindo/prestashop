@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-01-04 18:10:02
+<?php /* Smarty version Smarty-3.1.14, created on 2014-01-11 16:57:16
          compiled from "C:\xampp\htdocs\prestashop\themes\default\my-account.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1597452c196c314b415-99178782%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'f4718bc149681ec72418ca99768fd44b9091f8f0' => 
     array (
       0 => 'C:\\xampp\\htdocs\\prestashop\\themes\\default\\my-account.tpl',
-      1 => 1388855331,
+      1 => 1389455829,
       2 => 'file',
     ),
   ),
@@ -73,11 +73,9 @@ icon/addrbook.gif" alt="<?php echo smartyTranslate(array('s'=>'Addresses'),$_sma
 icon/userinfo.gif" alt="<?php echo smartyTranslate(array('s'=>'Information'),$_smarty_tpl);?>
 " class="icon" /> <?php echo smartyTranslate(array('s'=>'My personal information'),$_smarty_tpl);?>
 </a></li>
-	<li><a href="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['link']->value->getPageLink('discount',true), ENT_QUOTES, 'UTF-8', true);?>
-" title="<?php echo smartyTranslate(array('s'=>'Vouchers'),$_smarty_tpl);?>
-"><img src="<?php echo $_smarty_tpl->tpl_vars['img_dir']->value;?>
-icon/voucher.gif" alt="<?php echo smartyTranslate(array('s'=>'Vouchers'),$_smarty_tpl);?>
-" class="icon" /> Achat de credit</a></li>
+	<li><a href="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['link']->value->getPageLink('buy-credits',true), ENT_QUOTES, 'UTF-8', true);?>
+" "><img src="<?php echo $_smarty_tpl->tpl_vars['img_dir']->value;?>
+icon/voucher.gif" class="icon" /> Achat de credit</a></li>
 
 </ul>
 <p><a href="<?php echo $_smarty_tpl->tpl_vars['base_dir']->value;?>

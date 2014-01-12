@@ -93,4 +93,13 @@ class CreditOnBidCore extends ObjectModel
 				WHERE id_bid = '.(int)$id_bid.'');
 	}
 	
+	public static function getAllCreditByCustomer($id_customer)
+	{
+		return Db::getInstance()->executeS('
+				SELECT DISTINCT b.*
+				FROM `'._DB_PREFIX_.'credit_on_bid` b ,`'._DB_PREFIX_.'credit` c
+				WHERE c.`id_customer` = '.$id_customer.'
+				ORDER BY b.`bid_date`
+				');
+	}
 }

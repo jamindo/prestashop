@@ -28,7 +28,6 @@ class PersonalHistoryControllerCore extends FrontController
 			$this->context->smarty->assign('result_history', $result_history);
 			$this->context->smarty->assign('lot_history', $lot_history);
 		}
-
 		$this->context->smarty->assign('bids_list', $bids_list);
 		$this->context->smarty->assign('nb_bids_list', count($bids_list)-1);
 		
@@ -48,25 +47,36 @@ class PersonalHistoryControllerCore extends FrontController
 		$customer_id = $this->context->cookie->id_customer;
 		$choice = Tools::getValue('BidList');
 		if($choice == 'all'){
-			
-		} else {
-			$id_bid =(int)$choice;
-			$list_results = CreditOnBid::getAllCreditOnBidPerCustomer($id_bid , $customer_id);
-			if($list_results){
+			$credits = CreditOnBid::getAllCreditByCustomer($customer_id);
+			if($credits){
 				$result_history = array();
 				$lot_history = array();
-				for($i = 0 ; $i <= count($last_bids); $i++){
-					$credit = $last_bids[$i];
+				for( $i = 0 ; $i < count($credits); $i++){
+					$credit = $credits[$i];
 					$result_history[$i] = $this->getBidResult($credit['id_bid'], $credit['bid_value']);
 					$lot = Bid::getBidWithIdentifier($credit['id_bid']);
-					$lot_history[$i] = $lot[0];
+					$lot_name[$i] = $lot[0];
 				}
-				$this->context->smarty->assign('lasts_bids', $last_bids);
-				$this->context->smarty->assign('nb_lasts_bids', count($last_bids)-1);
-				$this->context->smarty->assign('result_history', $result_history);
-				$this->context->smarty->assign('lot_history', $lot_history);
+			}
+		} else {
+			$id_bid =(int)$choice;
+			$credits = CreditOnBid::getAllCreditOnBidPerCustomer($id_bid,$customer_id);
+			if($credits){
+			$result_history = array();
+			$lot_history = array();
+				for($i = 0 ; $i < count($credits); $i++){
+					$credit = $credits[$i];
+					$result_history[$i] = $this->getBidResult($id_bid, $credit['bid_value']);
+					$lot = Bid::getBidWithIdentifier($credit['id_bid']);
+					$lot_name[$i] = $lot[0];
+				}
 			}
 		}
+		$this->context->smarty->assign('credits_history', $credits);
+		$this->context->smarty->assign('result_history', $result_history);
+		$this-$this->context->smarty->assign('nb_results_history', count($credits)-1);
+		$this->context->smarty->assign('lot_name', $lot_name);
+		$this->context->smarty->assign('fromSearch', true);
 	}
 	
 	protected function getListOfBids($customer_id)
@@ -74,7 +84,7 @@ class PersonalHistoryControllerCore extends FrontController
 		$bids = CreditOnBid::getCreditsBiddedByCustomer($customer_id);
 		$all_bids = array();
 		for($i = 0 ; $i < count($bids); $i++){
-			$bid = Bid::getBidWithIdentifier($bids[$i]);
+			$bid = Bid::getBidWithIdentifier($bids[$i]['id_bid']);
 			$all_bids[$i] = $bid[0];
 		}
 		return $all_bids;
