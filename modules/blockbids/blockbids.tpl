@@ -7,6 +7,7 @@
 		{foreach from=$bids item=bid name=bids}
 		<li>
 			<h2><a href="index.php?controller=bid?id={$bid.id_bid}">{$bid.product_name} - Lot n&deg;{$bid.id_bid}</a></h2>
+			<input id="book" type="checkbox" name="bookmarkBid" value="{$bid.id_bid}"/><label for="book"></label>
 			<div class="center_block">
 				<span class="timeRemainingBeforeExpiration">Temps restant:</span> 
 				<br></br> 

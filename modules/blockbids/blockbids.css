@@ -29,3 +29,10 @@
 	margin-left:10px;
 	margin-bottom: 10px;
 }
+
+#book + label::before{
+    background-image: url(img/unbook.png);
+}
+#book:checked + label::before{
+background-image:url(img/book.png);
+}

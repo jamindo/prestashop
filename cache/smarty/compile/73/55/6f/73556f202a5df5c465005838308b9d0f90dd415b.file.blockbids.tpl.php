@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-01-06 18:48:43
+<?php /* Smarty version Smarty-3.1.14, created on 2014-01-12 16:40:19
          compiled from "C:\xampp\htdocs\prestashop\modules\blockbids\blockbids.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1557752caec7b85ef96-84656407%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '73556f202a5df5c465005838308b9d0f90dd415b' => 
     array (
       0 => 'C:\\xampp\\htdocs\\prestashop\\modules\\blockbids\\blockbids.tpl',
-      1 => 1389029905,
+      1 => 1389541023,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_52caec7b8c2c28_08789115',
   'variables' => 
   array (
     'nb_bids' => 0,
@@ -23,8 +25,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'link' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_52caec7b8c2c28_08789115',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_52caec7b8c2c28_08789115')) {function content_52caec7b8c2c28_08789115($_smarty_tpl) {?><!-- Bloc Enchères -->
 
@@ -43,6 +43,8 @@ $_smarty_tpl->tpl_vars['bid']->_loop = true;
 "><?php echo $_smarty_tpl->tpl_vars['bid']->value['product_name'];?>
  - Lot n&deg;<?php echo $_smarty_tpl->tpl_vars['bid']->value['id_bid'];?>
 </a></h2>
+			<input id="book" type="checkbox" name="bookmarkBid" value="<?php echo $_smarty_tpl->tpl_vars['bid']->value['id_bid'];?>
+"/><label for="book"></label>
 			<div class="center_block">
 				<span class="timeRemainingBeforeExpiration">Temps restant:</span> 
 				<br></br> 

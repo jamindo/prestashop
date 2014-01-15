@@ -73,14 +73,26 @@ class BidCore extends ObjectModel
 	 * @param string $format_fr
 	 * @return string
 	 */
-	function aff_date(&$date)
+	public function aff_date(&$date)
 	{
 		$date_formatee = "";
-		$format = "%d %B %Y";
-		setlocale(LC_TIME, "fr_FR");
+		$format = "Le %A %d %B %Y à %H:%M";
+		setlocale(LC_TIME, 'fr_FR','fra');
 		$date_strtotime = strtotime($date);
 		$date_formatee = strftime ($format,$date_strtotime);
 		$date = $date_formatee;
+		return $date;
+	}
+	
+	public function aff_date(&$date)
+	{
+		$date_formatee = "";
+		$format = "Le %A %d %B %Y à %H:%M";
+		setlocale(LC_TIME, 'fr_FR','fra');
+		$date_strtotime = strtotime($date);
+		$date_formatee = strftime ($format,$date_strtotime);
+		$date = $date_formatee;
+		return $date;
 	}
 	
 	/**

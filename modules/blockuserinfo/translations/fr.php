@@ -18,4 +18,4 @@ $_MODULE['<{blockuserinfo}prestashop>blockuserinfo_4394c8d8e63c470de62ced3ae85de
 $_MODULE['<{blockuserinfo}prestashop>blockuserinfo_99dea78007133396a7b8ed70578ac6ae'] = 'Login';
 $_MODULE['<{blockuserinfo}prestashop>blockuserinfo_d95cf4ab2cbf1dfb63f066b50558b07d'] = '>Mon compte';
 $_MODULE['<{blockuserinfo}prestashop>blockuserinfo_b8846485aeb9c47b556f85ca62bf2682'] = 'Voir mes enchères actuelles';
-$_MODULE['<{blockuserinfo}prestashop>blockuserinfo_7a13a47db2dd6310e1ccd9cb08d41bff'] = 'Mes enchères actuelles';
+$_MODULE['<{blockuserinfo}prestashop>blockuserinfo_7a13a47db2dd6310e1ccd9cb08d41bff'] = 'Mes enchères';
