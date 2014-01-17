@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-01-06 17:45:16
+<?php /* Smarty version Smarty-3.1.14, created on 2014-01-17 10:03:00
          compiled from "C:\xampp\htdocs\prestashop\themes\default\shopping-cart.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2687852cadd9c289794-83770693%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '9edf9b40cccdd256555ffe21973dc60115dc239a' => 
     array (
       0 => 'C:\\xampp\\htdocs\\prestashop\\themes\\default\\shopping-cart.tpl',
-      1 => 1384260129,
+      1 => 1389948981,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_52cadd9cb3d157_91152661',
   'variables' => 
   array (
     'account_created' => 0,
@@ -95,8 +97,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'HOOK_SHOPPING_CART_EXTRA' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_52cadd9cb3d157_91152661',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_52cadd9cb3d157_91152661')) {function content_52cadd9cb3d157_91152661($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_escape')) include 'C:\\xampp\\htdocs\\prestashop\\tools\\smarty\\plugins\\modifier.escape.php';
 ?>

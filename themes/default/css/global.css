@@ -1549,6 +1549,11 @@ form#add_address {}
 #order-follow #left_column {display:none}
 #order-follow #center_column{width:757px}
 
+/* ************************************************************************************************
+		PAGE BUY CREDITS
+************************************************************************************************ */
+#buy-credit #left_column {display:none}
+#buy-credit #center_column{width:757px}
 
 /* ************************************************************************************************
 		PAGE NEW-PRODUCTS

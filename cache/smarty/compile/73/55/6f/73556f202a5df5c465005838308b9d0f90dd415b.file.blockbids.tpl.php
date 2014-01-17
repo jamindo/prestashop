@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-01-12 16:40:19
+<?php /* Smarty version Smarty-3.1.14, created on 2014-01-15 22:02:29
          compiled from "C:\xampp\htdocs\prestashop\modules\blockbids\blockbids.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1557752caec7b85ef96-84656407%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '73556f202a5df5c465005838308b9d0f90dd415b' => 
     array (
       0 => 'C:\\xampp\\htdocs\\prestashop\\modules\\blockbids\\blockbids.tpl',
-      1 => 1389541023,
+      1 => 1389819744,
       2 => 'file',
     ),
   ),
@@ -53,7 +53,7 @@ $_smarty_tpl->tpl_vars['bid']->_loop = true;
 				<br></br> 
 				<span class="bidPrice">Cout d'une enchere: 1 bukyZ</span>
 				<br></br> 
-				<span class="bidExpiration">Fin de l'enchere: <?php echo $_smarty_tpl->tpl_vars['bid']->value['expiration_date'];?>
+				<span class="bidExpiration">Fin de l'enchere:<?php echo $_smarty_tpl->tpl_vars['bid']->value['expiration_date'];?>
 </span>
 			</div>
 			<div class="right_block">

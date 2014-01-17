@@ -34,7 +34,7 @@
 		{if $logged}
 		<div id="loggedblock">
 		<h3>{$cookie->customer_login}</h3>
-			<a href="{$link->getPageLink('followed-bids', true)|escape:'html'}" title="{l s='View my current bid' mod='blockuserinfo'}" class="myAccount" rel="nofollow">{l s='My current bid' mod='blockuserinfo'}</a>
+			<a href="{$link->getPageLink('followed-bid', true)|escape:'html'}" title="{l s='View my current bid' mod='blockuserinfo'}" class="myAccount" rel="nofollow">{l s='My current bid' mod='blockuserinfo'}</a>
 			<br></br>
 			<a href="{$link->getPageLink('my-account', true)|escape:'html'}" title="{l s='View my customer account' mod='blockuserinfo'}" class="myAccount" rel="nofollow">{l s='My account' mod='blockuserinfo'}</a>&nbsp;&nbsp;&nbsp;&nbsp;
 			<a href="{$link->getPageLink('index', true, NULL, "mylogout")|escape:'html'}" title="{l s='Log me out' mod='blockuserinfo'}" class="logout" rel="nofollow">{l s='Log out' mod='blockuserinfo'}</a>

@@ -84,15 +84,21 @@ class BidCore extends ObjectModel
 		return $date;
 	}
 	
-	public function aff_date(&$date)
+	/**
+	 * @param unknown $date
+	 * @param string $lang
+	 * @param string $format_fr
+	 * @return string
+	 */
+	public function count_date(&$date)
 	{
 		$date_formatee = "";
-		$format = "Le %A %d %B %Y à %H:%M";
+		$format = "%d %m %Y %H %M %S";
 		setlocale(LC_TIME, 'fr_FR','fra');
 		$date_strtotime = strtotime($date);
 		$date_formatee = strftime ($format,$date_strtotime);
-		$date = $date_formatee;
-		return $date;
+		$date_final = $date_formatee;
+		return $date_final;
 	}
 	
 	/**

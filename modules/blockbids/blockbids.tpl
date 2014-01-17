@@ -15,7 +15,7 @@
 				<br></br> 
 				<span class="bidPrice">Cout d'une enchere: 1 bukyZ</span>
 				<br></br> 
-				<span class="bidExpiration">Fin de l'enchere: {$bid.expiration_date}</span>
+				<span class="bidExpiration">Fin de l'enchere:{$bid.expiration_date}</span>
 			</div>
 			<div class="right_block">
 			<img src="{$bid.product_image}">
