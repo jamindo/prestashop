@@ -1552,8 +1552,8 @@ form#add_address {}
 /* ************************************************************************************************
 		PAGE BUY CREDITS
 ************************************************************************************************ */
-#buy-credit #left_column {display:none}
-#buy-credit #center_column{width:757px}
+#buy-credits #left_column {display:none}
+#buy-credits #center_column{width:757px}
 
 /* ************************************************************************************************
 		PAGE NEW-PRODUCTS

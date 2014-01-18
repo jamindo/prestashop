@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-01-17 16:52:26
+<?php /* Smarty version Smarty-3.1.14, created on 2014-01-18 15:40:11
          compiled from "C:\xampp\htdocs\prestashop\themes\default\buy-credits.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1311652d11188829382-49016751%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '85e0a371eff5ae79810451f0016edd209a86276e' => 
     array (
       0 => 'C:\\xampp\\htdocs\\prestashop\\themes\\default\\buy-credits.tpl',
-      1 => 1389964177,
+      1 => 1390055979,
       2 => 'file',
     ),
   ),
@@ -32,6 +32,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
 <script type="text/javascript">
 function getValue(selected){
+	document.getElementById('ma_variable').value=selected;
 }
 </script>
 
@@ -106,7 +107,41 @@ et recevez tout de suite 2 BukyZ gratuitement !
 </tbody>	
 	 </table>
 </div>
-<p id="affichage"></p>
 <br></br>
-<?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['tpl_dir']->value)."./credit-payment.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
-<?php }} ?>
+<h2>2.Choisissez un moyen de Paiement</h2>
+
+<div class="paiement_block">
+	<ul id="payment_list" class="clear">
+		<li>
+			<h3>Carte Bancaire</h3>
+			<table width="500px" align="center">
+				<tr>
+					<td><img src="img/sigle_cb.gif"></td>
+					<td>
+						<form action="/prestashop/modules/tgg_atos/front-ctrl/payment-redirect.php" title="Payer par carte">
+							<input type="submit" id="SubmitCBPayment" name="SubmitCBPayment" class="button" value="Payer par carte">
+							<input type="hidden" name="ma_variable" id="ma_variable" value="" />
+						</form>
+					</td>
+				</tr>
+			</table>
+			<br></br>
+		</li>
+		<li>
+			<h3>Paypal</h3>
+			<table width="500px" align="center">
+				<tr>
+					<td><img src="img/logo_paypal.gif"></td>
+					<td>
+						<form action="modules/paypal/express_checkout/payment.php" method="post">
+							<input type="submit" id="SubmitPaypalPayment" name="SubmitPaypalPayment" class="button" value="Payer avec Paypal">
+							<input type="hidden" name="ma_variable" id="ma_variable" value="" />
+						</form>
+					</td>
+				</tr>
+			</table>
+			</br>
+		</li>
+	</ul>
+</div>
+<br></br><?php }} ?>

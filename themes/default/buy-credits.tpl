@@ -11,6 +11,7 @@
 
 <script type="text/javascript">
 function getValue(selected){
+	document.getElementById('ma_variable').value=selected;
 }
 </script>
 
@@ -85,6 +86,41 @@ et recevez tout de suite 2 BukyZ gratuitement !
 </tbody>	
 	 </table>
 </div>
-<p id="affichage"></p>
 <br></br>
-{include file="$tpl_dir./credit-payment.tpl"}
+<h2>2.Choisissez un moyen de Paiement</h2>
+
+<div class="paiement_block">
+	<ul id="payment_list" class="clear">
+		<li>
+			<h3>Carte Bancaire</h3>
+			<table width="500px" align="center">
+				<tr>
+					<td><img src="img/sigle_cb.gif"></td>
+					<td>
+						<form action="/prestashop/modules/tgg_atos/front-ctrl/payment-redirect.php" title="Payer par carte">
+							<input type="submit" id="SubmitCBPayment" name="SubmitCBPayment" class="button" value="Payer par carte">
+							<input type="hidden" name="ma_variable" id="ma_variable" value="" />
+						</form>
+					</td>
+				</tr>
+			</table>
+			<br></br>
+		</li>
+		<li>
+			<h3>Paypal</h3>
+			<table width="500px" align="center">
+				<tr>
+					<td><img src="img/logo_paypal.gif"></td>
+					<td>
+						<form action="modules/paypal/express_checkout/payment.php" method="post">
+							<input type="submit" id="SubmitPaypalPayment" name="SubmitPaypalPayment" class="button" value="Payer avec Paypal">
+							<input type="hidden" name="ma_variable" id="ma_variable" value="" />
+						</form>
+					</td>
+				</tr>
+			</table>
+			</br>
+		</li>
+	</ul>
+</div>
+<br></br>

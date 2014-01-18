@@ -1,0 +1,1 @@
+16-01-2014 11:06:05 | Kwixo::install : 176 | Création du fichier de log
