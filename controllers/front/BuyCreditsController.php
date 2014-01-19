@@ -8,7 +8,7 @@ public function initContent()
 	{
 		parent::initContent();
 		
-		$total = 0;
+		$total = 50;
 		$this->context->smarty->assign('total', $total);
 		$this->setTemplate(_PS_THEME_DIR_.'buy-credits.tpl');
 	}

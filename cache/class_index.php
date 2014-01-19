@@ -499,6 +499,8 @@
   'ParentOrderControllerCore' => 'controllers/front/ParentOrderController.php',
   'PasswordController' => '',
   'PasswordControllerCore' => 'controllers/front/PasswordController.php',
+  'PaymentController' => '',
+  'PaymentControllerCore' => 'controllers/front/PaymentController.php',
   'PaymentCC' => '',
   'PaymentCCCore' => 'classes/PaymentCC.php',
   'PaymentModule' => '',

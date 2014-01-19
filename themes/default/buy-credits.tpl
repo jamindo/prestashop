@@ -11,7 +11,7 @@
 
 <script type="text/javascript">
 function getValue(selected){
-	document.getElementById('ma_variable').value=selected;
+	document.getElementById('amount').value=selected;
 }
 </script>
 
@@ -56,7 +56,7 @@ et recevez tout de suite 2 BukyZ gratuitement !
 		<td align="center"><span>22</span></td>
 	</tr>
 	<tr onclick="getValue('50');">
-		<td align="center"><input type="radio" id="a50" value="50" name="price"></td>
+		<td align="center"><input type="radio" id="a50" value="50" name="price" checked=""></td>
 		<td align="center"><strong>50€</strong></td>
 		<td align="center"><span>50</span></td>
 		<td align="center"><span>+15</span></td>
@@ -76,13 +76,6 @@ et recevez tout de suite 2 BukyZ gratuitement !
 		<td align="center"><span>+125</span></td>
 		<td align="center"><span>375</span></td>
 	</tr>
-	<tr onclick="getValue('600');">
-    	<td align="center"><input type="radio" id="a600" value="600" name="price"></td>
-    	<td align="center"><strong>600€</strong></td>
-    	<td align="center"><span>600</span></td>
-        <td align="center"><span>+390</span></td>
-		<td align="center"><span>990</span></td>
-	</tr>
 </tbody>	
 	 </table>
 </div>
@@ -97,9 +90,9 @@ et recevez tout de suite 2 BukyZ gratuitement !
 				<tr>
 					<td><img src="img/sigle_cb.gif"></td>
 					<td>
-						<form action="/prestashop/modules/tgg_atos/front-ctrl/payment-redirect.php" title="Payer par carte">
+						<form action="{$link->getPageLink('payment', true)|escape:'html'}" method="post">
 							<input type="submit" id="SubmitCBPayment" name="SubmitCBPayment" class="button" value="Payer par carte">
-							<input type="hidden" name="ma_variable" id="ma_variable" value="" />
+							<input type="hidden" name="amount" id="amount" value="{$total}" />
 						</form>
 					</td>
 				</tr>

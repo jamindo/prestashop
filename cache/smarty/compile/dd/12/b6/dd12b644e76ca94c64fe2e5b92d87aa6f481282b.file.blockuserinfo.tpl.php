@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-01-15 22:10:35
+<?php /* Smarty version Smarty-3.1.14, created on 2014-01-19 18:15:37
          compiled from "C:\xampp\htdocs\prestashop\modules\blockuserinfo\blockuserinfo.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1771652d6ad3bed1fc6-40687725%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'dd12b644e76ca94c64fe2e5b92d87aa6f481282b' => 
     array (
       0 => 'C:\\xampp\\htdocs\\prestashop\\modules\\blockuserinfo\\blockuserinfo.tpl',
-      1 => 1389820228,
+      1 => 1390151734,
       2 => 'file',
     ),
   ),
@@ -45,22 +45,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 		<div id="loggedblock">
 		<h3><?php echo $_smarty_tpl->tpl_vars['cookie']->value->customer_login;?>
 </h3>
-			<a href="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['link']->value->getPageLink('followed-bid',true), ENT_QUOTES, 'UTF-8', true);?>
-" title="<?php echo smartyTranslate(array('s'=>'View my current bid','mod'=>'blockuserinfo'),$_smarty_tpl);?>
-" class="myAccount" rel="nofollow"><?php echo smartyTranslate(array('s'=>'My current bid','mod'=>'blockuserinfo'),$_smarty_tpl);?>
-</a>
-			<br></br>
-			<a href="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['link']->value->getPageLink('my-account',true), ENT_QUOTES, 'UTF-8', true);?>
-" title="<?php echo smartyTranslate(array('s'=>'View my customer account','mod'=>'blockuserinfo'),$_smarty_tpl);?>
-" class="myAccount" rel="nofollow"><?php echo smartyTranslate(array('s'=>'My account','mod'=>'blockuserinfo'),$_smarty_tpl);?>
-</a>&nbsp;&nbsp;&nbsp;&nbsp;
 			<a href="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['link']->value->getPageLink('index',true,null,"mylogout"), ENT_QUOTES, 'UTF-8', true);?>
 " title="<?php echo smartyTranslate(array('s'=>'Log me out','mod'=>'blockuserinfo'),$_smarty_tpl);?>
 " class="logout" rel="nofollow"><?php echo smartyTranslate(array('s'=>'Log out','mod'=>'blockuserinfo'),$_smarty_tpl);?>
 </a>
-			<br></br>
-			<h4>Mon solde: <?php echo $_smarty_tpl->tpl_vars['cookie']->value->nb_credits;?>
- bukyz</h4>
 		</div>
 		<?php }else{ ?>
 		<div id="notloggedblock">

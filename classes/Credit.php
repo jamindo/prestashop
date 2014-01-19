@@ -54,4 +54,11 @@ class CreditCore extends ObjectModel
 			WHERE id_credit = '.(int)$id_credit.'
 		');
 	}
+	
+	public static function createCredit($id_customer)
+	{
+		Db::getInstance()->execute('
+			INSERT INTO '._DB_PREFIX_.'credit(id_customer)
+			VALUES('.$id_customer.')');
+	}
 }

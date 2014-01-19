@@ -1,6 +1,9 @@
 eclipse.preferences.version=1
 encoding//classes/Bid.php=UTF-8
+encoding//modules/blockcredits/blockcredits.tpl=UTF-8
+encoding//modules/blockrules/blockrules.tpl=UTF-8
 encoding//modules/blockuserinfo/translations/fr.php=UTF-8
 encoding//themes/default/buy-credits.tpl=UTF-8
 encoding//themes/default/followed-bids.tpl=UTF-8
+encoding//themes/default/payment.tpl=UTF-8
 encoding//translations/fr/errors.php=UTF-8
