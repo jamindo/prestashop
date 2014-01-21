@@ -63,7 +63,10 @@ class BidCore extends ObjectModel
  	* Get All Bids from db
  	*/
 	public static function getAllBids(){
-		$bids = Db::getInstance()->executeS('SELECT * FROM `'._DB_PREFIX_.'bid`');
+		$date = date("Y-m-d H:i:s");
+		$bids = Db::getInstance()->executeS('
+				SELECT * FROM `'._DB_PREFIX_.'bid`'
+			);
 		return $bids;
 	}
 	

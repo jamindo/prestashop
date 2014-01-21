@@ -10,28 +10,30 @@ class PersonalHistoryControllerCore extends FrontController
 	public function initContent()
 	{
 		parent::initContent();
-		$customer_id = $this->context->cookie->id_customer;
-		$bids_list = $this->getListOfBids($customer_id);
-
-		$last_bids = CreditOnBid::getLastsCreditBiddedByCustomer($customer_id);
-		if($last_bids){
-			$result_history = array();
-			$lot_history = array();
-			for($i = 0 ; $i <= count($last_bids); $i++){
-				$credit = $last_bids[$i];
-				$result_history[$i] = $this->getBidResult($credit['id_bid'], $credit['bid_value']);
-				$lot = Bid::getBidWithIdentifier($credit['id_bid']);
-				$lot_history[$i] = $lot[0];
+		$bid_id = (int)Tools::getValue('id');
+		if($bid_id != 0){
+		} else {
+			$customer_id = $this->context->cookie->id_customer;
+			$bids_list = $this->getListOfBids($customer_id);
+			
+			$last_bids = CreditOnBid::getLastsCreditBiddedByCustomer($customer_id);
+			if($last_bids){
+				$result_history = array();
+				$lot_history = array();
+				for($i = 0 ; $i <= count($last_bids); $i++){
+					$credit = $last_bids[$i];
+					$result_history[$i] = $this->getBidResult($credit['id_bid'], $credit['bid_value']);
+					$lot = Bid::getBidWithIdentifier($credit['id_bid']);
+					$lot_history[$i] = $lot[0];
+				}
+				$this->context->smarty->assign('lasts_bids', $last_bids);
+				$this->context->smarty->assign('nb_lasts_bids', count($last_bids)-1);
+				$this->context->smarty->assign('result_history', $result_history);
+				$this->context->smarty->assign('lot_history', $lot_history);
 			}
-			$this->context->smarty->assign('lasts_bids', $last_bids);
-			$this->context->smarty->assign('nb_lasts_bids', count($last_bids)-1);
-			$this->context->smarty->assign('result_history', $result_history);
-			$this->context->smarty->assign('lot_history', $lot_history);
+			$this->context->smarty->assign('bids_list', $bids_list);
+			$this->context->smarty->assign('nb_bids_list', count($bids_list)-1);
 		}
-		$this->context->smarty->assign('bids_list', $bids_list);
-		$this->context->smarty->assign('nb_bids_list', count($bids_list)-1);
-		
-
 		$this->setTemplate(_PS_THEME_DIR_.'personal-bid-history.tpl');
 	}
 	

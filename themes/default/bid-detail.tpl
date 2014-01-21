@@ -1,3 +1,46 @@
+<script type="text/javascript">
+function CompteARebours(){
+	var date_actuelle = new Date(); // On d�clare la date d'aujourd'hui.
+    var expir =  document.getElementById("expirDate").innerHTML;   
+	var expiration = expir.split(" ");
+
+	var expiration_date = new Date(expiration[2], expiration[1]-1, expiration[0], expiration[3], expiration[4], expiration[5]);
+	var tps_restant = expiration_date.getTime() - date_actuelle.getTime(); 
+	var s_restantes = tps_restant / 1000; // On convertit en secondes
+	var i_restantes = s_restantes / 60;
+	var H_restantes = i_restantes / 60;
+	var d_restants = H_restantes / 24;
+	
+	s_restantes = Math.floor(s_restantes % 60); // Secondes restantes
+	i_restantes = Math.floor(i_restantes % 60); // Minutes restantes
+	H_restantes = Math.floor(H_restantes % 24); // Heures restantes
+	d_restants = Math.floor(d_restants); // Jours restants
+	
+	if(d_restants < 0){
+		var texte = " <strong>Enchère terminée!</strong>";
+		document.getElementById('SubmitBid').disabled=true;
+		document.getElementById('SubmitMultipleBid').disabled=true;
+	} else {
+		var texte ="";
+		if(d_restants > 0){
+			texte += "<strong>" +d_restants+ " j </strong>";
+		}
+		if(H_restantes > 0){
+			texte += "<strong>" +H_restantes+ " h </strong>";
+		}
+		if(i_restantes > 0){
+			texte += "<strong>" +i_restantes+ " min </strong>";
+		}
+		if(s_restantes > 0){
+			texte += "<strong>" +s_restantes+ "sec </strong>";
+		}
+	}
+	document.getElementById("affichage").innerHTML = texte;
+}
+setInterval(CompteARebours, 1000); 
+</script>
+
+
 {if isset($bid_sucess)}
 <div id="bid_result" class="clear">
 <Table Border=3 WIDTH=500>
@@ -39,8 +82,8 @@
 <h2><a href="index.php?controller=bid?id={$selected_bid.id_bid}">{$selected_bid.product_name} - Lot n&deg;{$selected_bid.id_bid}</a></h2>
 <div id="bid_detail" class="clear">
 	<div class="center_block">
-				<span class="timeRemainingBeforeExpiration">Temps restant:</span> 
-				<br></br> 
+				<p id="affichage"></p>
+				<p id="expirDate" style="display:none;">{$date}</p>
 				<span class="bidPrice">Cout d'une enchere: 1 bukyZ</span>
 				<br></br> 
 				<span class="bidExpiration">Fin de l'enchere: {$selected_bid.expiration_date}</span>
@@ -60,33 +103,7 @@
 	</form>
 </div>
 <br></br>
-<Table Border=3 WIDTH=500>
-	<tr>
-		<td ALIGN="center">Date</td>
-		<td ALIGN="center">Mise</td>
-		<td ALIGN="center">Resultat</td>
-	</tr>
-	{for $i=0 to $nb_results_history}
-		<tr>
-			<td ALIGN="center">
-				{$credits_history[$i].bid_date}
-			</td>
-			<td ALIGN="center">
-				{$credits_history[$i].bid_value}
-			</td>
-			
-			{if $result_history[$i] == 1}
-			<td ALIGN="center" BGCOLOR="green">Enchere Unique la plus Basse !</td>
-			{/if}
-			{if $result_history[$i] == 2}
-			<td ALIGN="center" BGCOLOR="orange">Enchere Unique mais trop Haute !</td>
-			{/if}
-			{if $result_history[$i] == 3}
-			<td ALIGN="center" BGCOLOR="red">Enchere non Unique !</td>
-			{/if}
-		</tr>
-	{/for}
-</Table>
+<h4><a href="index.php?controller=personal-history?id={$selected_bid.id_bid}">> Voir mes enchères sur ce lot</a></h4>
 <br></br>
 <Table Border=3 WIDTH=500>
 	<tr>

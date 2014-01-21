@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-01-15 22:05:57
+<?php /* Smarty version Smarty-3.1.14, created on 2014-01-20 11:19:38
          compiled from "C:\xampp\htdocs\prestashop\themes\default\followed-bids.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:203152d3b42b8853c9-02736964%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '5347f650b3f96cd0102aeb3a482295807aab3007' => 
     array (
       0 => 'C:\\xampp\\htdocs\\prestashop\\themes\\default\\followed-bids.tpl',
-      1 => 1389819948,
+      1 => 1390212185,
       2 => 'file',
     ),
   ),

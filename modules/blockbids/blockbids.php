@@ -31,7 +31,7 @@ class blockbids extends Module
 		$bids = Bid::getAllBids();
 		$date_bids = array();
 		for($i=0 ; $i<count($bids) ; $i++) {
-			$bid = Bid::getBidWithIdentifier($bids[$i]);
+			$bid = Bid::getBidWithIdentifier($bids[$i]['id_bid']);
 			$date_bids[$i] = Bid::count_date($bid[0]['expiration_date']);
 			$bids[$i]['expiration_date'] = Bid::aff_date($bids[$i]['expiration_date']);
 		}
@@ -42,6 +42,15 @@ class blockbids extends Module
 		));
 		$this->context->controller->addCSS($this->_path.'blockbids.css');
 		return $this->display(__FILE__, 'blockbids.tpl');
+		
+	}
+	
+	private function getContent()
+	{
+		if (Tools::isImage('bookmarkBid'))
+		{
+			print('yo');
+		}
 	}
 }
 ?>

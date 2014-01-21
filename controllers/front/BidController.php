@@ -16,6 +16,8 @@ class BidControllerCore extends FrontController
 		$bid_id = (int)Tools::getValue('id');
 		$bid = Bid::getBidWithIdentifier($bid_id);
 		$selected_bid = $bid[0];
+		$date = Bid::count_date($selected_bid['expiration_date']);
+		$selected_bid['expiration_date'] = Bid::aff_date($selected_bid['expiration_date']);
 		$customer_id = $this->context->cookie->id_customer;
 		$credits = CreditOnBid::getAllCreditOnBidPerCustomer($bid_id,$customer_id);
 		if($credits){
@@ -26,7 +28,8 @@ class BidControllerCore extends FrontController
 			}
 			$this->context->smarty->assign('credits_history', $credits);
 			$this->context->smarty->assign('result_history', $result_history);
-			$this-$this->context->smarty->assign('nb_results_history', count($credits)-1);
+			$this->context->smarty->assign('date', $date);	
+			$this->context->smarty->assign('nb_results_history', count($credits)-1);
 		}
 		$this->context->smarty->assign('selected_bid', $selected_bid);
 		$this->setTemplate(_PS_THEME_DIR_.'bid-detail.tpl');
