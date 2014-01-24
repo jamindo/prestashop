@@ -63,9 +63,10 @@ class BidCore extends ObjectModel
  	* Get All Bids from db
  	*/
 	public static function getAllBids(){
-		$date = date("Y-m-d H:i:s");
+
 		$bids = Db::getInstance()->executeS('
-				SELECT * FROM `'._DB_PREFIX_.'bid`'
+				SELECT * FROM `'._DB_PREFIX_.'bid`
+				WHERE expiration_date > CURRENT_TIMESTAMP( )' 
 			);
 		return $bids;
 	}
@@ -111,6 +112,7 @@ class BidCore extends ObjectModel
 	{
 		return $nb_of_bids = (int)Db::getInstance()->getValue('
 				SELECT COUNT(`id_bid`)
-				FROM `'._DB_PREFIX_.'bid`');
+				FROM `'._DB_PREFIX_.'bid`
+				WHERE expiration_date > CURRENT_TIMESTAMP( )');
 	}
 }

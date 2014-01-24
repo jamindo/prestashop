@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-01-19 18:21:02
+<?php /* Smarty version Smarty-3.1.14, created on 2014-01-21 12:48:15
          compiled from "C:\xampp\htdocs\prestashop\modules\blockcredits\blockcredits.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:16052d6ad3c454098-24514697%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'fcf2e18275f3a02e5f106d8543ac76d7f5ca2185' => 
     array (
       0 => 'C:\\xampp\\htdocs\\prestashop\\modules\\blockcredits\\blockcredits.tpl',
-      1 => 1390152061,
+      1 => 1390304519,
       2 => 'file',
     ),
   ),

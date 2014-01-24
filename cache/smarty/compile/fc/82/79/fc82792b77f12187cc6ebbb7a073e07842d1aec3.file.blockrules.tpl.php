@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-01-19 15:52:47
+<?php /* Smarty version Smarty-3.1.14, created on 2014-01-21 12:48:14
          compiled from "C:\xampp\htdocs\prestashop\modules\blockrules\blockrules.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:484252dbe6bf2e5e88-14362366%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'fc82792b77f12187cc6ebbb7a073e07842d1aec3' => 
     array (
       0 => 'C:\\xampp\\htdocs\\prestashop\\modules\\blockrules\\blockrules.tpl',
-      1 => 1390143123,
+      1 => 1390304519,
       2 => 'file',
     ),
   ),
@@ -15,13 +15,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_52dbe6bf2f0029_10221589',
   'variables' => 
   array (
     'logged' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_52dbe6bf2f0029_10221589',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_52dbe6bf2f0029_10221589')) {function content_52dbe6bf2f0029_10221589($_smarty_tpl) {?><!-- Block rules -->
 <?php if ($_smarty_tpl->tpl_vars['logged']->value){?>

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-01-21 10:02:19
+<?php /* Smarty version Smarty-3.1.14, created on 2014-01-21 12:48:15
          compiled from "C:\xampp\htdocs\prestashop\modules\blockbids\blockbids.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1557752caec7b85ef96-84656407%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '73556f202a5df5c465005838308b9d0f90dd415b' => 
     array (
       0 => 'C:\\xampp\\htdocs\\prestashop\\modules\\blockbids\\blockbids.tpl',
-      1 => 1390294936,
+      1 => 1390304519,
       2 => 'file',
     ),
   ),

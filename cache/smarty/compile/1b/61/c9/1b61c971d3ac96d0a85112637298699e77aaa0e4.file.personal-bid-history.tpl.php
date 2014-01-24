@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-01-12 15:49:24
+<?php /* Smarty version Smarty-3.1.14, created on 2014-01-24 10:45:15
          compiled from "C:\xampp\htdocs\prestashop\themes\default\personal-bid-history.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:265352c734516224e1-80732232%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '1b61c971d3ac96d0a85112637298699e77aaa0e4' => 
     array (
       0 => 'C:\\xampp\\htdocs\\prestashop\\themes\\default\\personal-bid-history.tpl',
-      1 => 1389538075,
+      1 => 1390556682,
       2 => 'file',
     ),
   ),
@@ -24,13 +24,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'i' => 0,
     'bids_list' => 0,
     'fromSearch' => 0,
-    'nb_results_history' => 0,
+    'nb_search_results_history' => 0,
     'lot_history' => 0,
     'lot_name' => 0,
     'credits_history' => 0,
-    'result_history' => 0,
+    'search_results_history' => 0,
+    'default' => 0,
     'nb_lasts_bids' => 0,
     'lasts_bids' => 0,
+    'result_history' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
@@ -63,7 +65,7 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
 		<td ALIGN="center">Mise</td>
 		<td ALIGN="center">Resultat</td>
 	</tr>
-	<?php $_smarty_tpl->tpl_vars['i'] = new Smarty_Variable;$_smarty_tpl->tpl_vars['i']->step = 1;$_smarty_tpl->tpl_vars['i']->total = (int)ceil(($_smarty_tpl->tpl_vars['i']->step > 0 ? $_smarty_tpl->tpl_vars['nb_results_history']->value+1 - (0) : 0-($_smarty_tpl->tpl_vars['nb_results_history']->value)+1)/abs($_smarty_tpl->tpl_vars['i']->step));
+	<?php $_smarty_tpl->tpl_vars['i'] = new Smarty_Variable;$_smarty_tpl->tpl_vars['i']->step = 1;$_smarty_tpl->tpl_vars['i']->total = (int)ceil(($_smarty_tpl->tpl_vars['i']->step > 0 ? $_smarty_tpl->tpl_vars['nb_search_results_history']->value+1 - (0) : 0-($_smarty_tpl->tpl_vars['nb_search_results_history']->value)+1)/abs($_smarty_tpl->tpl_vars['i']->step));
 if ($_smarty_tpl->tpl_vars['i']->total > 0){
 for ($_smarty_tpl->tpl_vars['i']->value = 0, $_smarty_tpl->tpl_vars['i']->iteration = 1;$_smarty_tpl->tpl_vars['i']->iteration <= $_smarty_tpl->tpl_vars['i']->total;$_smarty_tpl->tpl_vars['i']->value += $_smarty_tpl->tpl_vars['i']->step, $_smarty_tpl->tpl_vars['i']->iteration++){
 $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1;$_smarty_tpl->tpl_vars['i']->last = $_smarty_tpl->tpl_vars['i']->iteration == $_smarty_tpl->tpl_vars['i']->total;?>
@@ -77,19 +79,20 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
 
 			</td>
 			
-			<?php if ($_smarty_tpl->tpl_vars['result_history']->value[$_smarty_tpl->tpl_vars['i']->value]==1){?>
+			<?php if ($_smarty_tpl->tpl_vars['search_results_history']->value[$_smarty_tpl->tpl_vars['i']->value]==1){?>
 			<td ALIGN="center" BGCOLOR="green">Enchere Unique la plus Basse !</td>
 			<?php }?>
-			<?php if ($_smarty_tpl->tpl_vars['result_history']->value[$_smarty_tpl->tpl_vars['i']->value]==2){?>
+			<?php if ($_smarty_tpl->tpl_vars['search_results_history']->value[$_smarty_tpl->tpl_vars['i']->value]==2){?>
 			<td ALIGN="center" BGCOLOR="orange">Enchere Unique mais trop Haute !</td>
 			<?php }?>
-			<?php if ($_smarty_tpl->tpl_vars['result_history']->value[$_smarty_tpl->tpl_vars['i']->value]==3){?>
+			<?php if ($_smarty_tpl->tpl_vars['search_results_history']->value[$_smarty_tpl->tpl_vars['i']->value]==3){?>
 			<td ALIGN="center" BGCOLOR="red">Enchere non Unique !</td>
 			<?php }?>
 		</tr>
 	<?php }} ?>
 </Table>
 <?php }?>
+<?php if (!isset($_smarty_tpl->tpl_vars['default']->value)){?>
 <br></br>
 <h2>Dernieres mises</h2>
 <Table Border=3 WIDTH=500>
@@ -124,4 +127,5 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
 	</tr>
     <?php }} ?>
 </Table>
+<?php }?>
 <?php }} ?>

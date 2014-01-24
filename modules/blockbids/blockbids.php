@@ -44,13 +44,5 @@ class blockbids extends Module
 		return $this->display(__FILE__, 'blockbids.tpl');
 		
 	}
-	
-	private function getContent()
-	{
-		if (Tools::isImage('bookmarkBid'))
-		{
-			print('yo');
-		}
-	}
 }
 ?>
