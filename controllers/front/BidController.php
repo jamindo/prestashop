@@ -156,7 +156,7 @@ class BidControllerCore extends FrontController
 					}
 				}
 	}
-	
+
 	protected function getBidResult($bid_id, $bid_value)
 	{
 		$lowest_bid = CreditOnBid::getLowestUniqueBid($bid_id);

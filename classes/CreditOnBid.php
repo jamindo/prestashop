@@ -102,4 +102,15 @@ class CreditOnBidCore extends ObjectModel
 				ORDER BY b.`bid_date`
 				');
 	}
+	
+	public static function getCreditWinner($id_bid)
+	{
+		return $sql = Db::getInstance()->executeS('
+				SELECT `id_credit`
+				FROM '._DB_PREFIX_.'credit_on_bid
+				WHERE id_bid = '.(int)$id_bid.'
+				GROUP BY bid_value
+				HAVING COUNT(bid_value) < 2
+				LIMIT 1');
+	}
 }

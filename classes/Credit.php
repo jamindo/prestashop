@@ -61,4 +61,12 @@ class CreditCore extends ObjectModel
 			INSERT INTO '._DB_PREFIX_.'credit(id_customer)
 			VALUES('.$id_customer.')');
 	}
+	
+	public static function getCreditOwner($id_credit)
+	{
+		return $sql = Db::getInstance()->executeS('
+			SELECT id_customer 
+			FROM '._DB_PREFIX_.'credit
+			WHERE id_credit = '.(int)$id_credit.'');
+	}
 }

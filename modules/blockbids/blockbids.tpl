@@ -5,7 +5,7 @@ function CompteARebours(){
 	var date_actuelle = new Date(); // On d�clare la date d'aujourd'hui.
     var expir =  document.getElementById("expirDate").innerHTML;   
 	var expiration = expir.split(" ");
-
+	
 	var expiration_date = new Date(expiration[2], expiration[1]-1, expiration[0], expiration[3], expiration[4], expiration[5]);
 	var tps_restant = expiration_date.getTime() - date_actuelle.getTime(); 
 	var s_restantes = tps_restant / 1000; // On convertit en secondes
@@ -21,7 +21,10 @@ function CompteARebours(){
 		var texte = " <strong>Enchère terminée!</strong>";
 		document.getElementById('SubmitBid').disabled=true;
 		document.getElementById('SubmitMultipleBid').disabled=true;
-	} else {
+		setInterval(CompteARebours, 10); 
+		location.reload();
+	}
+	else {
 		var texte ="";
 		if(d_restants > 0){
 			texte += "<strong>" +d_restants+ " j </strong>";
@@ -45,10 +48,17 @@ setInterval(CompteARebours, 1000);
 <ul id="block_bids" class="clear">
 	<ul id="bid_list" class="clear">
 		{for $i=0 to $nb_bids-1}
+		{$bookmark[$i]}
 		<li>
 			<h2><a href="index.php?controller=bid?id={$bids[$i].id_bid}">{$bids[$i].product_name} - Lot n&deg;{$bids[$i].id_bid}</a></h2>
-			<form action="index.php" method="post">
-				<input id="bookmarkBid" type="image" name="bookmarkBid" src="img/unbook.png"/>
+			<form action="index.php?controller=followed-bid" method="post"> 
+					<input type="hidden" id="bidId" name="bidId" value={$bids[$i].id_bid}>
+					{if $bookmark[$i] == 1}
+					<input type="image" src="img/book.png" id="SubmitUnbook" name="SubmitUnbook">
+					{/if}
+					{if $bookmark[$i] == 0}
+					<input type="image" src="img/unbook.png" id="SubmitBook" name="SubmitBook">
+					{/if}
 			</form>
 			<div class="center_block">
 				<p id="affichage"></p>

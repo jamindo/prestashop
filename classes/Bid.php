@@ -72,6 +72,17 @@ class BidCore extends ObjectModel
 	}
 	
 	/**
+	 * Get All finished Bids from db
+	 */
+	public static function getAllExpiredBids(){
+	
+		$bids = Db::getInstance()->executeS('
+				SELECT `id_bid` FROM `'._DB_PREFIX_.'bid`
+				WHERE expiration_date < CURRENT_TIMESTAMP( )'
+		);
+		return $bids;
+	}
+	/**
 	 * @param unknown $date
 	 * @param string $lang
 	 * @param string $format_fr

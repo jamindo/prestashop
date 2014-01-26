@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-01-21 12:48:15
+<?php /* Smarty version Smarty-3.1.14, created on 2014-01-26 15:00:33
          compiled from "C:\xampp\htdocs\prestashop\modules\blockbids\blockbids.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1557752caec7b85ef96-84656407%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '73556f202a5df5c465005838308b9d0f90dd415b' => 
     array (
       0 => 'C:\\xampp\\htdocs\\prestashop\\modules\\blockbids\\blockbids.tpl',
-      1 => 1390304519,
+      1 => 1390744829,
       2 => 'file',
     ),
   ),
@@ -21,6 +21,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   array (
     'nb_bids' => 0,
     'i' => 0,
+    'bookmark' => 0,
     'bids' => 0,
     'date_bids' => 0,
     'link' => 0,
@@ -35,7 +36,7 @@ function CompteARebours(){
 	var date_actuelle = new Date(); // On d�clare la date d'aujourd'hui.
     var expir =  document.getElementById("expirDate").innerHTML;   
 	var expiration = expir.split(" ");
-
+	
 	var expiration_date = new Date(expiration[2], expiration[1]-1, expiration[0], expiration[3], expiration[4], expiration[5]);
 	var tps_restant = expiration_date.getTime() - date_actuelle.getTime(); 
 	var s_restantes = tps_restant / 1000; // On convertit en secondes
@@ -51,7 +52,10 @@ function CompteARebours(){
 		var texte = " <strong>Enchère terminée!</strong>";
 		document.getElementById('SubmitBid').disabled=true;
 		document.getElementById('SubmitMultipleBid').disabled=true;
-	} else {
+		setInterval(CompteARebours, 10); 
+		location.reload();
+	}
+	else {
 		var texte ="";
 		if(d_restants > 0){
 			texte += "<strong>" +d_restants+ " j </strong>";
@@ -79,13 +83,22 @@ setInterval(CompteARebours, 1000);
 if ($_smarty_tpl->tpl_vars['i']->total > 0){
 for ($_smarty_tpl->tpl_vars['i']->value = 0, $_smarty_tpl->tpl_vars['i']->iteration = 1;$_smarty_tpl->tpl_vars['i']->iteration <= $_smarty_tpl->tpl_vars['i']->total;$_smarty_tpl->tpl_vars['i']->value += $_smarty_tpl->tpl_vars['i']->step, $_smarty_tpl->tpl_vars['i']->iteration++){
 $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1;$_smarty_tpl->tpl_vars['i']->last = $_smarty_tpl->tpl_vars['i']->iteration == $_smarty_tpl->tpl_vars['i']->total;?>
+		<?php echo $_smarty_tpl->tpl_vars['bookmark']->value[$_smarty_tpl->tpl_vars['i']->value];?>
+
 		<li>
 			<h2><a href="index.php?controller=bid?id=<?php echo $_smarty_tpl->tpl_vars['bids']->value[$_smarty_tpl->tpl_vars['i']->value]['id_bid'];?>
 "><?php echo $_smarty_tpl->tpl_vars['bids']->value[$_smarty_tpl->tpl_vars['i']->value]['product_name'];?>
  - Lot n&deg;<?php echo $_smarty_tpl->tpl_vars['bids']->value[$_smarty_tpl->tpl_vars['i']->value]['id_bid'];?>
 </a></h2>
-			<form action="index.php" method="post">
-				<input id="bookmarkBid" type="image" name="bookmarkBid" src="img/unbook.png"/>
+			<form action="index.php?controller=followed-bid" method="post"> 
+					<input type="hidden" id="bidId" name="bidId" value=<?php echo $_smarty_tpl->tpl_vars['bids']->value[$_smarty_tpl->tpl_vars['i']->value]['id_bid'];?>
+>
+					<?php if ($_smarty_tpl->tpl_vars['bookmark']->value[$_smarty_tpl->tpl_vars['i']->value]==1){?>
+					<input type="image" src="img/book.png" id="SubmitUnbook" name="SubmitUnbook">
+					<?php }?>
+					<?php if ($_smarty_tpl->tpl_vars['bookmark']->value[$_smarty_tpl->tpl_vars['i']->value]==0){?>
+					<input type="image" src="img/unbook.png" id="SubmitBook" name="SubmitBook">
+					<?php }?>
 			</form>
 			<div class="center_block">
 				<p id="affichage"></p>

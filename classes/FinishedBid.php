@@ -39,6 +39,20 @@ class FinishedBidCore extends ObjectModel
 				');
 	}
 	
+	public static function isAlreadyPresent($id_bid)
+	{
+		$bid = Db::getInstance()->executeS('
+				SELECT `id_finished_bid`
+				FROM `'._DB_PREFIX_.'finished_bid`
+				WHERE `id_bid` = '.id_bid.'');
+		
+		if($bid){
+			return true;
+		} else {
+			return false;
+		}
+	}
+	
 	public static function setBidWinner($id_finished_bid , $id_customer)
 	{
 		Db::getInstance()->execute('
@@ -46,5 +60,20 @@ class FinishedBidCore extends ObjectModel
 			SET `id_customer`= '.$id_customer.'
 			WHERE id_finished_bid = '.(int)$id_finished_bid.'
 		');
+	}
+	
+	public static function insertFinishedBid($id_bid, $id_customer)
+	{
+		Db::getInstance()->execute('
+			INSERT INTO '._DB_PREFIX_.'finished_bid(id_bid,id_customer)
+			VALUES('.$id_bid.','.$id_customer.')');
+	}
+	
+	public static function getFinishedBid()
+	{
+		return Db::getInstance()->executeS('
+				SELECT *
+				FROM `'._DB_PREFIX_.'finished_bid`
+				');
 	}
 }

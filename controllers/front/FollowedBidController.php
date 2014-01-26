@@ -33,4 +33,32 @@ public function init()
 		parent::setMedia();
 		$this->addCSS(_THEME_CSS_DIR_.'followed-bids.css');
 	}
+	
+	
+	public function postProcess()
+	{
+		if (Tools::isSubmit('SubmitBook')){
+			$this->processSubmitBook();
+		}
+		if (Tools::isSubmit('SubmitUnbook')){
+			$this->processSubmitUnbook();
+		}
+	}
+	
+	protected function processSubmitBook()
+	{
+		$id_bid = Tools::getValue('bidId');
+		$id_customer = $this->context->cookie->id_customer;
+		FollowedBid::createFollowedBid($id_bid,$id_customer);	
+		Tools::redirect('index.php');
+	}
+	
+	protected function processSubmitUnbook()
+	{
+		$id_bid = Tools::getValue('bidId');
+		$id_customer = $this->context->cookie->id_customer;
+		FollowedBid::stopFollowedBid($id_bid,$id_customer);
+		Tools::redirect('index.php');
+	}
+	
 }
