@@ -6,6 +6,7 @@ encoding//modules/blockrules/blockrules.tpl=UTF-8
 encoding//modules/blockuserinfo/translations/fr.php=UTF-8
 encoding//themes/default/bid-detail.tpl=UTF-8
 encoding//themes/default/buy-credits.tpl=UTF-8
+encoding//themes/default/finished-bid.tpl=UTF-8
 encoding//themes/default/followed-bids.tpl=UTF-8
 encoding//themes/default/payment.tpl=UTF-8
 encoding//translations/fr/errors.php=UTF-8

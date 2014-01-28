@@ -342,6 +342,8 @@
   'FinishedBidCore' => 'classes/FinishedBid.php',
   'FinishedBidDetailController' => '',
   'FinishedBidDetailControllerCore' => 'controllers/front/FinishedBidDetailController.php',
+  'FinishedBidRecapController' => '',
+  'FinishedBidRecapControllerCore' => 'controllers/front/FinishedBidRecapController.php',
   'FollowedBid' => '',
   'FollowedBidController' => '',
   'FollowedBidControllerCore' => 'controllers/front/FollowedBidController.php',

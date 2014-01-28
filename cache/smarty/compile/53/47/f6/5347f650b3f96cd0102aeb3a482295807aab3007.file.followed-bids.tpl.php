@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-01-28 17:37:28
+<?php /* Smarty version Smarty-3.1.14, created on 2014-01-28 17:58:00
          compiled from "C:\xampp\htdocs\prestashop\themes\default\followed-bids.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:203152d3b42b8853c9-02736964%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '5347f650b3f96cd0102aeb3a482295807aab3007' => 
     array (
       0 => 'C:\\xampp\\htdocs\\prestashop\\themes\\default\\followed-bids.tpl',
-      1 => 1390927043,
+      1 => 1390927136,
       2 => 'file',
     ),
   ),
@@ -129,8 +129,7 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
 				<td> <img src="<?php echo $_smarty_tpl->tpl_vars['followed_bids']->value[$_smarty_tpl->tpl_vars['i']->value]['product_image'];?>
 "></td>
 				<td>
-					<a href="index.php?controller=bid?id=<?php echo $_smarty_tpl->tpl_vars['followed_bids']->value[$_smarty_tpl->tpl_vars['i']->value]['id_bid'];?>
-">Lot n&deg;<?php echo $_smarty_tpl->tpl_vars['followed_bids']->value[$_smarty_tpl->tpl_vars['i']->value]['id_bid'];?>
+					<a href="index.php?controller=">Lot n&deg;<?php echo $_smarty_tpl->tpl_vars['followed_bids']->value[$_smarty_tpl->tpl_vars['i']->value]['id_bid'];?>
  - <?php echo $_smarty_tpl->tpl_vars['followed_bids']->value[$_smarty_tpl->tpl_vars['i']->value]['product_name'];?>
 </a><br></br>
 					<form action="index.php?controller=followed-bid" method="post"> 
@@ -167,7 +166,7 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
 </strong></span><br></br>
 					<?php }?>
 					<h4><a href="index.php?controller=finished-bid?id=<?php echo $_smarty_tpl->tpl_vars['followed_bids']->value[$_smarty_tpl->tpl_vars['i']->value]['id_bid'];?>
-">> Voir les détails de l'enchère</a></h4>
+">> Voir le détail de l'enchère</a></h4>
 				</td>
 			</tr>
 			<?php }?>
