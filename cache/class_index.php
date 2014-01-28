@@ -340,6 +340,8 @@
   'FinishedBidController' => '',
   'FinishedBidControllerCore' => 'controllers/front/FinishedBidController.php',
   'FinishedBidCore' => 'classes/FinishedBid.php',
+  'FinishedBidDetailController' => '',
+  'FinishedBidDetailControllerCore' => 'controllers/front/FinishedBidDetailController.php',
   'FollowedBid' => '',
   'FollowedBidController' => '',
   'FollowedBidControllerCore' => 'controllers/front/FollowedBidController.php',

@@ -28,6 +28,19 @@ class blockbids extends Module
 	public function hookHome($params)
 	{
 		global $smarty;
+		
+		$bids = Bid::getAllExpiredBids();
+		for($i=0 ; $i <count($bids) ; $i++){
+			$alreadyIn = FinishedBid::isAlreadyPresent($bids[$i]['id_bid']);
+			if($alreadyIn == false){
+				$winner_credit = CreditOnBid::getCreditWinner($bids[$i]['id_bid']);
+				$winner_credit_value = CreditOnBid::getCreditWinnerValue($bids[$i]['id_bid']);
+				$winner_id = Credit::getCreditOwner($winner_credit[0]['id_credit']);
+				FinishedBid::insertFinishedBid($bids[$i]['id_bid'],$winner_id[0]['id_customer'],
+				$winner_credit_value[0]['bid_value']);
+			}
+		}
+		
 		$bids = Bid::getAllBids();
 		$id_customer = $this->context->cookie->id_customer;
 		$date_bids = array();
@@ -43,6 +56,7 @@ class blockbids extends Module
 			$date_bids[$i] = Bid::count_date($bid[0]['expiration_date']);
 			$bids[$i]['expiration_date'] = Bid::aff_date($bids[$i]['expiration_date']);
 		}
+		
 		$this->context->smarty->assign(array(
 				'bids' => $bids,
 				'nb_bids' => Bid::countBids(),

@@ -843,6 +843,15 @@ class CustomerCore extends ObjectModel
 		return ($cart->nbProducts() === 0 ? (int)$cart->id : false);
 	}
 
+	public function getCustomerWithId($id_customer)
+	{
+		return Db::getInstance()->executeS('
+				SELECT login
+				FROM `'._DB_PREFIX_.'customer`
+				WHERE id_customer = '.(int)$id_customer.'
+				');
+	}
+	
 	public function getOutstanding()
 	{
 		$query = new DbQuery();

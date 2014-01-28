@@ -113,4 +113,15 @@ class CreditOnBidCore extends ObjectModel
 				HAVING COUNT(bid_value) < 2
 				LIMIT 1');
 	}
+	
+	public static function getCreditWinnerValue($id_bid)
+	{
+		return $sql = Db::getInstance()->executeS('
+				SELECT `bid_value`
+				FROM '._DB_PREFIX_.'credit_on_bid
+				WHERE id_bid = '.(int)$id_bid.'
+				GROUP BY bid_value
+				HAVING COUNT(bid_value) < 2
+				LIMIT 1');
+	}
 }

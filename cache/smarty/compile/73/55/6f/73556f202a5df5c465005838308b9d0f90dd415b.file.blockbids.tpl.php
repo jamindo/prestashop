@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-01-26 15:00:33
+<?php /* Smarty version Smarty-3.1.14, created on 2014-01-26 15:31:48
          compiled from "C:\xampp\htdocs\prestashop\modules\blockbids\blockbids.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1557752caec7b85ef96-84656407%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '73556f202a5df5c465005838308b9d0f90dd415b' => 
     array (
       0 => 'C:\\xampp\\htdocs\\prestashop\\modules\\blockbids\\blockbids.tpl',
-      1 => 1390744829,
+      1 => 1390746702,
       2 => 'file',
     ),
   ),
@@ -21,8 +21,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   array (
     'nb_bids' => 0,
     'i' => 0,
-    'bookmark' => 0,
     'bids' => 0,
+    'bookmark' => 0,
     'date_bids' => 0,
     'link' => 0,
   ),
@@ -83,8 +83,6 @@ setInterval(CompteARebours, 1000);
 if ($_smarty_tpl->tpl_vars['i']->total > 0){
 for ($_smarty_tpl->tpl_vars['i']->value = 0, $_smarty_tpl->tpl_vars['i']->iteration = 1;$_smarty_tpl->tpl_vars['i']->iteration <= $_smarty_tpl->tpl_vars['i']->total;$_smarty_tpl->tpl_vars['i']->value += $_smarty_tpl->tpl_vars['i']->step, $_smarty_tpl->tpl_vars['i']->iteration++){
 $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1;$_smarty_tpl->tpl_vars['i']->last = $_smarty_tpl->tpl_vars['i']->iteration == $_smarty_tpl->tpl_vars['i']->total;?>
-		<?php echo $_smarty_tpl->tpl_vars['bookmark']->value[$_smarty_tpl->tpl_vars['i']->value];?>
-
 		<li>
 			<h2><a href="index.php?controller=bid?id=<?php echo $_smarty_tpl->tpl_vars['bids']->value[$_smarty_tpl->tpl_vars['i']->value]['id_bid'];?>
 "><?php echo $_smarty_tpl->tpl_vars['bids']->value[$_smarty_tpl->tpl_vars['i']->value]['product_name'];?>

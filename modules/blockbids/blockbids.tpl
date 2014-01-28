@@ -48,7 +48,6 @@ setInterval(CompteARebours, 1000);
 <ul id="block_bids" class="clear">
 	<ul id="bid_list" class="clear">
 		{for $i=0 to $nb_bids-1}
-		{$bookmark[$i]}
 		<li>
 			<h2><a href="index.php?controller=bid?id={$bids[$i].id_bid}">{$bids[$i].product_name} - Lot n&deg;{$bids[$i].id_bid}</a></h2>
 			<form action="index.php?controller=followed-bid" method="post"> 
