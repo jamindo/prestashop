@@ -62,4 +62,9 @@ class PaymentControllerCore extends FrontController
 			return 375;
 		}
 	}
+	public function setMedia()
+	{
+		parent::setMedia();
+		$this->addCSS(_THEME_CSS_DIR_.'payment.css');
+	}
 }

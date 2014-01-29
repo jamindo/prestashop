@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-01-19 18:08:48
+<?php /* Smarty version Smarty-3.1.14, created on 2014-01-21 17:02:23
          compiled from "C:\xampp\htdocs\prestashop\themes\default\buy-credits.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1311652d11188829382-49016751%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '85e0a371eff5ae79810451f0016edd209a86276e' => 
     array (
       0 => 'C:\\xampp\\htdocs\\prestashop\\themes\\default\\buy-credits.tpl',
-      1 => 1390151318,
+      1 => 1390306406,
       2 => 'file',
     ),
   ),

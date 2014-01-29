@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-01-18 17:06:26
+<?php /* Smarty version Smarty-3.1.14, created on 2014-01-21 17:00:07
          compiled from "C:\xampp\htdocs\prestashop\themes\default\authentication.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1139152daa682061e22-35582271%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'f3a658c13c908e275cce506cfd6cd8a5b49f39df' => 
     array (
       0 => 'C:\\xampp\\htdocs\\prestashop\\themes\\default\\authentication.tpl',
-      1 => 1389030506,
+      1 => 1390306440,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_52daa682869af6_88259716',
   'variables' => 
   array (
     'email_create' => 0,
@@ -55,8 +57,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'PS_REGISTRATION_PROCESS_TYPE' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_52daa682869af6_88259716',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_52daa682869af6_88259716')) {function content_52daa682869af6_88259716($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_escape')) include 'C:\\xampp\\htdocs\\prestashop\\tools\\smarty\\plugins\\modifier.escape.php';
 ?>

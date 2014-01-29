@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-01-19 16:01:43
+<?php /* Smarty version Smarty-3.1.14, created on 2014-01-21 16:33:56
          compiled from "C:\xampp\htdocs\prestashop\modules\blockinscription\blockinscription.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1782752d6ad3c404869-35578257%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'd53147e9e0dbed2eb9170a7bf45f77817ac7ab2c' => 
     array (
       0 => 'C:\\xampp\\htdocs\\prestashop\\modules\\blockinscription\\blockinscription.tpl',
-      1 => 1390143700,
+      1 => 1390306582,
       2 => 'file',
     ),
   ),
