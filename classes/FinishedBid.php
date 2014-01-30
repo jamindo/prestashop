@@ -62,11 +62,11 @@ class FinishedBidCore extends ObjectModel
 		');
 	}
 	
-	public static function insertFinishedBid($id_bid, $id_customer, $bid_value)
+	public static function insertFinishedBid($id_bid, $id_customer, $bid_value, $saving)
 	{
 		Db::getInstance()->execute('
-			INSERT INTO '._DB_PREFIX_.'finished_bid(id_bid,id_customer,value)
-			VALUES('.$id_bid.','.$id_customer.','.$bid_value.')');
+			INSERT INTO '._DB_PREFIX_.'finished_bid(id_bid,id_customer,value,saving)
+			VALUES('.$id_bid.','.$id_customer.','.$bid_value.','.$saving.')');
 	}
 	
 	public static function getFinishedBid()

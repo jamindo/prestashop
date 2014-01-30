@@ -76,7 +76,7 @@ setInterval(CompteARebours, 1000);
 			<tr>
 				<td> <img src="{$followed_bids[$i].product_image}"></td>
 				<td>
-					<a href="index.php?controller=">Lot n&deg;{$followed_bids[$i].id_bid} - {$followed_bids[$i].product_name}</a><br></br>
+					<a href="index.php?controller=finished-bid-detail?id={$followed_bids[$i].id_bid}">Lot n&deg;{$followed_bids[$i].id_bid} - {$followed_bids[$i].product_name}</a><br></br>
 					<form action="index.php?controller=followed-bid" method="post"> 
 						<input type="hidden" id="bidId" name="bidId" value={$followed_bids[$i].id_bid}>
 						<input type="hidden" id="fromPage" name="fromPage" value="true">
@@ -91,7 +91,7 @@ setInterval(CompteARebours, 1000);
 				<td>
 					{if $winner_id[$i] == $customer}
 						{if $paid[$i] == 0}
-							<form action="index.php?controller=" method="post">
+							<form action="index.php?controller=finished-bid-recap" method="post">
 								<input type="hidden" id="bidId" name="bidId" value={$followed_bids[$i].id_bid}> 
 								<input type="submit" id="SubmitGetBid" name="SubmitGetBid" class="button" value="Récupérer le lot">
 							</form>
@@ -103,7 +103,7 @@ setInterval(CompteARebours, 1000);
 					{if $winner_id[$i] != $customer}
 					<span id="winner">Enchère remportée par :<strong>{$winner[$i]}</strong></span><br></br>
 					{/if}
-					<h4><a href="index.php?controller=finished-bid?id={$followed_bids[$i].id_bid}">> Voir le détail de l'enchère</a></h4>
+					<h4><a href="index.php?controller=finished-bid-detail?id={$followed_bids[$i].id_bid}">> Voir le détail de l'enchère</a></h4>
 				</td>
 			</tr>
 			{/if}

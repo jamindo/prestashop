@@ -33,8 +33,7 @@ public function init()
 			} else {
 				$finished_bid = FinishedBid::getFinishedBidWithId($query[$i]['id_bid']);
 				$sell[$i] = $finished_bid[0]['value'];
-				$save[$i] = number_format(((($followed_bids[$i]['product_value'] - $finished_bid[0]['value'])
-							*100)/$followed_bids[$i]['product_value']),2);
+				$save[$i] = $finished_bid[0]['saving'];
 				$winner = Customer::getCustomerWithId($finished_bid[0]['id_customer']);
 				$winner_login[$i] = $winner[0]['login'];
 				$winner_id[$i] = $finished_bid[0]['id_customer'];

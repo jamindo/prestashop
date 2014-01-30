@@ -10,6 +10,12 @@ class PaymentControllerCore extends FrontController
 		$this->setTemplate(_PS_THEME_DIR_.'payment.tpl');
 	}
 	
+	public function setMedia()
+	{
+		parent::setMedia();
+		$this->addCSS(_THEME_CSS_DIR_.'payment.css');
+	}
+	
 	public function postProcess()
 	{
 		if (Tools::isSubmit('SubmitCBPayment')){

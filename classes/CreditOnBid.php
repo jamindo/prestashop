@@ -124,4 +124,23 @@ class CreditOnBidCore extends ObjectModel
 				HAVING COUNT(bid_value) < 2
 				LIMIT 1');
 	}
+	
+	public static function getAllBiddedValue($id_bid)
+	{
+		return $sql = Db::getInstance()->executeS('
+			SELECT distinct bid_value
+			FROM '._DB_PREFIX_.'credit_on_bid
+			WHERE id_bid='.$id_bid.'
+			ORDER BY bid_value ASC');
+	}
+	
+	public static function countNbBid($bid_value, $id_bid)
+	{
+		return $nb_of_bids = (int)Db::getInstance()->getValue('
+				SELECT COUNT(bid_value)
+				FROM `'._DB_PREFIX_.'credit_on_bid`
+				WHERE id_bid='.$id_bid.'
+				AND bid_value='.$bid_value.'
+				');
+	}
 }

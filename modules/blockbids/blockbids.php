@@ -36,8 +36,10 @@ class blockbids extends Module
 				$winner_credit = CreditOnBid::getCreditWinner($bids[$i]['id_bid']);
 				$winner_credit_value = CreditOnBid::getCreditWinnerValue($bids[$i]['id_bid']);
 				$winner_id = Credit::getCreditOwner($winner_credit[0]['id_credit']);
+				$saving = number_format(((($bids[$i]['product_value'] - $winner_credit_value[0]['bid_value'])
+					*100)/$bids[$i]['product_value']),2);
 				FinishedBid::insertFinishedBid($bids[$i]['id_bid'],$winner_id[0]['id_customer'],
-				$winner_credit_value[0]['bid_value']);
+				$winner_credit_value[0]['bid_value'],$saving);
 			}
 		}
 		
