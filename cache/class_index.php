@@ -663,6 +663,8 @@
   'WebserviceSpecificManagementInterface' => 'classes/webservice/WebserviceSpecificManagementInterface.php',
   'WebserviceSpecificManagementSearch' => '',
   'WebserviceSpecificManagementSearchCore' => 'classes/webservice/WebserviceSpecificManagementSearch.php',
+  'WinnedBidController' => '',
+  'WinnedBidControllerCore' => 'controllers/front/WinnedBidController.php',
   'Zone' => '',
   'ZoneCore' => 'classes/Zone.php',
 ); ?>

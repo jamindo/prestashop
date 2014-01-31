@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-01-21 12:48:15
+<?php /* Smarty version Smarty-3.1.14, created on 2014-01-31 16:22:05
          compiled from "C:\xampp\htdocs\prestashop\modules\blockcredits\blockcredits.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:16052d6ad3c454098-24514697%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'fcf2e18275f3a02e5f106d8543ac76d7f5ca2185' => 
     array (
       0 => 'C:\\xampp\\htdocs\\prestashop\\modules\\blockcredits\\blockcredits.tpl',
-      1 => 1390304519,
+      1 => 1391181718,
       2 => 'file',
     ),
   ),
@@ -48,6 +48,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 	</br>
 	<li><a href="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['link']->value->getPageLink('followed-bid',true), ENT_QUOTES, 'UTF-8', true);?>
 ">Mes enchères</a></li>
+	</br>
+	<li><a href="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['link']->value->getPageLink('winned-bid',true), ENT_QUOTES, 'UTF-8', true);?>
+">Mes enchères remportés</a></li>
 	</br>
 	<li><a href="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['link']->value->getPageLink('addresses',true), ENT_QUOTES, 'UTF-8', true);?>
 ">Mes adresses</a></li>

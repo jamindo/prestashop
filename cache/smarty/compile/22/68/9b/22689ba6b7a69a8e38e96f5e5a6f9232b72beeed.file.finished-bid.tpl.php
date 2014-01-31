@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-01-29 15:56:21
+<?php /* Smarty version Smarty-3.1.14, created on 2014-01-30 13:56:54
          compiled from "C:\xampp\htdocs\prestashop\themes\default\finished-bid.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1861752d3b43d8e9dc4-89013521%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '22689ba6b7a69a8e38e96f5e5a6f9232b72beeed' => 
     array (
       0 => 'C:\\xampp\\htdocs\\prestashop\\themes\\default\\finished-bid.tpl',
-      1 => 1391007376,
+      1 => 1391086129,
       2 => 'file',
     ),
   ),
@@ -58,7 +58,7 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
 							<form action="index.php?controller=finished-bid-recap" method="post">
 								<input type="hidden" id="bidId" name="bidId" value=<?php echo $_smarty_tpl->tpl_vars['current_bid']->value[$_smarty_tpl->tpl_vars['i']->value]['id_bid'];?>
 > 
-								<input type="submit" id="SubmitGetBid" name="SubmitGetBid" class="button" value="Récupérer le lot">
+								<input type="submit" id="SubmitBidRecap" name="SubmitBidRecap" class="button" value="Récupérer le lot">
 							</form>
 						<?php }?>
 						<?php if ($_smarty_tpl->tpl_vars['finished_bids']->value[$_smarty_tpl->tpl_vars['i']->value]['paid']==1){?>

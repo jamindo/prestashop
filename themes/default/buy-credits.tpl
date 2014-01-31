@@ -99,21 +99,6 @@ et recevez tout de suite 2 BukyZ gratuitement !
 			</table>
 			<br></br>
 		</li>
-		<li>
-			<h3>Paypal</h3>
-			<table width="500px" align="center">
-				<tr>
-					<td><img src="img/logo_paypal.gif"></td>
-					<td>
-						<form action="modules/paypal/express_checkout/payment.php" method="post">
-							<input type="submit" id="SubmitPaypalPayment" name="SubmitPaypalPayment" class="button" value="Payer avec Paypal">
-							<input type="hidden" name="ma_variable" id="ma_variable" value="" />
-						</form>
-					</td>
-				</tr>
-			</table>
-			</br>
-		</li>
 	</ul>
 </div>
 <br></br>

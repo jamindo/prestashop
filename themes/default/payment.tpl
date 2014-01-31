@@ -63,17 +63,29 @@
                                 <div class="bouton_centre">        
                                         <input type="submit" id="SubmitPayment" name="SubmitPayment" class="button" value="Valider">
                                         <input type="hidden" name="amount" id="amount" value="{$amount}" />
+                                        <input type="hidden" name="forBid" id="forBid" value="{$fromBid}" />
+                                        <input type="hidden" name="bids_selected" id="bids_selected" value="{$bids_selected}"/>
                                 </div>
                         </div>
                 </div>
         </form>
 </fieldset>
 {/if}
-
 {if $fromPayment == true}
+	{if $fromBid == 0}
+		 <form action="{$link->getPageLink('payment', true)|escape:'html'}" method="post">
+                <span id="sucess"> Paiement accepté, veuillez cliquer sur le bouton ci dessous pour entériner le paiement</span>
+                <input type="submit" id="GetBid" name="GetBid" class="button" value="Ok">
+                <input type="hidden" name="total" id="total" value="{$amount}" />
+                <input type="hidden" name="bids_selected" id="bids_selected" value="{$bids_selected}"/>
+        </form>
+	{/if}
+	{if $fromBid != 0}
         <form action="{$link->getPageLink('payment', true)|escape:'html'}" method="post">
                 <span id="sucess"> Paiement accepté, veuillez cliquer sur le bouton ci dessous pour récupérer vos crédits</span>
                 <input type="submit" id="GetCredits" name="GetCredits" class="button" value="Récupérer">
                 <input type="hidden" name="total" id="total" value="{$amount}" />
+                <input type="hidden" name="bids_selected" id="bids_selected" value="{$bids_selected}"/>
         </form>
+    {/if}
 {/if}

@@ -27,20 +27,32 @@ class PaymentControllerCore extends FrontController
 		if (Tools::isSubmit('GetCredits')){
 			$this->processSubmitGetCredits();
 		}
+		if (Tools::isSubmit('GetBid')){
+			$this->processSubmitGetBid();
+		}
 	}
 	
 	public function processSubmitCBPayment()
 	{
 		$amount = Tools::getValue('amount');
+		$fromBid = Tools::getValue('forBid');
+		$bids_selected = Tools::getValue('bids_selected');
 		$this->context->smarty->assign('fromCBPayment',true);
+		$this->context->smarty->assign('fromBid',$fromBid);
 		$this->context->smarty->assign('amount',$amount);
+		$this->context->smarty->assign('bids_selected',$bids_selected);
 	}
 	
 	public function processSubmitPayment()
 	{
 		$amount = Tools::getValue('amount');
+		$fromBid = Tools::getValue('forBid');
+		$bids_selected = Tools::getValue('bids_selected');
+
 		$this->context->smarty->assign('amount',$amount);
+		$this->context->smarty->assign('fromBid',$fromBid);
 		$this->context->smarty->assign('fromPayment',true);
+		$this->context->smarty->assign('bids_selected',$bids_selected);
 	}
 	
 	public function processSubmitGetCredits()
@@ -52,6 +64,16 @@ class PaymentControllerCore extends FrontController
 			Credit::createCredit($customer_id);
 		}
 		$this->context->cookie->nb_credits = Credit::countCredits($customer_id);
+		Tools::redirect('http://localhost/prestashop/');
+	}
+	
+	public function processSubmitGetBid()
+	{
+		$bids_selected = Tools::getValue('bids_selected');
+		$bid =  split('-', $bids_selected.split);
+		for($i = 0 ; $i<=count(bid) ; $i++){
+			FinishedBid::turnPaidBid($bid[$i]);
+		}
 		Tools::redirect('http://localhost/prestashop/');
 	}
 	

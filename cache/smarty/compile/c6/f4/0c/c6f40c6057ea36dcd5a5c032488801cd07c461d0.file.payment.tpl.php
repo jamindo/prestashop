@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-01-29 18:10:03
+<?php /* Smarty version Smarty-3.1.14, created on 2014-01-31 18:03:15
          compiled from "C:\xampp\htdocs\prestashop\themes\default\payment.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2400552daac995dd884-95146656%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'c6f40c6057ea36dcd5a5c032488801cd07c461d0' => 
     array (
       0 => 'C:\\xampp\\htdocs\\prestashop\\themes\\default\\payment.tpl',
-      1 => 1391015399,
+      1 => 1391187397,
       2 => 'file',
     ),
   ),
@@ -22,6 +22,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'fromCBPayment' => 0,
     'link' => 0,
     'amount' => 0,
+    'fromBid' => 0,
+    'bids_selected' => 0,
     'fromPayment' => 0,
   ),
   'has_nocache_code' => false,
@@ -94,19 +96,37 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                                         <input type="submit" id="SubmitPayment" name="SubmitPayment" class="button" value="Valider">
                                         <input type="hidden" name="amount" id="amount" value="<?php echo $_smarty_tpl->tpl_vars['amount']->value;?>
 " />
+                                        <input type="hidden" name="forBid" id="forBid" value="<?php echo $_smarty_tpl->tpl_vars['fromBid']->value;?>
+" />
+                                        <input type="hidden" name="bids_selected" id="bids_selected" value="<?php echo $_smarty_tpl->tpl_vars['bids_selected']->value;?>
+"/>
                                 </div>
                         </div>
                 </div>
         </form>
 </fieldset>
 <?php }?>
-
 <?php if ($_smarty_tpl->tpl_vars['fromPayment']->value==true){?>
+	<?php if ($_smarty_tpl->tpl_vars['fromBid']->value==0){?>
+		 <form action="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['link']->value->getPageLink('payment',true), ENT_QUOTES, 'UTF-8', true);?>
+" method="post">
+                <span id="sucess"> Paiement accepté, veuillez cliquer sur le bouton ci dessous pour entériner le paiement</span>
+                <input type="submit" id="GetBid" name="GetBid" class="button" value="Ok">
+                <input type="hidden" name="total" id="total" value="<?php echo $_smarty_tpl->tpl_vars['amount']->value;?>
+" />
+                <input type="hidden" name="bids_selected" id="bids_selected" value="<?php echo $_smarty_tpl->tpl_vars['bids_selected']->value;?>
+"/>
+        </form>
+	<?php }?>
+	<?php if ($_smarty_tpl->tpl_vars['fromBid']->value!=0){?>
         <form action="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['link']->value->getPageLink('payment',true), ENT_QUOTES, 'UTF-8', true);?>
 " method="post">
                 <span id="sucess"> Paiement accepté, veuillez cliquer sur le bouton ci dessous pour récupérer vos crédits</span>
                 <input type="submit" id="GetCredits" name="GetCredits" class="button" value="Récupérer">
                 <input type="hidden" name="total" id="total" value="<?php echo $_smarty_tpl->tpl_vars['amount']->value;?>
 " />
+                <input type="hidden" name="bids_selected" id="bids_selected" value="<?php echo $_smarty_tpl->tpl_vars['bids_selected']->value;?>
+"/>
         </form>
+    <?php }?>
 <?php }?><?php }} ?>

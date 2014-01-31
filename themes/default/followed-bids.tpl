@@ -93,7 +93,7 @@ setInterval(CompteARebours, 1000);
 						{if $paid[$i] == 0}
 							<form action="index.php?controller=finished-bid-recap" method="post">
 								<input type="hidden" id="bidId" name="bidId" value={$followed_bids[$i].id_bid}> 
-								<input type="submit" id="SubmitGetBid" name="SubmitGetBid" class="button" value="Récupérer le lot">
+								<input type="submit" id="SubmitBidRecap" name="SubmitBidRecap" class="button" value="Récupérer le lot">
 							</form>
 						{/if}
 						{if $paid[$i] == 1}

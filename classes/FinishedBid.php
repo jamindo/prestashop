@@ -85,4 +85,32 @@ class FinishedBidCore extends ObjectModel
 				WHERE id_bid = '.(int)$id_bid.'
 				');
 	}
+	
+	public static function getFinishedBidWithCustomer($id_customer)
+	{
+		return Db::getInstance()->executeS('
+				SELECT *
+				FROM `'._DB_PREFIX_.'finished_bid`
+				WHERE id_customer = '.(int)$id_customer.'
+				');
+	}
+	
+	public static function countUnpaidBid($id_customer)
+	{
+		return $nb_of_bids = (int)Db::getInstance()->getValue('
+				SELECT COUNT(id_finished_bid)
+				FROM `'._DB_PREFIX_.'finished_bid`
+				WHERE id_customer = '.(int)$id_customer.'
+				AND `paid`= 0
+				');
+	}
+	
+	public static function turnPaidBid($id_bid)
+	{
+		Db::getInstance()->execute('
+			UPDATE '._DB_PREFIX_.'finished_bid
+			SET `paid`= 1
+			WHERE id_bid = '.(int)$id_bid.'
+		');
+	}
 }

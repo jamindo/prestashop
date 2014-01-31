@@ -16,6 +16,8 @@
 	</br>
 	<li><a href="{$link->getPageLink('followed-bid', true)|escape:'html'}">Mes enchères</a></li>
 	</br>
+	<li><a href="{$link->getPageLink('winned-bid', true)|escape:'html'}">Mes enchères remportés</a></li>
+	</br>
 	<li><a href="{$link->getPageLink('addresses', true)|escape:'html'}">Mes adresses</a></li>
 	</br>
 	<li><a href="{$link->getPageLink('identity', true)|escape:'html'}">Mes informations</a></li>
